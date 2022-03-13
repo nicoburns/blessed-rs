@@ -1,0 +1,142 @@
+{
+    "crate_groups": [
+        {
+            "name": "Core",
+            "description": "Very commonly used domain-specific tools",
+            "purposes": [
+                {
+                    "name": "Random numbers",
+                    "crates": [{
+                        "name": "rand",
+                        "notes": "De facto random number generation library split out from the standard library"
+                    }]
+                },
+                {
+                    "name": "Serialization (JSON, YAML, etc)",
+                    "crates": [{
+                        "name": "serde",
+                        "notes": "De facto serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using."
+                    }]
+                },
+                {
+                    "name": "Regular Expressions",
+                    "crates": [{
+                        "name": "regex",
+                        "notes": "De facto regex library. Very fast, but does not support fancier features such as backtracking."
+                    }, 
+                    {
+                        "name": "fancy_regex",
+                        "notes": "Use if need features such as backtracking which regex doesn't support"
+                    }]
+                },
+                {
+                    "name": "Gzip (de)compression",
+                    "crates": [{
+                        "name": "flate2",
+                        "notes": "Uses a pure-Rust implementation by default. Use feature flags to opt in to system zlib."
+                    }]
+                },
+                {
+                    "name": "Time & Date",
+                    "crates": [{
+                        "name": "time",
+                        "notes": "Basic time manipulation."
+                    }, {
+                        "name": "chrono",
+                        "notes": "Basic time manipulation."
+                    }]
+                }
+            ]
+        },
+        {
+            "name": "Error Handling",
+            "description": "Crates for more easily handling errors",
+            "purposes": [
+                {
+                    "name": "For applications",
+                    "crates": [{
+                        "name": "anyhow",
+                        "notes": "Provides a boxed error type that can hold any error, and helpers for generating an application-level stack trace."
+                    }]
+                },
+                {
+                    "name": "For libraries",
+                    "crates": [{
+                        "name": "thiserror",
+                        "notes": "Helps with generating boilerplate for enum-style error types."
+                    }]
+                }
+            ]
+        },
+        {
+            "name": "Logging",
+            "description": "Crates for logging. Note that in general you will need a seperate crate for actually printing/storing the logs",
+            "purposes": [
+                {
+                    "name": "Text-based logging",
+                    "crates": [{
+                        "name": "tracing",
+                        "notes": "Tracing is now the go-to crate for logging."
+                    }, {
+                        "name": "log",
+                        "notes": "An older and simpler crate if your needs are simple and you are not using any async code."
+                    }]
+                },
+                {
+                    "name": "Structed logging",
+                    "crates": [{
+                        "name": "tracing",
+                        "notes": "Tracing is now the go-to crate for logging."
+                    }, {
+                        "name": "slog",
+                        "notes": "Structed logging"
+                    }]
+                }
+            ]
+        },
+        {
+            "name": "Language Extensions",
+            "description": "General purpose utility crates that extend language and/or stdlib functionality.",
+            "purposes": [
+                {
+                    "name": "Lazy static variable initialization",
+                    "crates": [{
+                        "name": "once_cell",
+                        "notes": "Newer crate with more ergonomic API. On track to be incorporated into the standard library. Should be preferred for all new projects."
+                    }, {
+                        "name": "lazy_static",
+                        "notes": "Older crate. API is less convenient, but crate is stable and maintained."
+                    }]
+                },
+                {
+                    "name": "Iterator helpers",
+                    "crates": [{
+                        "name": "itertools",
+                        "notes": "A bunch of useful methods on iterators that aren't in the stdlib"
+                    }]
+                },
+                {
+                    "name": "Abstracting over different number types",
+                    "crates": [{
+                        "name": "num",
+                        "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
+                    }]
+                },
+                {
+                    "name": "Endian conversion",
+                    "crates": [{
+                        "name": "byteorder",
+                        "notes": "Utility functions to convert between different endianness or read/write data with a specific endianness"
+                    }]
+                },
+                {
+                    "name": "Bitflags",
+                    "crates": [{
+                        "name": "bitflags",
+                        "notes": "Strongly typed bitflag types"
+                    }]
+                }
+            ]
+        }
+    ]
+}

@@ -21,6 +21,11 @@ h1.logo {
 h3 {
     font-size: 1.6em;
     font-weight: normal;
+    margin-bottom: 0;
+}
+p.group-description {
+    color: #CCC;
+    margin-top: 0;
 }
 
 a, a:hover, a:visited, a:active {
