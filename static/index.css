@@ -1,10 +1,50 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: system-ui, Arial, Helvetica, sans-serif;
     background-color: #333;
     color: #FFF;
 }
 
+#content {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 h1.logo {
     font-size: 5rem;
+    font-weight: normal;
+}
+h3 {
+    font-size: 1.6em;
+    font-weight: normal;
+}
+
+a, a:hover, a:visited, a:active {
+    color: #3298dc
+}
+
+table {
+    border-collapse: collapse;
+    /* border: 1px solid #f9f9f9; */
+}
+
+.full-width {
+    width: 100%;
+}
+
+table th {
+    padding: 6px 18px 6px 6px;
+    text-align: left;
+    font-size: 0.8em;
+    white-space: nowrap;
+    color: #EAEAEA;
+}
+
+table td {
+    padding: 6px 12px;
+    border: 1px solid #EAEAEA;
 }

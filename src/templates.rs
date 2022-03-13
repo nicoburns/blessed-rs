@@ -1,4 +1,4 @@
-use tera::{Tera, Context};
+use tera::Tera;
 use once_cell::sync::Lazy;
 
 pub(crate) static TERA: Lazy<Tera> = Lazy::new(|| {
