@@ -7,6 +7,7 @@ use std::net::SocketAddr;
 use tower_http::{services::ServeDir, trace::TraceLayer};
 
 mod routes;
+mod templates;
 
 #[tokio::main]
 async fn main() {

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="/static/index.css" />
+        <title>{% block title %}Home{% endblock title %} - Blessed.rs</title>
+        {% endblock head %}
+    </head>
+    <body>
+        <div id="content">{% block content %}{% endblock content %}</div>
+    </body>
+</html>
