@@ -3,7 +3,7 @@ use axum::{
     Router,
     http::StatusCode,
 };
-use std::net::SocketAddr;
+use std::net::{SocketAddr, IpAddr};
 use tower_http::{services::ServeDir, trace::TraceLayer};
 
 mod routes;
@@ -29,8 +29,9 @@ async fn main() {
 
     // run our app with hyper
     // `axum::Server` is a re-export of `hyper::Server`
+    let host : IpAddr = std::env::var("HOST").ok().and_then(|h| h.parse().ok()).unwrap_or([127, 0, 0, 1].into());
     let port = std::env::var("PORT").ok().and_then(|p| p.parse().ok()).unwrap_or(3333);
-    let addr = SocketAddr::from(([127, 0, 0, 1], port));
+    let addr = SocketAddr::from((host, port));
     tracing::debug!("listening on {}", addr);
     axum::Server::bind(&addr)
         .serve(app.into_make_service())
