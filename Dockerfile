@@ -16,7 +16,7 @@ RUN cargo build --release
 
 FROM debian:buster-slim
 # RUN apt-get update && apt-get install -y extra-runtime-dependencies && rm -rf /var/lib/apt/lists/*
-COPY --from=builder /usr/local/cargo/bin/blessed-rs /usr/local/bin/blessed-rs
+COPY --from=builder  /usr/src/blessed-rs/target/release/blessed-rs /usr/local/bin/blessed-rs
 
 WORKDIR /usr/blessed-rs
 COPY ./static ./static
