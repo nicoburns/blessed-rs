@@ -11,7 +11,7 @@ pub(crate) async fn run() -> impl IntoResponse {
 
 
     // Load crate data
-    let data_file_contents : &str = include_str!("../../data/crates.json");
+    let data_file_contents : &str = include_str!("../../../data/crates.json");
     // let data_file_contents = String::from_utf8(std::fs::read("data/crates.json").unwrap()).unwrap();
     let data : CrateDefinitionFile = serde_json::from_str(&data_file_contents).unwrap();
     
