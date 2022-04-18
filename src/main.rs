@@ -21,7 +21,7 @@ async fn main() {
 
     // build our application with a route
     let app = Router::new()
-        .route("/", get(routes::index))
+        .route("/", get(routes::crates::list::run))
         .route("/users", post(routes::users::create::run))
         .route("/crates", get(routes::crates::list::run))
         .nest("/static", static_file_service)
