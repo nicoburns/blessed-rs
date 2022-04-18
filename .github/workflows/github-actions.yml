@@ -30,8 +30,6 @@ jobs:
         with:
           name: blessed-rs-release-binary
           path: target/release
-      - name: List Files
-        run: find .
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
