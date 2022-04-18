@@ -41,10 +41,10 @@
                     "name": "Time & Date",
                     "crates": [{
                         "name": "time",
-                        "notes": "Basic time manipulation."
+                        "notes": "The original datetime crate which was split out of std pre-rust-1.0. Preferrable if covers your needs, but it's quite limited in what it provides."
                     }, {
                         "name": "chrono",
-                        "notes": "Basic time manipulation."
+                        "notes": "The most comphrehensive and full-featured datetime library, but more complex because of it."
                     }]
                 },
                 {
