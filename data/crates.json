@@ -1,9 +1,9 @@
 {
     "crate_groups": [
         {
-            "slug": "core",
-            "name": "Core",
-            "description": "Very commonly used domain-specific tools",
+            "slug": "common",
+            "name": "Common",
+            "description": "Very commonly used crates that everyone should know about",
             "purposes": [
                 {
                     "name": "Random numbers",
