@@ -53,3 +53,11 @@ table td {
     padding: 6px 12px;
     border: 1px solid #CCC;
 }
+
+table tbody:nth-of-type(odd) {
+    background-color: #f6f8fa;
+}
+
+table tbody:nth-of-type(even) {
+    background-color: #FFF;
+}

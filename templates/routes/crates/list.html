@@ -27,8 +27,8 @@
         <th>Notes</th>
       </tr>
     </thead>
-    <tbody>
-      {% for purpose in group.purposes %}
+    {% for purpose in group.purposes %}
+      <tbody>
         {% for crate in purpose.crates %}
           <tr>
             {% if loop.index0 == 0 %}<td rowspan="{{ purpose.crates | length }} ">{{ purpose.name }}</td>{% endif %}
