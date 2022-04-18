@@ -46,6 +46,16 @@
                         "name": "chrono",
                         "notes": "Basic time manipulation."
                     }]
+                },
+                {
+                    "name": "HTTP Requests",
+                    "crates": [{
+                        "name": "reqwest",
+                        "notes": "Full-fat HTTP client. Can be used in both synchronous and asynchronous code. Requires tokio runtime."
+                    }, {
+                        "name": "ureq",
+                        "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
+                    }]
                 }
             ]
         },
