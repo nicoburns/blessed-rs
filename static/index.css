@@ -12,15 +12,18 @@ body {
 #main-container {
     margin: 0;
     padding: 0;
+    margin: 24px;
 }
 
 #left-sidebar {
     width: 200px;
-    margin-left: 24px;
 }
 .toc {
     position: sticky;
     top: 24px;
+}
+.toc h3 {
+    margin-top:  16px;
 }
 .toc ul {
     list-style: none;
@@ -28,7 +31,7 @@ body {
 }
 .toc li {
     padding-left: 0;
-    margin: 6px 12px;
+    margin: 6px 0px;
 }
 .toc li a {
     color: #CCC;
@@ -82,6 +85,10 @@ h2.page-subheading {
     flex-direction: row;
     align-items: stretch;
     justify-content: flex-start;
+}
+
+p.introduction {
+    color: #666;
 }
 
 h3 {

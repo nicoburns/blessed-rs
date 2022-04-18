@@ -26,6 +26,20 @@
 
   <!-- Main page content -->
   <div id="content">
+
+<!--     <p class="introduction">
+      Many programming langauges (such as Python and Go) take a "kitchen sink" approach to their standard libraries, including functionality
+      like regular expressions, random number generation, serialization (JSON, XML, etc), and HTTP clients and servers directly in the stdlib.
+    </p> -->
+
+    <p class="introduction">
+      Compared to other programming languages such as Python and Go, Rust's standard library is very small, including only core data structures in the standard library with all other functionality farmed out to 3rd party ecosystem crates, and a common complaint from new Rust developers is that they don't know where to start: which crates they ought to use and which crates they ought to trust.
+    </p>
+
+    <p class="introduction">
+      This list attempts to answer those questions.
+    </p>
+
     {% for group in crate_groups %}
     <section data-toc-section id="section-{{ group.slug }}">
       <h3>{{ group.name }}</h3>
