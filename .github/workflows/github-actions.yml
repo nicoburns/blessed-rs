@@ -2,7 +2,7 @@ name: Blessed.rs
 on: [push]
 jobs:
   build:
-    name: Compile and Deploy
+    name: Compile binary
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,10 +11,25 @@ jobs:
           toolchain: stable
       - name: Compile Release build
         run: cargo build --release --all-features
+      - name: Upload binary as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: blessed-rs-release-binary
+          path: target/release/blessed-rs
+  deploy:
+    name: Deploy to Heroku
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download binary artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: blessed-rs-release-binary
+          path: target/release/blessed-rs
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
           heroku_app_name: "blessed-rs" #Must be unique in Heroku
           heroku_email: "nico@nicoburns.com"
           usedocker: true
