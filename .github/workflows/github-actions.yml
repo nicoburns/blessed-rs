@@ -11,6 +11,8 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+      - name: Restore rust compilation cache
+        uses: Swatinem/rust-cache@v1
       - name: Compile release build
         run: cargo build --release --all-features
       - name: Upload binary as artifact
