@@ -9,9 +9,6 @@
 {% endblock head %}
 
 {% block content %}
-<center>
-  <h1 class="logo">Blessed.rs</h1>
-</center>
 
 {% for group in crate_groups %}
 
@@ -38,8 +35,8 @@
             <td>{{ crate.notes }}</td>
           </tr>
         {% endfor %}
-      {% endfor %}
-    </tbody>
+      </tbody>
+    {% endfor %}
   </table>
 {% endfor %}
 

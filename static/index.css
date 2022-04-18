@@ -5,8 +5,8 @@
 
 body {
     font-family: system-ui, Arial, Helvetica, sans-serif;
-    background-color: #333;
-    color: #FFF;
+    background-color: #FFF;
+    color: #333;
 }
 
 #content {
@@ -14,17 +14,46 @@ body {
     margin: 0 auto;
 }
 
-h1.logo {
-    font-size: 5rem;
-    font-weight: normal;
+#header {
+    border-bottom: 1px solid #CCC;
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    background-color: #fef6f1;
 }
+
+.page-heading-group {
+    flex: 0 0 auto;
+    margin-top: -6px;
+}
+
+img.logo {
+    height: 120px;
+}
+
+h1.page-heading {
+    color: #333;
+    color: #4d4a45;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+}
+h2.page-subheading {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0;
+    color: #666;
+    color: #77482d;
+    color: #644735;
+}
+
 h3 {
     font-size: 1.6em;
     font-weight: normal;
     margin-bottom: 0;
 }
 p.group-description {
-    color: #CCC;
+    color: #666;
     margin-top: 0;
 }
 
@@ -43,10 +72,11 @@ table {
 
 table th {
     padding: 6px 18px 6px 6px;
+    border: 1px solid #CCC;
     text-align: left;
     font-size: 0.8em;
     white-space: nowrap;
-    color: #EAEAEA;
+    color: #333;
 }
 
 table td {

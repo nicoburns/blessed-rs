@@ -8,6 +8,13 @@
         {% endblock head %}
     </head>
     <body>
+        <div id="header">
+            <img class="logo" src="/static/rust-logo-black.svg" />
+            <div class="page-heading-group">
+                <h1 class="page-heading">Blessed</h1>
+                <h2 class="page-subheading">An opinionated guide to the Rust ecosystem</h2>
+            </div>
+        </div>
         <div id="content">{% block content %}{% endblock content %}</div>
     </body>
 </html>
