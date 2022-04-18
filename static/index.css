@@ -9,9 +9,39 @@ body {
     color: #333;
 }
 
+#main-container {
+    margin: 0;
+    padding: 0;
+}
+
+#left-sidebar {
+    width: 200px;
+    margin-left: 24px;
+}
+.toc {
+    position: sticky;
+    top: 24px;
+}
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+.toc li {
+    padding-left: 0;
+    margin: 6px 12px;
+}
+.toc li a {
+    color: #CCC;
+    text-decoration: none;
+}
+.toc .active:not(.active ~ .active) a {
+    color: #333;
+    text-decoration: none;
+}
+
 #content {
-    max-width: 1024px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin-left: 24px;
 }
 
 #header {
@@ -45,6 +75,13 @@ h2.page-subheading {
     color: #666;
     color: #77482d;
     color: #644735;
+}
+
+.hflex {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
 }
 
 h3 {

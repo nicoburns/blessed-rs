@@ -24,8 +24,8 @@ pub(crate) async fn run() -> impl IntoResponse {
     let res  = match rendered {
         Ok(res) => (StatusCode::OK, Html(res)),
         Err(err) => {
-            tracing::debug!("listening on {}", err);
-            (StatusCode::INTERNAL_SERVER_ERROR, Html("".to_string()))
+            tracing::debug!("Error: {:?}", err);
+            (StatusCode::INTERNAL_SERVER_ERROR, Html(format!("<code><pre>{:#?}</pre></code>", err)))
         }
     };
 
@@ -47,6 +47,7 @@ struct Purpose {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct CrateGroup {
+    slug: String,
     name: String,
     description: String,
     purposes: Vec<Purpose>,

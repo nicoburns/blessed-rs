@@ -1,6 +1,7 @@
 {
     "crate_groups": [
         {
+            "slug": "core",
             "name": "Core",
             "description": "Very commonly used domain-specific tools",
             "purposes": [
@@ -49,6 +50,7 @@
             ]
         },
         {
+            "slug": "error-handling",
             "name": "Error Handling",
             "description": "Crates for more easily handling errors",
             "purposes": [
@@ -69,6 +71,7 @@
             ]
         },
         {
+            "slug": "logging",
             "name": "Logging",
             "description": "Crates for logging. Note that in general you will need a seperate crate for actually printing/storing the logs",
             "purposes": [
@@ -95,6 +98,7 @@
             ]
         },
         {
+            "slug": "lang-extensions",
             "name": "Language Extensions",
             "description": "General purpose utility crates that extend language and/or stdlib functionality.",
             "purposes": [
