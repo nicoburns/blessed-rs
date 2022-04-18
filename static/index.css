@@ -117,8 +117,9 @@ table th {
 }
 
 table td {
-    padding: 6px 12px;
+    padding: 6px 6px;
     border: 1px solid #CCC;
+    font-size: 14px;
 }
 
 table tbody:nth-of-type(odd) {

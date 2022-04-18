@@ -33,8 +33,8 @@
       <table class="full-width">
         <thead>
           <tr>
-            <th width="200">Use Case</th>
-            <th>Recommendation</th>
+            <th width="250">Use Case</th>
+            <th width="100">Recommendation</th>
             <!-- <th>Latest Version</th> -->
             <!-- <th>Last Updated</th> -->
             <th>Notes</th>
@@ -48,7 +48,7 @@
                 <td><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></td>
                 <!-- <td>0.8.5</td> -->
                 <!-- <td>5 days ago</td> -->
-                <td>{{ crate.notes }}</td>
+                <td class="crate-notes">{{ crate.notes }}</td>
               </tr>
             {% endfor %}
           </tbody>
