@@ -6,4 +6,6 @@ COPY ./static ./static
 COPY ./templates ./templates
 COPY ./data ./data
 
+RUN chmod +x /usr/local/bin/blessed-rs
+
 CMD ["blessed-rs"]
