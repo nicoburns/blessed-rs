@@ -29,7 +29,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: blessed-rs-release-binary
-          path: target/release/blessed-rs
+          path: target/release
+      - name: List Files
+        run: find .
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
