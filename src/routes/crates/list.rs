@@ -18,7 +18,7 @@ pub(crate) async fn run() -> impl IntoResponse {
     // Render template
     let mut context = Context::new();
     context.insert("crate_groups", &data.crate_groups);
-    let rendered = TERA.render("routes/crates/list.html", &context);
+    let rendered = TERA.render("routes/crates/crates-list.html", &context);
 
     // Handle template rendering errors
     let res  = match rendered {
