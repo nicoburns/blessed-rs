@@ -22,9 +22,6 @@ body {
     position: sticky;
     top: 24px;
 }
-.toc h3 {
-    margin-top:  16px;
-}
 .toc ul {
     list-style: none;
     padding: 0;
