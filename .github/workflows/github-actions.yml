@@ -2,11 +2,19 @@ name: Blessed.rs
 on: [push]
 jobs:
   build:
-    name: Compile release build
+    name: Compile and Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo build --release --all-features
+      - name: Compile Release build
+        run: cargo build --release --all-features
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "blessed-rs" #Must be unique in Heroku
+          heroku_email: "nico@nicoburns.com"
+          usedocker: true
