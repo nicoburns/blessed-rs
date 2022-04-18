@@ -1,3 +1,5 @@
+name: Blessed.rs
+on: [push]
 jobs:
   build:
     name: Compile release build
