@@ -163,6 +163,37 @@
                             }]
                         }
                     ]
+                },
+                {
+                    "slug": "system",
+                    "name": "System",
+                    "description": "For low-level interaction with the underling platform / operating system",
+                    "purposes": [
+                        {
+                            "name": "Memory mapping files",
+                            "crates": [{
+                                "name": "memmap",
+                                "notes": ""
+                            }]
+                        },
+                        {
+                            "name": "Libc",
+                            "crates": [{
+                                "name": "libc",
+                                "notes": "Bindings for directly calling libc functions."
+                            }]
+                        },
+                        {
+                            "name": "Windows (OS)",
+                            "crates": [{
+                                "name": "windows-rs",
+                                "notes": "The official Microsoft-provided crate for interacting with windows APIs"
+                            }, {
+                                "name": "winapi",
+                                "notes": "Older binding to the windows APIs. Unofficial, but more complete than windows-rs"
+                            }]
+                        }
+                    ]
                 }
             ]
         }
