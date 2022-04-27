@@ -46,11 +46,19 @@ struct Purpose {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-struct CrateGroup {
+struct CrateSubGroup {
     slug: String,
     name: String,
     description: String,
     purposes: Vec<Purpose>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+struct CrateGroup {
+    slug: String,
+    name: String,
+    description: String,
+    subgroups: Vec<CrateSubGroup>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

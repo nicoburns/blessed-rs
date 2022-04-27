@@ -30,13 +30,16 @@ body {
     padding-left: 0;
     margin: 6px 0px;
 }
-.toc li a {
+.toc li > a {
     color: #CCC;
     text-decoration: none;
 }
-.toc .active:not(.active ~ .active) a {
+.toc .active:not(.active ~ .active) > a {
     color: #333;
     text-decoration: none;
+}
+.subtoc {
+    margin-left: 12px;
 }
 
 #content {
@@ -88,10 +91,20 @@ p.introduction {
     color: #666;
 }
 
+section {
+    margin-bottom: 24px;
+}
+
 h3 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: normal;
     margin-bottom: 0;
+}
+h4 {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 p.group-description {
     color: #666;

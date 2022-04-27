@@ -18,7 +18,18 @@
       <h3>Sections</h3>
       <ul>
         {% for group in crate_groups %}
-          <li data-toc-link="section-{{ group.slug }}"><a href="#section-{{ group.slug }}">{{ group.name }}</a></li>
+          <li data-toc-link="section-{{ group.slug }}">
+            <a href="#section-{{ group.slug }}">{{ group.name }}</a>
+            {% if group.subgroups | length > 0 %}
+              <ul class="subtoc">
+                {% for subgroup in group.subgroups %}
+                  <li data-toc-link="section-{{ group.slug }}-subsection-{{ subgroup.slug }}">
+                    <a href="#section-{{ group.slug }}-subsection-{{ subgroup.slug }}">{{ subgroup.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
         {% endfor %}
       </ul>
     </div>
@@ -45,30 +56,36 @@
     <section data-toc-section id="section-{{ group.slug }}">
       <h3>{{ group.name }}</h3>
       <p class="group-description">{{ group.description }}</p>
-      <table class="full-width">
-        <thead>
-          <tr>
-            <th width="250">Use Case</th>
-            <th width="100">Recommendation</th>
-            <!-- <th>Latest Version</th> -->
-            <!-- <th>Last Updated</th> -->
-            <th>Notes</th>
-          </tr>
-        </thead>
-        {% for purpose in group.purposes %}
-          <tbody>
-            {% for crate in purpose.crates %}
-              <tr>
-                {% if loop.index0 == 0 %}<td rowspan="{{ purpose.crates | length }} ">{{ purpose.name }}</td>{% endif %}
-                <td><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></td>
-                <!-- <td>0.8.5</td> -->
-                <!-- <td>5 days ago</td> -->
-                <td class="crate-notes">{{ crate.notes }}</td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        {% endfor %}
-      </table>
+      {% for subgroup in group.subgroups %}
+      <section data-toc-section id="section-{{ group.slug }}-subsection-{{ subgroup.slug }}">
+        <h4>{{ subgroup.name }}</h4>
+        <p class="group-description">{{ subgroup.description }}</p>
+        <table class="full-width">
+          <thead>
+            <tr>
+              <th width="250">Use Case</th>
+              <th width="100">Recommendation</th>
+              <!-- <th>Latest Version</th> -->
+              <!-- <th>Last Updated</th> -->
+              <th>Notes</th>
+            </tr>
+          </thead>
+          {% for purpose in subgroup.purposes %}
+            <tbody>
+              {% for crate in purpose.crates %}
+                <tr>
+                  {% if loop.index0 == 0 %}<td rowspan="{{ purpose.crates | length }} ">{{ purpose.name }}</td>{% endif %}
+                  <td><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></td>
+                  <!-- <td>0.8.5</td> -->
+                  <!-- <td>5 days ago</td> -->
+                  <td class="crate-notes">{{ crate.notes }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          {% endfor %}
+        </table>
+      </section>
+      {% endfor %}
     </section>
     {% endfor %}
   </div>
