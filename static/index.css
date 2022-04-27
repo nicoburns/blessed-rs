@@ -29,6 +29,7 @@ body {
 .toc li {
     padding-left: 0;
     margin: 6px 0px;
+    font-size: 1.1em;
 }
 .toc li > a {
     color: #CCC;
@@ -40,6 +41,9 @@ body {
 }
 .subtoc {
     margin-left: 12px;
+}
+.subtoc li {
+    font-size: 0.8em;
 }
 
 #content {
