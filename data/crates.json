@@ -196,6 +196,141 @@
                     ]
                 }
             ]
+        },
+        {
+            "slug": "networking",
+            "name": "Networking",
+            "description": "TCP, HTTP, GRPc, etc. And the executors required to do asynchronous networking.",
+            "subgroups": [
+                {
+                    "slug": "async-executors",
+                    "name": "Async Executors",
+                    "description": "To do async programming using the async-await in Rust you need a runtime to execute drive your Futures.",
+                    "purposes": [
+                        {
+                            "name": "General purpose",
+                            "crates": [{
+                                "name": "tokio",
+                                "notes": "The oldest async runtime in the Rust ecosystem and still the most widely supported. Recommended for new projects."
+                            }, {
+                                "name": "async-std",
+                                "notes": "A newer option that is very similar to tokio. It's API more closely mirrors the std library, but it doesn't have as much traction as Tokio."
+                            }]
+                        },
+                        {
+                            "name": "io_uring",
+                            "crates": [{
+                                "name": "glommio",
+                                "notes": "Use if you need io_uring support. Still somewhat experimental but rapidly maturing."
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "slug": "http-foundations",
+                    "name": "HTTP",
+                    "description": "To do async programming using the async-await in Rust you need a runtime to execute drive your Futures.",
+                    "purposes": [
+                        {
+                            "name": "Types & Interfaces",
+                            "crates": [{
+                                "name": "http",
+                                "notes": "The `http` crate doesn't actually contain an HTTP implementation. Just types and interfaces to help interoperability."
+                            }]
+                        },
+                        {
+                            "name": "Low-level HTTP Implementation",
+                            "crates": [{
+                                "name": "hyper",
+                                "notes": "A low-level HTTP implementation (both client and server). Implements HTTP 1, 2, and 3. Requires the tokio async runtime."
+                            }]
+                        },
+                        {
+                            "name": "TLS / SSL",
+                            "crates": [{
+                                "name": "rustls",
+                                "notes": "A portable pure-rust implementation of TLS"
+                            }, {
+                                "name": "rust-native-tls",
+                                "notes": "Delegates to the system TLS implementations on windows and macOS, and uses OpenSSL on linux."
+                            }]
+                        },
+                        {
+                            "name": "HTTP Client",
+                            "crates": [{
+                                "name": "reqwest",
+                                "notes": "Full-fat HTTP client. Can be used in both synchronous and asynchronous code. Requires tokio runtime."
+                            },{
+                                "name": "surf",
+                                "notes": "Client that uses the async-std runtime rather than the tokio runtime."
+                            }, {
+                                "name": "ureq",
+                                "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
+                            }]
+                        },
+                        {
+                            "name": "HTTP Server",
+                            "crates": [{
+                                "name": "axum",
+                                "notes": "A minimal and ergonomic framework. An official part of the tokio project. Recommend for most new projects."
+                            }, {
+                                "name": "tide",
+                                "notes": "Similar to Axum, but based on async-std rather than tokio"
+                            }, {
+                                "name": "actix-web",
+                                "notes": "A performance focussed framework. All Rust frameworks are fast, but choose actix-web if you need the absolutely maximum performance."
+                            }, {
+                                "name": "poem",
+                                "notes": "Automatically generates OpenAPI defintions."
+                            }, {
+                                "name": "warp",
+                                "notes": "Very similar to axum but with a quirkier API. This is a solid framework, but you should probably prefer Axum unless you particular like the API"
+                            }, {
+                                "name": "rocket",
+                                "notes": "Focussed on ergonomics. This is a solid framework, however development has stalled. Avoid for new projects."
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "slug": "websockets",
+                    "name": "Websockets",
+                    "description": "This section includes libraries for you to use just websockets. However note that many of the HTTP server frameworks in the section above also support websockets",
+                    "purposes": [
+                        {
+                            "name": "Low-level",
+                            "crates": [{
+                                "name": "tungstenite-rs",
+                                "notes": "Low-level crate that others build on"
+                            }]
+                        },
+                        {
+                            "name": "General Purpose",
+                            "crates": [{
+                                "name": "tokio-tungstenite",
+                                "notes": "If you are using the tokio executor"
+                            }, {
+                                "name": "async-tungstenite",
+                                "notes": "If you are using the async-std executor"
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "slug": "grpc",
+                    "name": "gRPC",
+                    "description": "",
+                    "purposes": [
+                        {
+                            "name": "General Purpose",
+                            "crates": [{
+                                "name": "tonic",
+                                "notes": "gRPC over HTTP/2 with full support for asynchronous code. Works with tokio."
+                            }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
