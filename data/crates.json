@@ -18,6 +18,13 @@
                             }]
                         },
                         {
+                            "name": "UUIDs",
+                            "crates": [{
+                                "name": "uuid",
+                                "notes": "Implements generating and parsing UUIDs and a number of utility functions"
+                            }]
+                        },
+                        {
                             "name": "Serialization (JSON, YAML, etc)",
                             "crates": [{
                                 "name": "serde",
