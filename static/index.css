@@ -35,9 +35,15 @@ body {
     color: #CCC;
     text-decoration: none;
 }
+.toc li > ul {
+    display: none;
+}
 .toc > ul > li.active:not(.active ~ .active) > a {
     color: #333;
     text-decoration: none;
+}
+.toc > ul > li.active:not(.active ~ .active) > ul {
+    display: block;
 }
 .toc > ul > li.active:not(.active ~ .active) > ul > li.active:not(.active ~ .active) > a {
     color: #333;
