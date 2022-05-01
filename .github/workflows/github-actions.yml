@@ -42,7 +42,7 @@ jobs:
           heroku_email: "nico@nicoburns.com"
           usedocker: true
   deploy_flyio:
-      name: Deploy app
+      name: Deploy to Fly.io
       runs-on: ubuntu-latest
       needs: build
       steps:
