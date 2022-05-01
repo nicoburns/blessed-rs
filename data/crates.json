@@ -60,6 +60,26 @@
                             }]
                         },
                         {
+                            "name": "Insertion-ordered map",
+                            "crates": [{
+                                "name": "indexmap",
+                                "notes": "A HashMap that seperately keeps track of insertion order and allows you to efficiently iterate over it's elements in that order"
+                            }]
+                        },
+                        {
+                            "name": "Stack-allocated arrays",
+                            "crates": [{
+                                "name": "arrayvec",
+                                "notes": "Arrays that are ONLY stack-allocated with fixed capacity"
+                            }, {
+                                "name": "arrayvec",
+                                "notes": "Arrays that are ONLY stack-allocated with fixed capacity"
+                            }, {
+                                "name": "tinyvec",
+                                "notes": "Stack allocated arrays in 100% safe Rust code but requires items to implement the Default trait."
+                            }]
+                        },
+                        {
                             "name": "HTTP Requests",
                             "crates": [{
                                 "name": "reqwest",
