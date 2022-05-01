@@ -3,7 +3,7 @@
     <head>
         {% block head %}
         <link rel="stylesheet" href="/static/normalize.css" />
-        <link rel="stylesheet" href="/static/index.css" />
+        <link rel="stylesheet" href="/static/index.css?{{ get_index_css_hash() }}" />
         <title>{% block title %}Home{% endblock title %} - Blessed.rs</title>
         {% endblock head %}
     </head>

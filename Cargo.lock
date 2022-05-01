@@ -92,6 +92,7 @@ name = "blessed-rs"
 version = "0.1.0"
 dependencies = [
  "axum",
+ "fxhash",
  "once_cell",
  "serde",
  "serde_json",
@@ -274,6 +275,15 @@ dependencies = [
  "futures-task",
  "pin-project-lite",
  "pin-utils",
+]
+
+[[package]]
+name = "fxhash"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c31b6d751ae2c7f11320402d34e41349dd1016f8d5d45e48c4312bc8625af50c"
+dependencies = [
+ "byteorder",
 ]
 
 [[package]]
