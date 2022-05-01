@@ -36,7 +36,7 @@ body {
     text-decoration: none;
 }
 .toc li > ul {
-    display: none;
+    /*display: none;*/
 }
 .toc > ul > li.active:not(.active ~ .active) > a {
     color: #333;
