@@ -105,6 +105,21 @@ p.introduction {
     color: #666;
 }
 
+p, li {
+    color: #666;
+    line-height: 1.35;
+}
+
+#content ul {
+    max-width: 800px;
+    padding-left: 48px;
+}
+
+#content li {
+    margin-bottom: 12px;
+    padding-left: 12px;
+}
+
 section {
     margin-bottom: 24px;
 }

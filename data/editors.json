@@ -1,0 +1,32 @@
+[
+  {
+    "name": "VS Code",
+    "url": "https://code.visualstudio.com/",
+    "editor_plugins": "Rust Analyzer (note: avoid the \"Rust\" plugin. It is in the process of being deprecated and has a number of issues that are solved in the new Rust Analyzer plugin)",
+    "notes": "Generally recommended"
+  },
+  {
+    "name": "Intellij/CLion",
+    "url": "https://www.jetbrains.com/rust/",
+    "editor_plugins": "Rust Plugin",
+    "notes": "Well supported. A good option if you like Intellij products."
+  },
+  {
+    "name": "Sublime Text",
+    "url": "https://www.sublimetext.com/",
+    "editor_plugins": "sublime-lsp and lsp-rust-analyzer plugins",
+    "notes": "Well supported. A good option if you like Intellij products."
+  },
+  {
+    "name": "Vim/NeoVim",
+    "url": "https://neovim.io/",
+    "editor_plugins": "TBD",
+    "notes": "If you know you know. Not recommended for beginners."
+  },
+  {
+    "name": "Emacs",
+    "url": "https://www.gnu.org/software/emacs/",
+    "editor_plugins": "TBD",
+    "notes": "If you know you know. Not recommended for beginners."
+  }
+]

@@ -25,6 +25,7 @@ async fn main() {
         .route("/", get(|| async { Redirect::to("/crates") }))
         .route("/users", post(routes::users::create::run))
         .route("/crates", get(routes::crates::list::run))
+        .route("/getting-started", get(routes::getting_started::guide::run))
         .nest("/static", static_file_service)
         .layer(TraceLayer::new_for_http());
 

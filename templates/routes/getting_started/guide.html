@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% import "macros/toc.html" as toc %}
+{% block title %}Crate List{% endblock title %}
+
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock head %}
+
+{% block main %}
+
+<div class="hflex">
+
+  {{ toc::left_sidebar(sections=toc_sections) }}
+
+  <!-- Main page content -->
+  <div id="content">
+
+    <section data-toc-section id="section-installation">
+      <h3>Installation</h3>
+      <p class="group-description"></p>
+      <section data-toc-section id="section-installation-subsection-cargo-rustc">
+        <h4>Rustup</h4>
+        <p class="introduction">
+          Compared to other programming languages such as Python and Go, Rust's standard library is very small, including only core data structures in the standard library with all other functionality farmed out to 3rd party ecosystem crates, and a common complaint from new Rust developers is that they don't know where to start: which crates they ought to use and which crates they ought to trust.
+        </p>
+    </section>
+
+    <section data-toc-section id="section-learning-resources">
+      <h3>Learning Resources</h3>
+      <p class="group-description"></p>
+
+      <section data-toc-section id="section-learning-resources-subsection-books">
+        <h4>Books</h4>
+        <ul>
+          <li>
+            <b><a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a></b>
+            The official rust-lang book. Aimed at those with experience in another programming language but not
+            necessarily a low-level one. This is also the best option if you are trying to learn Rust as your first programming language. Freely available online (a print version is also available)
+          </li>
+          <li>
+            <b><a href="https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/">Programming Rust</a></b>
+             Another book aimed at those with experience in another programming language, but not
+            necessarily a low-level one. While the official book above has a stellar reputation, this one has a reputation for being even better,
+            diving deeper and giving a more thorough introduction to the language. The downside being it's not free.
+          </li>
+          <li>
+            <b><a href="https://www.rustinaction.com/">Rust in action</a></b>
+            This one has a slightly different focus, and is more suited to the more experienced developer with some grasp of CS theory, or those coming from a background in C or C++. It takes the reader through some relatively advanced projects including a CPU emulator, database, and an OS kernel.
+          </li>
+          <li>
+            <b><a href="https://nostarch.com/rust-rustaceans">Rust for Rustaceans</a></b>
+            A more advanced book that dives into some of the more involved parts of Rust. Not suitable for a complete beginner (even if they have experience in other languages). Best read after you have already learnt some basic Rust through one or more of the other resources.
+          </li>
+        </ul>
+
+      </section>
+
+    </section>
+
+  </div>
+</div>
+
+{% endblock main %}
+
+{% block footer %}
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        if (entry.intersectionRatio > 0) {
+          document.querySelector(`li[data-toc-link="${id}"]`).classList.add('active');
+        } else {
+          document.querySelector(`li[data-toc-link="${id}"]`).classList.remove('active');
+        }
+      });
+    });
+
+    // Track all sections that have an `id` applied
+    document.querySelectorAll('section[data-toc-section]').forEach((section) => {
+      observer.observe(section);
+    });
+    
+  });
+</script>
+{% endblock footer %}
