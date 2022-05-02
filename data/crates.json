@@ -43,6 +43,13 @@
                             }]
                         },
                         {
+                            "name": "Temporary files",
+                            "crates": [{
+                                "name": "tempfile",
+                                "notes": "Supports both temporary files and temporary directories"
+                            }]
+                        },
+                        {
                             "name": "Gzip (de)compression",
                             "crates": [{
                                 "name": "flate2",
