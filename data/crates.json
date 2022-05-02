@@ -413,6 +413,57 @@
                     ]
                 }
             ]
+        },
+        {
+            "slug": "concurrency",
+            "name": "Concurrency",
+            "description": "",
+            "subgroups": [
+                {
+                    "slug": "data-structures",
+                    "name": "Data Structures",
+                    "description": "See <a target=\"_blank\" href=\"https://github.com/xacrimon/conc-map-bench\">conc-map-bench</a> for benchmarks of concurrent HashMaps.",
+                    "purposes": [
+                        {
+                            "name": "Mutex",
+                            "crates": [{
+                                "name": "parking_lot",
+                                "notes": "std::mutex also works fine. But Parking Lot is faster."
+                            }]
+                        },
+                        {
+                            "name": "Atomic pointer swapping",
+                            "crates": [{
+                                "name": "arc_swap",
+                                "notes": "Useful for sharing data that has many readers but few writers"
+                            }]
+                        },
+                        {
+                            "name": "Concurrent HashMap",
+                            "crates": [{
+                                "name": "dashmap",
+                                "notes": "The fastest for general purpose workloads"
+                            }, {
+                                "name": "flurry",
+                                "notes": "Particularly good for read-heavy workloads."
+                            }]
+                        },
+                        {
+                            "name": "Channels",
+                            "crates": [{
+                                "name": "crossbeam_channel",
+                                "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
+                            }, {
+                                "name": "flume",
+                                "notes": "Smaller and simpler than crossbeam_channel and almost as fast"
+                            }, {
+                                "name": "postage",
+                                "notes": "Channels that integrate nicely with async code"
+                            }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
