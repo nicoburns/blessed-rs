@@ -418,6 +418,27 @@
                             }]
                         }
                     ]
+                },
+                {
+                    "slug": "rendering",
+                    "name": "Terminal Rendering",
+                    "description": "For fancy terminal rendering and TUIs. The crates recommended here work cross-platform (including windows).",
+                    "purposes": [
+                        {
+                            "name": "Coloured Output",
+                            "crates": [{
+                                "name": "termcolor",
+                                "notes": "Cross-platform terminal colour output"
+                            }]
+                        },
+                        {
+                            "name": "Full TUI library",
+                            "crates": [{
+                                "name": "crossterm",
+                                "notes": "Cross-platform terminal rendering and event handling"
+                            }]
+                        }
+                    ]
                 }
             ]
         },
