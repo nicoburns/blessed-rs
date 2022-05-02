@@ -345,7 +345,69 @@
                             "name": "General Purpose",
                             "crates": [{
                                 "name": "tonic",
-                                "notes": "gRPC over HTTP/2 with full support for asynchronous code. Works with tokio."
+                                "notes": "gRPC over HTTP/2 with full support for asynchronous code. Works with tokio"
+                            }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "cli-tools",
+            "name": "CLIs",
+            "description": "",
+            "subgroups": [
+                {
+                    "slug": "argument-parsing",
+                    "name": "Argument Parsing",
+                    "description": "See <a target=\"_blank\" href=\"https://github.com/rust-cli/argparse-benchmarks-rs\">argparse-benchmarks-rs</a> for a full comparison of the crates mentioned here and more.",
+                    "purposes": [
+                        {
+                            "name": "Fully-featured",
+                            "crates": [{
+                                "name": "clap",
+                                "notes": "Ergonomic, supports everything, and is fast at runtime. However compile times can be slow"
+                            }]
+                        },
+                        {
+                            "name": "Minimal",
+                            "crates": [{
+                                "name": "lexopt",
+                                "notes": "Fast compile times, fast runtime, pedantic about correctness. API is less ergonomic"
+                            }, {
+                                "name": "pico-args",
+                                "notes": "Fast compile times, fast runtime, more lax about correctness. API is more ergonomic"
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "slug": "utility",
+                    "name": "Utility",
+                    "description": "Helpers that are often useful when implementing CLIs",
+                    "purposes": [
+                        {
+                            "name": "Globbing",
+                            "crates": [{
+                                "name": "globset",
+                                "notes": "High-performance globbing that allows multiple globs to be evaluated at once"
+                            }]
+                        },
+                        {
+                            "name": "Directory walking",
+                            "crates": [{
+                                "name": "walkdir",
+                                "notes": "Basic recursive filesystem walking."
+                            }, {
+                                "name": "ignore",
+                                "notes": "Recursive filesystem walking that respects ignore files (like .gitignore)"
+                            }]
+                        },
+                        {
+                            "name": "File watching",
+                            "crates": [{
+                                "name": "watchexec",
+                                "notes": "Watch files or directories and execute a function when they change"
                             }]
                         }
                     ]

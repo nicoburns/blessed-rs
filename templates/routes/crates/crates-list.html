@@ -55,11 +55,11 @@
     {% for group in crate_groups %}
     <section data-toc-section id="section-{{ group.slug }}">
       <h3>{{ group.name }}</h3>
-      <p class="group-description">{{ group.description }}</p>
+      <p class="group-description">{{ group.description | safe }}</p>
       {% for subgroup in group.subgroups %}
       <section data-toc-section id="section-{{ group.slug }}-subsection-{{ subgroup.slug }}">
         <h4>{{ subgroup.name }}</h4>
-        <p class="group-description">{{ subgroup.description }}</p>
+        <p class="group-description">{{ subgroup.description | safe }}</p>
         <table class="full-width">
           <thead>
             <tr>
@@ -78,7 +78,7 @@
                   <td><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></td>
                   <!-- <td>0.8.5</td> -->
                   <!-- <td>5 days ago</td> -->
-                  <td class="crate-notes">{{ crate.notes }}</td>
+                  <td class="crate-notes">{{ crate.notes | safe }}</td>
                 </tr>
               {% endfor %}
             </tbody>
