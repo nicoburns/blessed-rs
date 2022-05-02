@@ -72,8 +72,8 @@
                                 "name": "arrayvec",
                                 "notes": "Arrays that are ONLY stack-allocated with fixed capacity"
                             }, {
-                                "name": "arrayvec",
-                                "notes": "Arrays that are ONLY stack-allocated with fixed capacity"
+                                "name": "smallvec",
+                                "notes": "Arrays that are stack-allocated with fallback to the heap if the fixed stack capacity is exceeded"
                             }, {
                                 "name": "tinyvec",
                                 "notes": "Stack allocated arrays in 100% safe Rust code but requires items to implement the Default trait."
