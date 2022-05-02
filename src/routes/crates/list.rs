@@ -5,7 +5,22 @@ use axum::{
 use serde::{Serialize, Deserialize};
 use serde_json;
 use tera::Context;
-use crate::templates::TERA;
+use crate::templates::{ TERA, TocSection, TocSubSection };
+
+fn crates_to_toc(crates: &[CrateGroup]) ->  Vec<TocSection> {
+    return crates.iter().map(|group| {
+        TocSection {
+            name: group.name.clone(),
+            slug: group.slug.clone(),
+            subsections: group.subgroups.iter().map(|subgroup| {
+                TocSubSection {
+                    name: subgroup.name.clone(),
+                    slug: subgroup.slug.clone(),
+                }
+            }).collect()
+        }
+    }).collect()
+}
 
 pub(crate) async fn run() -> impl IntoResponse {
 
@@ -18,6 +33,7 @@ pub(crate) async fn run() -> impl IntoResponse {
     // Render template
     let mut context = Context::new();
     context.insert("crate_groups", &data.crate_groups);
+    context.insert("toc_sections", &crates_to_toc(&data.crate_groups));
     let rendered = TERA.render("routes/crates/crates-list.html", &context);
 
     // Handle template rendering errors

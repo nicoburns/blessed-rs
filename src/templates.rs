@@ -3,6 +3,7 @@ use once_cell::sync::Lazy;
 use fxhash::hash32;
 use std::fs::read_to_string;
 use std::env::current_dir;
+use serde::{ Serialize, Deserialize };
 use serde_json::{ Value,  Number };
 
 pub(crate) static TERA: Lazy<Tera> = Lazy::new(|| {
@@ -29,3 +30,16 @@ pub(crate) static TERA: Lazy<Tera> = Lazy::new(|| {
     // tera.register_filter("do_nothing", do_nothing_filter);
     tera
 });
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub(crate) struct TocSubSection {
+    pub name: String,
+    pub slug: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub(crate) struct TocSection {
+    pub name: String,
+    pub slug: String,
+    pub subsections: Vec<TocSubSection>
+}

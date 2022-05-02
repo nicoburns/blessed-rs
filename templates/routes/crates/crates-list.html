@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/toc.html" as toc %}
 {% block title %}Crate List{% endblock title %}
 
 {% block head %}
@@ -13,27 +14,7 @@
 <div class="hflex">
 
   <!-- Table of contents -->
-  <div id="left-sidebar">
-    <div class="toc">
-      <h3>Sections</h3>
-      <ul>
-        {% for group in crate_groups %}
-          <li data-toc-link="section-{{ group.slug }}">
-            <a href="#section-{{ group.slug }}">{{ group.name }}</a>
-            {% if group.subgroups | length > 0 %}
-              <ul class="subtoc">
-                {% for subgroup in group.subgroups %}
-                  <li data-toc-link="section-{{ group.slug }}-subsection-{{ subgroup.slug }}">
-                    <a href="#section-{{ group.slug }}-subsection-{{ subgroup.slug }}">{{ subgroup.name }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+  {{ toc::left_sidebar(sections=toc_sections) }}
 
   <!-- Main page content -->
   <div id="content">
@@ -92,27 +73,3 @@
 </div>
 
 {% endblock main %}
-
-{% block footer %}
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        if (entry.intersectionRatio > 0) {
-          document.querySelector(`li[data-toc-link="${id}"]`).classList.add('active');
-        } else {
-          document.querySelector(`li[data-toc-link="${id}"]`).classList.remove('active');
-        }
-      });
-    });
-
-    // Track all sections that have an `id` applied
-    document.querySelectorAll('section[data-toc-section]').forEach((section) => {
-      observer.observe(section);
-    });
-    
-  });
-</script>
-{% endblock footer %}
