@@ -2,6 +2,7 @@ use axum::{
     routing::{get, post, get_service},
     Router,
     http::StatusCode,
+    response::Redirect,
 };
 use std::net::{SocketAddr, IpAddr};
 use tower_http::{services::ServeDir, trace::TraceLayer};
@@ -21,7 +22,7 @@ async fn main() {
 
     // build our application with a route
     let app = Router::new()
-        .route("/", get(routes::crates::list::run))
+        .route("/", get(|| async { Redirect::to("/crates") }))
         .route("/users", post(routes::users::create::run))
         .route("/crates", get(routes::crates::list::run))
         .nest("/static", static_file_service)
