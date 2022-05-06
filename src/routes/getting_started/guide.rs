@@ -15,7 +15,7 @@ pub(crate) async fn run() -> impl IntoResponse {
 
     let toc_sections = vec![
         TocSection { name: "Installation".into(), slug: "installation".into(), subsections: vec![
-            TocSubSection { name: "Rustup".into(), slug: "cargo-rustc".into() },
+            TocSubSection { name: "Rust Compiler".into(), slug: "cargo-rustc".into() },
             TocSubSection { name: "Editor Setup".into(), slug: "editor-setup".into() },
             TocSubSection { name: "Cargo Plugins".into(), slug: "cargo-plugins".into() },
         ]},
