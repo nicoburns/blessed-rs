@@ -478,6 +478,7 @@
                         },
                         {
                             "name": "Channels",
+                            "notes": "See <a href=\"https://docs.rs/tokio/latest/tokio/sync/mpsc/index.html#communicating-between-sync-and-async-code\">communicating-between-sync-and-async-code</a> for notes on when to use async-specific channels vs general purpose channels.",
                             "crates": [{
                                 "name": "crossbeam_channel",
                                 "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."

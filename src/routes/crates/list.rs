@@ -58,6 +58,7 @@ struct Crate {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct Purpose {
     name: String,
+    notes: Option<String>,
     crates: Vec<Crate>,
 }
 
