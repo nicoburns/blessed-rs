@@ -45,23 +45,38 @@
           <thead>
             <tr>
               <th width="250">Use Case</th>
-              <th width="100">Recommendation</th>
+              <!-- <th width="100">Recommendation</th> -->
               <!-- <th>Latest Version</th> -->
               <!-- <th>Last Updated</th> -->
-              <th>Notes</th>
+              <!-- <th>Notes</th> -->
+              <th>Recommended Crates</th>
             </tr>
           </thead>
           {% for purpose in subgroup.purposes %}
             <tbody>
-              {% for crate in purpose.crates %}
+              <!--{% for crate in purpose.crates %}
                 <tr>
                   {% if loop.index0 == 0 %}<td rowspan="{{ purpose.crates | length }} ">{{ purpose.name }}</td>{% endif %}
                   <td><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></td>
-                  <!-- <td>0.8.5</td> -->
-                  <!-- <td>5 days ago</td> -->
                   <td class="crate-notes">{{ crate.notes | safe }}</td>
                 </tr>
-              {% endfor %}
+              {% endfor %} -->
+              <tr>
+                <td rowspan="{{ purpose.crates | length }}">{{ purpose.name }}</td>
+                <td>
+                  <!-- <ul> -->
+                  {% if purpose.notes %}
+                    <p style="margin: 3px 6px 6px 6px;font-style: italic;color: #666">{{ purpose.notes | safe }}</p>
+                  {% endif %}
+                  {% for crate in purpose.crates %}
+                      <p style="margin: 3px 6px;max-width: 600px">
+                        <b style="font-size: 14px"><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></b><br />
+                        {{ crate.notes | safe }}
+                      </p>
+                  {% endfor %}
+                  <!-- </ul> -->
+                </td>
+              </tr>
             </tbody>
           {% endfor %}
         </table>
