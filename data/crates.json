@@ -450,7 +450,7 @@
                 {
                     "slug": "data-structures",
                     "name": "Data Structures",
-                    "description": "See <a target=\"_blank\" href=\"https://github.com/xacrimon/conc-map-bench\">conc-map-bench</a> for benchmarks of concurrent HashMaps.",
+                    "description": "",
                     "purposes": [
                         {
                             "name": "Mutex",
@@ -468,6 +468,7 @@
                         },
                         {
                             "name": "Concurrent HashMap",
+                            "notes": "See <a target=\"_blank\" href=\"https://github.com/xacrimon/conc-map-bench\">conc-map-bench</a> for comparative benchmarks of concurrent HashMaps.",
                             "crates": [{
                                 "name": "dashmap",
                                 "notes": "The fastest for general purpose workloads"
@@ -479,13 +480,15 @@
                         {
                             "name": "Channels",
                             "notes": "See <a href=\"https://docs.rs/tokio/latest/tokio/sync/mpsc/index.html#communicating-between-sync-and-async-code\">communicating-between-sync-and-async-code</a> for notes on when to use async-specific channels vs general purpose channels.",
-                            "crates": [{
+                            "crates": [
+                            {
                                 "name": "crossbeam_channel",
                                 "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
                             }, {
                                 "name": "flume",
                                 "notes": "Smaller and simpler than crossbeam_channel and almost as fast"
-                            }, {
+                            },
+                            {
                                 "name": "postage",
                                 "notes": "Channels that integrate nicely with async code"
                             }]
