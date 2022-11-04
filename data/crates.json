@@ -492,6 +492,14 @@
                                 "name": "postage",
                                 "notes": "Channels that integrate nicely with async code"
                             }]
+                        },
+                        {
+                            "name": "Parallel computation",
+                            "crates": [
+                            {
+                                "name": "rayon",
+                                "notes": "Convert sequential computation into parallel computation with one call - `par_iter` instead of `iter`"
+                            }]
                         }
                     ]
                 }
