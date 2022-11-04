@@ -228,6 +228,9 @@
                             }, {
                                 "name": "winapi",
                                 "notes": "Older binding to the windows APIs. Unofficial, but more complete than windows-rs"
+                            }, {
+                                "name": "winsafe",
+                                "notes": "Windows API and GUI in safe, idiomatic Rust"
                             }]
                         }
                     ]
