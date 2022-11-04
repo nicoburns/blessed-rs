@@ -199,8 +199,8 @@
                         {
                             "name": "Memory mapping files",
                             "crates": [{
-                                "name": "memmap",
-                                "notes": ""
+                                "name": "memmap2",
+                                "notes": "The older memmap crate is unmaintained."
                             }]
                         },
                         {
