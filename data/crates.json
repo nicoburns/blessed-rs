@@ -36,7 +36,7 @@
                             "crates": [{
                                 "name": "regex",
                                 "notes": "De facto regex library. Very fast, but does not support fancier features such as backtracking."
-                            }, 
+                            },
                             {
                                 "name": "fancy_regex",
                                 "notes": "Use if need features such as backtracking which regex doesn't support"
@@ -218,6 +218,9 @@
                             }, {
                                 "name": "winapi",
                                 "notes": "Older binding to the windows APIs. Unofficial, but more complete than windows-rs"
+                            }, {
+                                "name": "winsafe",
+                                "notes": "Windows API and GUI in safe, idiomatic Rust"
                             }]
                         }
                     ]
