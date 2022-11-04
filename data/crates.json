@@ -36,7 +36,7 @@
                             "crates": [{
                                 "name": "regex",
                                 "notes": "De facto regex library. Very fast, but does not support fancier features such as backtracking."
-                            }, 
+                            },
                             {
                                 "name": "fancy_regex",
                                 "notes": "Use if need features such as backtracking which regex doesn't support"
@@ -187,6 +187,16 @@
                             "crates": [{
                                 "name": "bitflags",
                                 "notes": "Strongly typed bitflag types"
+                            }]
+                        },
+                        {
+                            "name": "Go-like defer calls",
+                            "crates": [{
+                                "name": "defer",
+                                "notes": "Utility to defer excecution of code, inspired by go's defer statement"
+                            }, {
+                                "name": "defer-lite",
+                                "notes": "A lightweight high-performance implementation of Go's defer statement"
                             }]
                         }
                     ]
