@@ -135,13 +135,13 @@
                             }]
                         },
                         {
-                            "name": "Structed logging",
+                            "name": "Structured logging",
                             "crates": [{
                                 "name": "tracing",
                                 "notes": "Tracing is now the go-to crate for logging."
                             }, {
                                 "name": "slog",
-                                "notes": "Structed logging"
+                                "notes": "Structured logging"
                             }]
                         }
                     ]
