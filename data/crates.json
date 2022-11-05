@@ -475,6 +475,9 @@
                             }, {
                                 "name": "flurry",
                                 "notes": "Particularly good for read-heavy workloads."
+                            }, {
+                                "name": "evmap",
+                                "notes": "Significantly more performant compared to flurry if there is only one writer, does support multiple writers with a mutex.
                             }]
                         },
                         {
@@ -499,6 +502,21 @@
                             {
                                 "name": "rayon",
                                 "notes": "Convert sequential computation into parallel computation with one call - `par_iter` instead of `iter`"
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "slug": "primitives",
+                    "name": "Primitives",
+                    "description": "",
+                    "purposes": [
+                        {
+                            "name": "Mutli reader, single writer",
+                            "crates": [
+                            {
+                                "name": "left-right",
+                                "notes": "A concurrency primitive for high concurrency reads over a single-writer data structure. Used by evmap."
                             }]
                         }
                     ]
