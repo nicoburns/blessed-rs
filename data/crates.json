@@ -512,7 +512,7 @@
                     "description": "",
                     "purposes": [
                         {
-                            "name": "Mutli reader, single writer",
+                            "name": "Concurrent",
                             "crates": [
                             {
                                 "name": "left-right",
