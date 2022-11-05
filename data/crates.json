@@ -477,7 +477,7 @@
                                 "notes": "Particularly good for read-heavy workloads."
                             }, {
                                 "name": "evmap",
-                                "notes": "Significantly more performant compared to flurry if there is only one writer, does support multiple writers with a mutex.
+                                "notes": "Significantly more performant compared to flurry if there is only one writer, does support multiple writers with a mutex."
                             }]
                         },
                         {
