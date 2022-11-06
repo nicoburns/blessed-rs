@@ -213,7 +213,7 @@
                         {
                             "name": "Windows (OS)",
                             "crates": [{
-                                "name": "windows-rs",
+                                "name": "windows",
                                 "notes": "The official Microsoft-provided crate for interacting with windows APIs"
                             }, {
                                 "name": "winapi",
