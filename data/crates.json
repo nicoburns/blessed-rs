@@ -70,7 +70,7 @@
                             "name": "Insertion-ordered map",
                             "crates": [{
                                 "name": "indexmap",
-                                "notes": "A HashMap that seperately keeps track of insertion order and allows you to efficiently iterate over it's elements in that order"
+                                "notes": "A HashMap that seperately keeps track of insertion order and allows you to efficiently iterate over its elements in that order"
                             }]
                         },
                         {
@@ -241,7 +241,7 @@
                                 "notes": "The oldest async runtime in the Rust ecosystem and still the most widely supported. Recommended for new projects."
                             }, {
                                 "name": "async-std",
-                                "notes": "A newer option that is very similar to tokio. It's API more closely mirrors the std library, but it doesn't have as much traction as Tokio."
+                                "notes": "A newer option that is very similar to tokio. Its API more closely mirrors the std library, but it doesn't have as much traction as Tokio."
                             }]
                         },
                         {
