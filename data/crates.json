@@ -256,7 +256,7 @@
                 {
                     "slug": "http-foundations",
                     "name": "HTTP",
-                    "description": "To do async programming using the async-await in Rust you need a runtime to execute drive your Futures.",
+                    "description": "HTTP client and server libraries, as well as lower-level building blocks.",
                     "purposes": [
                         {
                             "name": "Types & Interfaces",
