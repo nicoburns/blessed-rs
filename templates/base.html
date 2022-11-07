@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% block head %}
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Home{% endblock title %} - Blessed.rs</title>
+
         <link rel="stylesheet" href="/static/normalize.css" />
         <link rel="stylesheet" href="/static/index.css?{{ get_index_css_hash() }}" />
         <link rel="stylesheet" href="/static/github-fork-ribbon.css" />
         <style type="text/css">.github-fork-ribbon:before { background-color: #333; }</style>
-        <title>{% block title %}Home{% endblock title %} - Blessed.rs</title>
-        {% endblock head %}
+
+        {% block head %}{% endblock head %}
     </head>
     <body>
         <a class="github-fork-ribbon" href="https://github.com/nicoburns/blessed-rs" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>

@@ -18,6 +18,7 @@ body {
 #left-sidebar {
     width: 200px;
 }
+
 .toc {
     position: sticky;
     top: 24px;
@@ -174,4 +175,16 @@ table tbody:nth-of-type(odd) {
 
 table tbody:nth-of-type(even) {
     background-color: #FFF;
+}
+
+@media screen and (max-width: 800px) {
+  #main-container { margin: 0 12px; }
+  #left-sidebar { display: none; }
+  #content { margin-left: 0; }
+
+  img.logo { height: 70px }
+  h1.page-heading { font-size: 2rem }
+  h2.page-subheading { font-size: 1rem }
+
+  h3 { margin-top: 14px }
 }
