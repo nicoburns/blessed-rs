@@ -154,6 +154,14 @@ table {
     width: 100%;
 }
 
+.fixed-layout {
+    table-layout: fixed;
+}
+
+.use-case-column {
+    width: 250px;
+}
+
 table th {
     padding: 6px 18px 6px 6px;
     border: 1px solid #CCC;
@@ -187,4 +195,5 @@ table tbody:nth-of-type(even) {
   h2.page-subheading { font-size: 1rem }
 
   h3 { margin-top: 14px }
+  .use-case-column { width: 100px; }
 }
