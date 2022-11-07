@@ -14,7 +14,7 @@
                             "name": "Random numbers",
                             "crates": [{
                                 "name": "rand",
-                                "notes": "De facto random number generation library split out from the standard library"
+                                "notes": "De facto standard random number generation library split out from the standard library"
                             }]
                         },
                         {
@@ -28,14 +28,14 @@
                             "name": "Serialization (JSON, YAML, etc)",
                             "crates": [{
                                 "name": "serde",
-                                "notes": "De facto serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using."
+                                "notes": "De facto standard serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using."
                             }]
                         },
                         {
                             "name": "Regular Expressions",
                             "crates": [{
                                 "name": "regex",
-                                "notes": "De facto regex library. Very fast, but does not support fancier features such as backtracking."
+                                "notes": "De facto standard regex library. Very fast, but does not support fancier features such as backtracking."
                             }, 
                             {
                                 "name": "fancy_regex",
