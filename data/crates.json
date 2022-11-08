@@ -26,6 +26,7 @@
                         },
                         {
                             "name": "Serialization (JSON, YAML, etc)",
+                            "notes": "See <a href=\"https://docs.rs/serde/latest/serde/#data-formats\">here</a> for supported formats.",
                             "crates": [{
                                 "name": "serde",
                                 "notes": "De facto standard serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using."
