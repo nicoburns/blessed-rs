@@ -18,10 +18,13 @@
                             }]
                         },
                         {
-                            "name": "UUIDs",
+                            "name": "Time & Date",
                             "crates": [{
-                                "name": "uuid",
-                                "notes": "Implements generating and parsing UUIDs and a number of utility functions"
+                                "name": "time",
+                                "notes": "The original datetime crate which was split out of std pre-rust-1.0. Preferrable if covers your needs, but it's quite limited in what it provides."
+                            }, {
+                                "name": "chrono",
+                                "notes": "The most comphrehensive and full-featured datetime library, but more complex because of it."
                             }]
                         },
                         {
@@ -44,6 +47,13 @@
                             }]
                         },
                         {
+                            "name": "UUIDs",
+                            "crates": [{
+                                "name": "uuid",
+                                "notes": "Implements generating and parsing UUIDs and a number of utility functions"
+                            }]
+                        },
+                        {
                             "name": "Temporary files",
                             "crates": [{
                                 "name": "tempfile",
@@ -55,16 +65,6 @@
                             "crates": [{
                                 "name": "flate2",
                                 "notes": "Uses a pure-Rust implementation by default. Use feature flags to opt in to system zlib."
-                            }]
-                        },
-                        {
-                            "name": "Time & Date",
-                            "crates": [{
-                                "name": "time",
-                                "notes": "The original datetime crate which was split out of std pre-rust-1.0. Preferrable if covers your needs, but it's quite limited in what it provides."
-                            }, {
-                                "name": "chrono",
-                                "notes": "The most comphrehensive and full-featured datetime library, but more complex because of it."
                             }]
                         },
                         {
