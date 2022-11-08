@@ -5,6 +5,7 @@
 
 body {
     font-family: system-ui, Arial, Helvetica, sans-serif;
+    font-family: "fira sans", system-ui, Arial, Helvetica, sans-serif;
     background-color: #FFF;
     color: #333;
 }
