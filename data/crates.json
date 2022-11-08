@@ -12,7 +12,7 @@
                     "purposes": [
                         {
                             "name": "Random numbers",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "rand",
                                 "notes": "De facto standard random number generation library split out from the standard library"
                             }]
@@ -20,7 +20,7 @@
                         {
                             "name": "Time & Date",
                             "notes": "Unfortunately there is no clear answer as to which is best between time and chrono.<br />Evaluate for yourself between these two, but be resassured that both are trusted and well-maintained.",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "time",
                                 "notes": "A smaller, simpler library. Preferrable if covers your needs, but it's quite limited in what it provides."
                             }, {
@@ -31,14 +31,14 @@
                         {
                             "name": "Serialization (JSON, YAML, etc)",
                             "notes": "See <a href=\"https://docs.rs/serde/latest/serde/#data-formats\">here</a> for supported formats.",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "serde",
                                 "notes": "De facto standard serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using."
                             }]
                         },
                         {
                             "name": "Regular Expressions",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "regex",
                                 "notes": "De facto standard regex library. Very fast, but does not support fancier features such as backtracking."
                             }, 
@@ -49,35 +49,35 @@
                         },
                         {
                             "name": "UUIDs",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "uuid",
                                 "notes": "Implements generating and parsing UUIDs and a number of utility functions"
                             }]
                         },
                         {
                             "name": "Temporary files",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "tempfile",
                                 "notes": "Supports both temporary files and temporary directories"
                             }]
                         },
                         {
                             "name": "Gzip (de)compression",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "flate2",
                                 "notes": "Uses a pure-Rust implementation by default. Use feature flags to opt in to system zlib."
                             }]
                         },
                         {
                             "name": "Insertion-ordered map",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "indexmap",
                                 "notes": "A HashMap that seperately keeps track of insertion order and allows you to efficiently iterate over its elements in that order"
                             }]
                         },
                         {
                             "name": "Stack-allocated arrays",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "arrayvec",
                                 "notes": "Arrays that are ONLY stack-allocated with fixed capacity"
                             }, {
@@ -90,7 +90,7 @@
                         },
                         {
                             "name": "HTTP Requests",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "reqwest",
                                 "notes": "Full-fat HTTP client. Can be used in both synchronous and asynchronous code. Requires tokio runtime."
                             }, {
@@ -107,7 +107,7 @@
                     "purposes": [
                         {
                             "name": "For applications",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "anyhow",
                                 "notes": "Provides a boxed error type that can hold any error, and helpers for generating an application-level stack trace."
                             }, {
@@ -117,7 +117,7 @@
                         },
                         {
                             "name": "For libraries",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "thiserror",
                                 "notes": "Helps with generating boilerplate for enum-style error types."
                             }]
@@ -131,7 +131,7 @@
                     "purposes": [
                         {
                             "name": "Text-based logging",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "tracing",
                                 "notes": "Tracing is now the go-to crate for logging."
                             }, {
@@ -141,7 +141,7 @@
                         },
                         {
                             "name": "Structured logging",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "tracing",
                                 "notes": "Tracing is now the go-to crate for logging."
                             }, {
@@ -158,7 +158,7 @@
                     "purposes": [
                         {
                             "name": "Lazy static variable initialization",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "once_cell",
                                 "notes": "Newer crate with more ergonomic API. On track to be incorporated into the standard library. Should be preferred for all new projects."
                             }, {
@@ -168,14 +168,14 @@
                         },
                         {
                             "name": "Iterator helpers",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "itertools",
                                 "notes": "A bunch of useful methods on iterators that aren't in the stdlib"
                             }]
                         },
                         {
                             "name": "Macro helpers",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "syn",
                                 "notes": "Parse rust source code"
                             }, {
@@ -188,27 +188,27 @@
                         },
                         {
                             "name": "Abstracting over different number types",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "num",
                                 "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
                             }]
                         },
                         {
                             "name": "Endian conversion",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "byteorder",
                                 "notes": "Utility functions to convert between different endianness or read/write data with a specific endianness"
                             }]
                         },
                         {
                             "name": "Safe type casts",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "bytemuck"
                             }]
                         },
                         {
                             "name": "Bitflags",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "bitflags",
                                 "notes": "Strongly typed bitflag types"
                             }]
@@ -222,21 +222,21 @@
                     "purposes": [
                         {
                             "name": "Memory mapping files",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "memmap2",
                                 "notes": "The older memmap crate is unmaintained."
                             }]
                         },
                         {
                             "name": "Libc",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "libc",
                                 "notes": "Bindings for directly calling libc functions."
                             }]
                         },
                         {
                             "name": "Windows (OS)",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "windows",
                                 "notes": "The official Microsoft-provided crate for interacting with windows APIs"
                             }, {
@@ -257,7 +257,7 @@
                 {
                     "name": "Password Hashing",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/password-hashes#rustcrypto-password-hashes\">Rust Crypto Password Hashes</a>.",
-                    "crates": [
+                    "recommendations": [
                         { "name": "argon2" },
                         { "name": "scrypt" },
                         { "name": "bcrypt" }
@@ -266,7 +266,7 @@
                 {
                     "name": "General Purpose Hashing",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/hashes#rustcrypto-hashes\">Rust Crypto Hashes</a>.",
-                    "crates": [
+                    "recommendations": [
                         { "name": "sha2" },
                         { "name": "sha1" },
                         { "name": "md-5" }
@@ -275,7 +275,7 @@
                 {
                     "name": "AEAD Encryption",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/AEADs#rustcrypto-authenticated-encryption-with-associated-data-aead-algorithms\">Rust Crypto AEADs</a>.",
-                    "crates": [
+                    "recommendations": [
                         { "name": "aes-gcm-siv" },
                         { "name": "aes-gcm" },
                         { "name": "chacha20poly1305" }
@@ -283,14 +283,14 @@
                 },
                 {
                     "name": "RSA",
-                    "crates": [
+                    "recommendations": [
                         { "name": "rsa" }
                     ]
                 },
                 {
                     "name": "Digital Signatures",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/signatures#rustcrypto-signatures--\">Rust Crypto Signatures</a>.",
-                    "crates": [
+                    "recommendations": [
                         { "name": "ed25519", "notes": "Use in conjunction with the ed25519-dalek crate." },
                         { "name": "ecdsa" },
                         { "name": "dsa" }
@@ -299,7 +299,7 @@
                 {
                     "name": "Certificate Formats",
                     "notes": "For more formats, see <a href=\"https://github.com/RustCrypto/formats#rustcrypto-formats--\">Rust Crypto Formats</a>.",
-                    "crates": [
+                    "recommendations": [
                         { "name": "der" },
                         { "name": "pem‑rfc7468" },
                         { "name": "pkcs8" },
@@ -308,7 +308,7 @@
                 },
                 {
                     "name": "TLS / SSL",
-                    "crates": [{
+                    "recommendations": [{
                         "name": "rustls",
                         "notes": "A portable pure-rust high-level implementation of TLS. Implements TLS 1.2 and higher."
                     }, {
@@ -324,7 +324,7 @@
                 },
                 {
                     "name": "Utilities",
-                    "crates": [{
+                    "recommendations": [{
                         "name": "subtle",
                         "notes": "Utilities for writing constant-time algorithms"
                     },
@@ -348,7 +348,7 @@
                     "purposes": [
                         {
                             "name": "General purpose",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "tokio",
                                 "notes": "The oldest async runtime in the Rust ecosystem and still the most widely supported. Recommended for new projects."
                             }, {
@@ -358,7 +358,7 @@
                         },
                         {
                             "name": "io_uring",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "glommio",
                                 "notes": "Use if you need io_uring support. Still somewhat experimental but rapidly maturing."
                             }]
@@ -372,42 +372,44 @@
                     "purposes": [
                         {
                             "name": "Types & Interfaces",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "http",
                                 "notes": "The `http` crate doesn't actually contain an HTTP implementation. Just types and interfaces to help interoperability."
                             }]
                         },
                         {
                             "name": "Low-level HTTP Implementation",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "hyper",
                                 "notes": "A low-level HTTP implementation (both client and server). Implements HTTP 1, 2, and 3. Requires the tokio async runtime."
                             }]
                         },
                         {
                             "name": "HTTP Client",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "reqwest",
                                 "notes": "Full-fat HTTP client. Can be used in both synchronous and asynchronous code. Requires tokio runtime."
-                            },{
-                                "name": "surf",
-                                "notes": "Client that uses the async-std runtime rather than the tokio runtime."
                             }, {
                                 "name": "ureq",
                                 "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
+                            }],
+                            "see_also": [{
+                                "name": "surf",
+                                "notes": "Client that uses the async-std runtime rather than the tokio runtime. Not well maintained."
                             }]
                         },
                         {
                             "name": "HTTP Server",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "axum",
                                 "notes": "A minimal and ergonomic framework. An official part of the tokio project. Recommend for most new projects."
                             }, {
-                                "name": "tide",
-                                "notes": "Similar to Axum, but based on async-std rather than tokio"
-                            }, {
                                 "name": "actix-web",
                                 "notes": "A performance focussed framework. All Rust frameworks are fast, but choose actix-web if you need the absolutely maximum performance."
+                            }],
+                            "see_also": [{
+                                "name": "rocket",
+                                "notes": "Focussed on ergonomics. This is a solid framework, however development has stalled. Avoid for new projects."
                             }, {
                                 "name": "poem",
                                 "notes": "Automatically generates OpenAPI defintions."
@@ -415,13 +417,13 @@
                                 "name": "warp",
                                 "notes": "Very similar to axum but with a quirkier API. This is a solid framework, but you should probably prefer Axum unless you particular like the API"
                             }, {
-                                "name": "rocket",
-                                "notes": "Focussed on ergonomics. This is a solid framework, however development has stalled. Avoid for new projects."
+                                "name": "tide",
+                                "notes": "Similar to Axum, but based on async-std rather than tokio"
                             }]
                         },
                         {
                             "name": "GraphQL Server",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "async-graphql",
                                 "notes": "A high-performance graphql server library that's fully specification compliant. Integrates with actix-web, axum, poem, rocket, tide, warp."
                             }]
@@ -435,14 +437,14 @@
                     "purposes": [
                         {
                             "name": "Low-level",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "tungstenite-rs",
                                 "notes": "Low-level crate that others build on"
                             }]
                         },
                         {
                             "name": "General Purpose",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "tokio-tungstenite",
                                 "notes": "If you are using the tokio executor"
                             }, {
@@ -458,7 +460,7 @@
                     "purposes": [
                         {
                             "name": "General Purpose",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "tonic",
                                 "notes": "gRPC over HTTP/2 with full support for asynchronous code. Works with tokio"
                             }]
@@ -477,14 +479,14 @@
                     "purposes": [
                         {
                             "name": "Multi Database",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "sqlx",
                                 "notes": "Works with Postgres, MySQL, SQLite, and MS SQL.<br />Supports compile time checking of queries. Async: supports both tokio and async-std."
                             }]
                         },
                         {
                             "name": "ORMs",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "sea-orm",
                                 "notes": "Recommended. Built on top of sqlx. There is also a related sea-query crate that provides a query builder without full ORM functionality."
                             }, {
@@ -494,7 +496,7 @@
                         },
                         {
                             "name": "Postgres",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "sqlx"
                             }, {
                                 "name": "tokio-postgres",
@@ -503,7 +505,7 @@
                         },
                         {
                             "name": "MySQL",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "sqlx"
                             }, {
                                 "name": "mysql_async",
@@ -512,7 +514,7 @@
                         },
                         {
                             "name": "SQLite",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "sqlx"
                             }, {
                                 "name": "rustqlite",
@@ -521,7 +523,7 @@
                         },
                         {
                             "name": "MS SQL",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "sqlx"
                             }, {
                                 "name": "tiberius",
@@ -530,7 +532,7 @@
                         },
                         {
                             "name": "Oracle",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "oracle",
                                 "notes": "Rust bindings to ODPI-C"
                             }]
@@ -543,13 +545,13 @@
                     "purposes": [
                         {
                             "name": "Redis",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "redis"
                             }]
                         },
                         {
                             "name": "MongoDB",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "mongodb"
                             }]
                         }
@@ -568,14 +570,14 @@
                     "purposes": [
                         {
                             "name": "Fully-featured",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "clap",
                                 "notes": "Ergonomic, supports everything, and is fast at runtime. However compile times can be slow"
                             }]
                         },
                         {
                             "name": "Minimal",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "lexopt",
                                 "notes": "Fast compile times, fast runtime, pedantic about correctness. API is less ergonomic"
                             }, {
@@ -592,14 +594,14 @@
                     "purposes": [
                         {
                             "name": "Globbing",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "globset",
                                 "notes": "High-performance globbing that allows multiple globs to be evaluated at once"
                             }]
                         },
                         {
                             "name": "Directory walking",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "walkdir",
                                 "notes": "Basic recursive filesystem walking."
                             }, {
@@ -609,14 +611,14 @@
                         },
                         {
                             "name": "Filesystem helpers",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "fs_extra",
                                 "notes": "Recursively move, copy, and delete the files in a directory"
                             }]
                         },
                         {
                             "name": "File watching",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "notify",
                                 "notes": "Watch files or directories and execute a function when they change"
                             }]
@@ -630,21 +632,21 @@
                     "purposes": [
                         {
                             "name": "Coloured Output",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "termcolor",
                                 "notes": "Cross-platform terminal colour output"
                             }]
                         },
                         {
                             "name": "Progress indicators",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "indicatif",
                                 "notes": "Progress bars and spinners"
                             }]
                         },
                         {
                             "name": "Full TUI library",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "crossterm",
                                 "notes": "Cross-platform terminal rendering and event handling"
                             }]
@@ -663,14 +665,14 @@
                     "purposes": [
                         {
                             "name": "Mutex",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "parking_lot",
                                 "notes": "std::mutex also works fine. But Parking Lot is faster."
                             }]
                         },
                         {
                             "name": "Atomic pointer swapping",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "arc_swap",
                                 "notes": "Useful for sharing data that has many readers but few writers"
                             }]
@@ -678,7 +680,7 @@
                         {
                             "name": "Concurrent HashMap",
                             "notes": "See <a target=\"_blank\" href=\"https://github.com/xacrimon/conc-map-bench\">conc-map-bench</a> for comparative benchmarks of concurrent HashMaps.",
-                            "crates": [{
+                            "recommendations": [{
                                 "name": "dashmap",
                                 "notes": "The fastest for general purpose workloads"
                             }, {
@@ -689,7 +691,7 @@
                         {
                             "name": "Channels",
                             "notes": "See <a href=\"https://docs.rs/tokio/latest/tokio/sync/mpsc/index.html#communicating-between-sync-and-async-code\">communicating-between-sync-and-async-code</a> for notes on when to use async-specific channels vs general purpose channels.",
-                            "crates": [
+                            "recommendations": [
                             {
                                 "name": "crossbeam_channel",
                                 "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
@@ -704,7 +706,7 @@
                         },
                         {
                             "name": "Parallel computation",
-                            "crates": [
+                            "recommendations": [
                             {
                                 "name": "rayon",
                                 "notes": "Convert sequential computation into parallel computation with one call - `par_iter` instead of `iter`"
