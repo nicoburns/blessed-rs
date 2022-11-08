@@ -415,6 +415,13 @@
                                 "name": "rocket",
                                 "notes": "Focussed on ergonomics. This is a solid framework, however development has stalled. Avoid for new projects."
                             }]
+                        },
+                        {
+                            "name": "GraphQL Server",
+                            "crates": [{
+                                "name": "async-graphql",
+                                "notes": "A high-performance graphql server library that's fully specification compliant. Integrates with actix-web, axum, poem, rocket, tide, warp."
+                            }]
                         }
                     ]
                 },
