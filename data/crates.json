@@ -314,12 +314,13 @@
                     }, {
                         "name": "native-tls",
                         "notes": "Delegates to the system TLS implementations on windows and macOS, and uses OpenSSL on linux."
-                    }, {
+                    }],
+                    "see_also": [{
                         "name": "webpki",
                         "notes": "X.509 Certificate validation. Builds on top of ring."
                     }, {
                         "name": "ring",
-                        "notes": "Fork of BoringSSL. Provides cryptographic primitives for TLS/SSL"
+                        "notes": "Fork of BoringSSL. Provides low-level cryptographic primitives for TLS/SSL"
                     }]
                 },
                 {
