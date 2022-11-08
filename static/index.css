@@ -104,11 +104,11 @@ h2.page-subheading {
 }
 
 p.introduction {
-    color: #666;
+    color: #494949;
 }
 
 p, li {
-    color: #333;
+    color: #000;
     line-height: 1.35;
 }
 
@@ -138,7 +138,7 @@ h4 {
     margin-top: 0;
 }
 p.group-description {
-    color: #666;
+    color: #494949;
     margin-top: 0;
 }
 
@@ -169,7 +169,7 @@ table th {
     text-align: left;
     font-size: 0.8em;
     white-space: nowrap;
-    color: #333;
+    color: #000;
 }
 
 table td {
