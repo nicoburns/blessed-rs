@@ -170,6 +170,19 @@
                             }]
                         },
                         {
+                            "name": "Macro helpers",
+                            "crates": [{
+                                "name": "syn",
+                                "notes": "Parse rust source code"
+                            }, {
+                                "name": "quote",
+                                "notes": "Quasi quoting rust (useful for interpolating generated code with literal code)"
+                            }, {
+                                "name": "paste",
+                                "notes": "Concatenating and manipulating identifiers"
+                            }]
+                        },
+                        {
                             "name": "Abstracting over different number types",
                             "crates": [{
                                 "name": "num",
