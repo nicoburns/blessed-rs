@@ -19,9 +19,10 @@
                         },
                         {
                             "name": "Time & Date",
+                            "notes": "Unfortunately there is no clear answer as to which is best between time and chrono.<br />Evaluate for yourself between these two, but be resassured that both are trusted and well-maintained.",
                             "crates": [{
                                 "name": "time",
-                                "notes": "The original datetime crate which was split out of std pre-rust-1.0. Preferrable if covers your needs, but it's quite limited in what it provides."
+                                "notes": "A smaller, simpler library. Preferrable if covers your needs, but it's quite limited in what it provides."
                             }, {
                                 "name": "chrono",
                                 "notes": "The most comphrehensive and full-featured datetime library, but more complex because of it."
