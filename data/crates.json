@@ -470,6 +470,105 @@
             ]
         },
         {
+            "slug": "databases",
+            "name": "Databases",
+            "description": "",
+            "subgroups": [
+                {
+                    "slug": "sql-databases",
+                    "name": "SQL Databases",
+                    "description": "",
+                    "purposes": [
+                        {
+                            "name": "Multi Database",
+                            "crates": [{
+                                "name": "sqlx",
+                                "notes": "Works with Postgres, MySQL, SQLite, and MS SQL.<br />Supports compile time checking of queries. Async: supports both tokio and async-std."
+                            }]
+                        },
+                        {
+                            "name": "ORMs",
+                            "crates": [{
+                                "name": "sea-orm",
+                                "notes": "Recommended. Built on top of sqlx. There is also a related sea-query crate that provides a query builder without full ORM functionality."
+                            }, {
+                                "name": "diesel",
+                                "notes": "Stable release is sync only. Pre-release async branch is currently AGPL. Can provide better performance in some circumstances."
+                            }]
+                        },
+                        {
+                            "name": "Postgres",
+                            "crates": [{
+                                "name": "sqlx",
+                                "notes": ""
+                            }, {
+                                "name": "tokio-postgres",
+                                "notes": "Postgres-specific library. Performs better than SQLx"
+                            }]
+                        },
+                        {
+                            "name": "MySQL",
+                            "crates": [{
+                                "name": "sqlx",
+                                "notes": ""
+                            }, {
+                                "name": "mysql_async",
+                                "notes": "Has a poorly designed API. Prefer SQLx for MySQL"
+                            }]
+                        },
+                        {
+                            "name": "SQLite",
+                            "crates": [{
+                                "name": "sqlx",
+                                "notes": ""
+                            }, {
+                                "name": "rustqlite",
+                                "notes": "Provides a sync API to SQLite + provides access to advanced sqlite features."
+                            }]
+                        },
+                        {
+                            "name": "MS SQL",
+                            "crates": [{
+                                "name": "sqlx",
+                                "notes": ""
+                            }, {
+                                "name": "tiberius",
+                                "notes": "MS SQL specific library. Has better support for advanced column types than SQLx."
+                            }]
+                        },
+                        {
+                            "name": "Oracle",
+                            "crates": [{
+                                "name": "oracle",
+                                "notes": "Rust bindings to ODPI-C"
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "slug": "other-databases",
+                    "name": "Other Databases",
+                    "description": "",
+                    "purposes": [
+                        {
+                            "name": "Redis",
+                            "crates": [{
+                                "name": "redis",
+                                "notes": ""
+                            }]
+                        },
+                        {
+                            "name": "MongoDB",
+                            "crates": [{
+                                "name": "mongodb",
+                                "notes": ""
+                            }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "slug": "cli-tools",
             "name": "CLIs",
             "description": "",
