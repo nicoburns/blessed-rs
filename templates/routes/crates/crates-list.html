@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% import "macros/toc.html" as toc %}
+{% import "macros/crate_table.html" as crate_table %}
 {% block title %}Crate List{% endblock title %}
 
 {% block head %}
@@ -37,50 +38,17 @@
     <section data-toc-section id="section-{{ group.slug }}">
       <h3>{{ group.name }}</h3>
       <p class="group-description">{{ group.description | safe }}</p>
+
+      {% if group.purposes %}
+        {{ crate_table::crate_table(purposes=group.purposes) }}
+      {% endif %}
+
       {% for subgroup in group.subgroups %}
-      <section data-toc-section id="section-{{ group.slug }}-subsection-{{ subgroup.slug }}">
-        <h4>{{ subgroup.name }}</h4>
-        <p class="group-description">{{ subgroup.description | safe }}</p>
-        <table class="full-width fixed-layout">
-          <thead>
-            <tr>
-              <th class="use-case-column">Use Case</th>
-              <!-- <th width="100">Recommendation</th> -->
-              <!-- <th>Latest Version</th> -->
-              <!-- <th>Last Updated</th> -->
-              <!-- <th>Notes</th> -->
-              <th>Recommended Crates</th>
-            </tr>
-          </thead>
-          {% for purpose in subgroup.purposes %}
-            <tbody>
-              <!--{% for crate in purpose.crates %}
-                <tr>
-                  {% if loop.index0 == 0 %}<td rowspan="{{ purpose.crates | length }} ">{{ purpose.name }}</td>{% endif %}
-                  <td><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></td>
-                  <td class="crate-notes">{{ crate.notes | safe }}</td>
-                </tr>
-              {% endfor %} -->
-              <tr>
-                <td>{{ purpose.name }}</td>
-                <td>
-                  <!-- <ul> -->
-                  {% if purpose.notes %}
-                    <p style="margin: 3px 6px 6px 6px;font-style: italic;color: #666">{{ purpose.notes | safe }}</p>
-                  {% endif %}
-                  {% for crate in purpose.crates %}
-                      <p style="margin: 3px 6px;max-width: 600px">
-                        <b style="font-size: 14px"><a href="https://docs.rs/{{ crate.name }}">{{ crate.name }}</a></b><br />
-                        {{ crate.notes | safe }}
-                      </p>
-                  {% endfor %}
-                  <!-- </ul> -->
-                </td>
-              </tr>
-            </tbody>
-          {% endfor %}
-        </table>
-      </section>
+        <section data-toc-section id="section-{{ group.slug }}-subsection-{{ subgroup.slug }}">
+          <h4>{{ subgroup.name }}</h4>
+          <p class="group-description">{{ subgroup.description | safe }}</p>
+          {{ crate_table::crate_table(purposes=subgroup.purposes) }}
+        </section>
       {% endfor %}
     </section>
     {% endfor %}

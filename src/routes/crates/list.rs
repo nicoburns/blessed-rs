@@ -53,6 +53,7 @@ pub(crate) async fn run() -> impl IntoResponse {
 struct Crate {
     name: String,
     notes: String,
+    link: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -76,6 +77,7 @@ struct CrateGroup {
     name: String,
     description: String,
     subgroups: Vec<CrateSubGroup>,
+    purposes: Option<Vec<Purpose>>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

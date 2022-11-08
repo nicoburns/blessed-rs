@@ -225,6 +225,94 @@
             ]
         },
         {
+            "slug": "cryptography",
+            "name": "Cryptography",
+            "description": "Crates that provide implementations of cryptographic algorithms. This section attempts to list the best crates for the listed algorithms, but does not intend to make recommendations for the algorithms themselves.<br />",
+            "subgroups": [],
+            "purposes": [
+                {
+                    "name": "Password Hashing",
+                    "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/password-hashes#rustcrypto-password-hashes\">Rust Crypto Password Hashes</a>.",
+                    "crates": [
+                        { "name": "argon2", "notes": "" },
+                        { "name": "scrypt", "notes": "" },
+                        { "name": "bcrypt", "notes": "" }
+                    ]
+                },
+                {
+                    "name": "General Purpose Hashing",
+                    "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/hashes#rustcrypto-hashes\">Rust Crypto Hashes</a>.",
+                    "crates": [
+                        { "name": "sha2", "notes": "" },
+                        { "name": "sha1", "notes": "" },
+                        { "name": "md-5", "notes": "" }
+                    ]
+                },
+                {
+                    "name": "AEAD Encryption",
+                    "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/AEADs#rustcrypto-authenticated-encryption-with-associated-data-aead-algorithms\">Rust Crypto AEADs</a>.",
+                    "crates": [
+                        { "name": "aes-gcm-siv", "notes": "" },
+                        { "name": "aes-gcm", "notes": "" },
+                        { "name": "chacha20poly1305", "notes": "" }
+                    ]
+                },
+                {
+                    "name": "RSA",
+                    "crates": [
+                        { "name": "rsa", "notes": "" }
+                    ]
+                },
+                {
+                    "name": "Digital Signatures",
+                    "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/signatures#rustcrypto-signatures--\">Rust Crypto Signatures</a>.",
+                    "crates": [
+                        { "name": "ed25519", "notes": "Use in conjunction with the ed25519-dalek crate." },
+                        { "name": "ecdsa", "notes": "" },
+                        { "name": "dsa", "notes": "" }
+                    ]
+                },
+                {
+                    "name": "Certificate Formats",
+                    "notes": "For more formats, see <a href=\"https://github.com/RustCrypto/formats#rustcrypto-formats--\">Rust Crypto Formats</a>.",
+                    "crates": [
+                        { "name": "der", "notes": "" },
+                        { "name": "pem‑rfc7468 ", "notes": "" },
+                        { "name": "pkcs8", "notes": "" },
+                        { "name": "x509-cert", "notes": "" }
+                    ]
+                },
+                {
+                    "name": "TLS / SSL",
+                    "crates": [{
+                        "name": "rustls",
+                        "notes": "A portable pure-rust high-level implementation of TLS. Implements TLS 1.2 and higher."
+                    }, {
+                        "name": "rust-native-tls",
+                        "notes": "Delegates to the system TLS implementations on windows and macOS, and uses OpenSSL on linux."
+                    }, {
+                        "name": "webpki",
+                        "notes": "X.509 Certificate validation. Builds on top of ring."
+                    }, {
+                        "name": "ring",
+                        "notes": "Fork of BoringSSL. Provides cryptographic primitives for TLS/SSL"
+                    }]
+                },
+                {
+                    "name": "Utilities",
+                    "crates": [{
+                        "name": "subtle",
+                        "notes": "Utilities for writing constant-time algorithms"
+                    },
+                    {
+                        "name": "zeroize",
+                        "notes": "Securely erase memory"
+                    }]
+                }
+            ]
+        },
+
+        {
             "slug": "networking",
             "name": "Networking",
             "description": "TCP, HTTP, GRPc, etc. And the executors required to do asynchronous networking.",
@@ -270,16 +358,6 @@
                             "crates": [{
                                 "name": "hyper",
                                 "notes": "A low-level HTTP implementation (both client and server). Implements HTTP 1, 2, and 3. Requires the tokio async runtime."
-                            }]
-                        },
-                        {
-                            "name": "TLS / SSL",
-                            "crates": [{
-                                "name": "rustls",
-                                "notes": "A portable pure-rust implementation of TLS"
-                            }, {
-                                "name": "rust-native-tls",
-                                "notes": "Delegates to the system TLS implementations on windows and macOS, and uses OpenSSL on linux."
                             }]
                         },
                         {
