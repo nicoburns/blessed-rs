@@ -197,6 +197,13 @@
                             }]
                         },
                         {
+                            "name": "Safe type casts",
+                            "crates": [{
+                                "name": "bytemuck",
+                                "notes": ""
+                            }]
+                        },
+                        {
                             "name": "Bitflags",
                             "crates": [{
                                 "name": "bitflags",
