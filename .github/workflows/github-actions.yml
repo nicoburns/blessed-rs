@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -28,7 +28,7 @@ jobs:
       needs: build
       steps:
         - name: Checkout repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v3
         - name: Download binary artifact
           uses: actions/download-artifact@v3
           with:
