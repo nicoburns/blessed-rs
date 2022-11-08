@@ -409,7 +409,7 @@
                             }],
                             "see_also": [{
                                 "name": "rocket",
-                                "notes": "Focussed on ergonomics. This is a solid framework, however development has stalled. Avoid for new projects."
+                                "notes": "Has an excellent API and a solid implementation. However development has been intermittent, and the async branch still doesn't have a stable release. Use of rocket is not recommended until this has fixed."
                             }, {
                                 "name": "poem",
                                 "notes": "Automatically generates OpenAPI defintions."
