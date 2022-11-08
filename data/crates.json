@@ -416,7 +416,7 @@
                                 "notes": "Automatically generates OpenAPI defintions."
                             }, {
                                 "name": "warp",
-                                "notes": "Very similar to axum but with a quirkier API. This is a solid framework, but you should probably prefer Axum unless you particular like the API"
+                                "notes": "Very similar to axum but with a quirkier API. This is a solid framework, but you should probably prefer Axum unless you particularly like the API"
                             }, {
                                 "name": "tide",
                                 "notes": "Similar to Axum, but based on async-std rather than tokio"
