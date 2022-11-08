@@ -382,7 +382,7 @@
                             "name": "Low-level HTTP Implementation",
                             "recommendations": [{
                                 "name": "hyper",
-                                "notes": "A low-level HTTP implementation (both client and server). Implements HTTP 1, 2, and 3. Requires the tokio async runtime."
+                                "notes": "A low-level HTTP implementation (both client and server). Implements HTTP 1, 2, and 3. Works best with the tokio async runtime, but can support other runtimes."
                             }]
                         },
                         {
