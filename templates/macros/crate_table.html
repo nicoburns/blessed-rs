@@ -28,7 +28,10 @@
           {% endif %}
           {% for crate in purpose.crates %}
               <p style="margin: 3px 6px;max-width: 600px">
-                <b style="font-size: 14px"><a href="{% if crate.link %}{{ crate.link }}{% else %}https://docs.rs/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b><br />
+                <b><a href="{% if crate.link %}{{ crate.link }}{% else %}https://lib.rs/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b>{% if not crate.link %}
+                  <a style="color: #666;text-decoration: none" href="https://docs.rs/{{ crate.name }}"> [docs]</a>
+                {% endif %}
+                <br />
                 {{ crate.notes | safe }}
               </p>
           {% endfor %}
