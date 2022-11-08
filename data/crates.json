@@ -491,7 +491,7 @@
                         {
                             "name": "File watching",
                             "crates": [{
-                                "name": "watchexec",
+                                "name": "notify",
                                 "notes": "Watch files or directories and execute a function when they change"
                             }]
                         }
