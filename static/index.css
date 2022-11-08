@@ -22,7 +22,9 @@ body {
 
 .toc {
     position: sticky;
+    overflow-y: auto;
     top: 24px;
+    max-height: calc(100vh - 24px);
 }
 .toc ul {
     list-style: none;
