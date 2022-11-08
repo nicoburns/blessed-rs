@@ -510,6 +510,13 @@
                             }]
                         },
                         {
+                            "name": "Filesystem helpers",
+                            "crates": [{
+                                "name": "fs_extra",
+                                "notes": "Recursively move, copy, and delete the files in a directory"
+                            }]
+                        },
+                        {
                             "name": "File watching",
                             "crates": [{
                                 "name": "notify",
@@ -528,6 +535,13 @@
                             "crates": [{
                                 "name": "termcolor",
                                 "notes": "Cross-platform terminal colour output"
+                            }]
+                        },
+                        {
+                            "name": "Progress indicators",
+                            "crates": [{
+                                "name": "indicatif",
+                                "notes": "Progress bars and spinners"
                             }]
                         },
                         {
