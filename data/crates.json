@@ -572,11 +572,12 @@
                         {
                             "name": "Fully-featured",
                             "recommendations": [{
-                                "name": "bpaf",
-                                "notes": "Generally recommended. Featureful, ergonomic and faster to compile than clap."
-                            }, {
                                 "name": "clap",
-                                "notes": "Ergonomic, includes the kitchen sink, and is fast at runtime. However compile times can be slow"
+                                "notes": "Ergonomic, battle-tested, includes the kitchen sink, and is fast at runtime. However compile times can be slow"
+                            }],
+                            "see_also": [{
+                                "name": "bpaf",
+                                "notes": "Fast compile times than clap while still being featureful. But still has some rough edges, and the API can be confusing at times."
                             }]
                         },
                         {
