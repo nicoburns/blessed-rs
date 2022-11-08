@@ -37,7 +37,7 @@
     {% for group in crate_groups %}
     <section data-toc-section id="section-{{ group.slug }}">
       <h3>{{ group.name }}</h3>
-      <p class="group-description">{{ group.description | safe }}</p>
+      <p class="group-description">{% if group.description %}{{ group.description | safe }}{% endif %}</p>
 
       {% if group.purposes %}
         {{ crate_table::crate_table(purposes=group.purposes) }}
@@ -46,7 +46,7 @@
       {% for subgroup in group.subgroups %}
         <section data-toc-section id="section-{{ group.slug }}-subsection-{{ subgroup.slug }}">
           <h4>{{ subgroup.name }}</h4>
-          <p class="group-description">{{ subgroup.description | safe }}</p>
+          <p class="group-description">{% if subgroup.description %}{{ subgroup.description | safe }}{% endif %}</p>
           {{ crate_table::crate_table(purposes=subgroup.purposes) }}
         </section>
       {% endfor %}

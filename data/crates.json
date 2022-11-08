@@ -203,8 +203,7 @@
                         {
                             "name": "Safe type casts",
                             "crates": [{
-                                "name": "bytemuck",
-                                "notes": ""
+                                "name": "bytemuck"
                             }]
                         },
                         {
@@ -259,33 +258,33 @@
                     "name": "Password Hashing",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/password-hashes#rustcrypto-password-hashes\">Rust Crypto Password Hashes</a>.",
                     "crates": [
-                        { "name": "argon2", "notes": "" },
-                        { "name": "scrypt", "notes": "" },
-                        { "name": "bcrypt", "notes": "" }
+                        { "name": "argon2" },
+                        { "name": "scrypt" },
+                        { "name": "bcrypt" }
                     ]
                 },
                 {
                     "name": "General Purpose Hashing",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/hashes#rustcrypto-hashes\">Rust Crypto Hashes</a>.",
                     "crates": [
-                        { "name": "sha2", "notes": "" },
-                        { "name": "sha1", "notes": "" },
-                        { "name": "md-5", "notes": "" }
+                        { "name": "sha2" },
+                        { "name": "sha1" },
+                        { "name": "md-5" }
                     ]
                 },
                 {
                     "name": "AEAD Encryption",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/AEADs#rustcrypto-authenticated-encryption-with-associated-data-aead-algorithms\">Rust Crypto AEADs</a>.",
                     "crates": [
-                        { "name": "aes-gcm-siv", "notes": "" },
-                        { "name": "aes-gcm", "notes": "" },
-                        { "name": "chacha20poly1305", "notes": "" }
+                        { "name": "aes-gcm-siv" },
+                        { "name": "aes-gcm" },
+                        { "name": "chacha20poly1305" }
                     ]
                 },
                 {
                     "name": "RSA",
                     "crates": [
-                        { "name": "rsa", "notes": "" }
+                        { "name": "rsa" }
                     ]
                 },
                 {
@@ -293,18 +292,18 @@
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/signatures#rustcrypto-signatures--\">Rust Crypto Signatures</a>.",
                     "crates": [
                         { "name": "ed25519", "notes": "Use in conjunction with the ed25519-dalek crate." },
-                        { "name": "ecdsa", "notes": "" },
-                        { "name": "dsa", "notes": "" }
+                        { "name": "ecdsa" },
+                        { "name": "dsa" }
                     ]
                 },
                 {
                     "name": "Certificate Formats",
                     "notes": "For more formats, see <a href=\"https://github.com/RustCrypto/formats#rustcrypto-formats--\">Rust Crypto Formats</a>.",
                     "crates": [
-                        { "name": "der", "notes": "" },
-                        { "name": "pem‑rfc7468 ", "notes": "" },
-                        { "name": "pkcs8", "notes": "" },
-                        { "name": "x509-cert", "notes": "" }
+                        { "name": "der" },
+                        { "name": "pem‑rfc7468" },
+                        { "name": "pkcs8" },
+                        { "name": "x509-cert" }
                     ]
                 },
                 {
@@ -456,7 +455,6 @@
                 {
                     "slug": "grpc",
                     "name": "gRPC",
-                    "description": "",
                     "purposes": [
                         {
                             "name": "General Purpose",
@@ -472,12 +470,10 @@
         {
             "slug": "databases",
             "name": "Databases",
-            "description": "",
             "subgroups": [
                 {
                     "slug": "sql-databases",
                     "name": "SQL Databases",
-                    "description": "",
                     "purposes": [
                         {
                             "name": "Multi Database",
@@ -499,8 +495,7 @@
                         {
                             "name": "Postgres",
                             "crates": [{
-                                "name": "sqlx",
-                                "notes": ""
+                                "name": "sqlx"
                             }, {
                                 "name": "tokio-postgres",
                                 "notes": "Postgres-specific library. Performs better than SQLx"
@@ -509,8 +504,7 @@
                         {
                             "name": "MySQL",
                             "crates": [{
-                                "name": "sqlx",
-                                "notes": ""
+                                "name": "sqlx"
                             }, {
                                 "name": "mysql_async",
                                 "notes": "Has a poorly designed API. Prefer SQLx for MySQL"
@@ -519,8 +513,7 @@
                         {
                             "name": "SQLite",
                             "crates": [{
-                                "name": "sqlx",
-                                "notes": ""
+                                "name": "sqlx"
                             }, {
                                 "name": "rustqlite",
                                 "notes": "Provides a sync API to SQLite + provides access to advanced sqlite features."
@@ -529,8 +522,7 @@
                         {
                             "name": "MS SQL",
                             "crates": [{
-                                "name": "sqlx",
-                                "notes": ""
+                                "name": "sqlx"
                             }, {
                                 "name": "tiberius",
                                 "notes": "MS SQL specific library. Has better support for advanced column types than SQLx."
@@ -548,20 +540,17 @@
                 {
                     "slug": "other-databases",
                     "name": "Other Databases",
-                    "description": "",
                     "purposes": [
                         {
                             "name": "Redis",
                             "crates": [{
-                                "name": "redis",
-                                "notes": ""
+                                "name": "redis"
                             }]
                         },
                         {
                             "name": "MongoDB",
                             "crates": [{
-                                "name": "mongodb",
-                                "notes": ""
+                                "name": "mongodb"
                             }]
                         }
                     ]
@@ -571,7 +560,6 @@
         {
             "slug": "cli-tools",
             "name": "CLIs",
-            "description": "",
             "subgroups": [
                 {
                     "slug": "argument-parsing",
@@ -668,12 +656,10 @@
         {
             "slug": "concurrency",
             "name": "Concurrency",
-            "description": "",
             "subgroups": [
                 {
                     "slug": "data-structures",
                     "name": "Data Structures",
-                    "description": "",
                     "purposes": [
                         {
                             "name": "Mutex",

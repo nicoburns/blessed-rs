@@ -32,7 +32,7 @@
                   <a style="margin-left: 3px;opacity: 0.7;color: #333;text-decoration: none" href="https://docs.rs/{{ crate.name }}"> [docs]</a>
                 {% endif %}
                 <br />
-                {{ crate.notes | safe }}
+                {% if crate.notes %}{{ crate.notes | safe }}{% endif %}
               </p>
           {% endfor %}
           <!-- </ul> -->
