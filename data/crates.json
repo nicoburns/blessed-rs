@@ -309,7 +309,7 @@
                         "name": "rustls",
                         "notes": "A portable pure-rust high-level implementation of TLS. Implements TLS 1.2 and higher."
                     }, {
-                        "name": "rust-native-tls",
+                        "name": "native-tls",
                         "notes": "Delegates to the system TLS implementations on windows and macOS, and uses OpenSSL on linux."
                     }, {
                         "name": "webpki",
