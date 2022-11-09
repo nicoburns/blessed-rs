@@ -7,6 +7,14 @@
             "subgroups": [],
             "purposes": [
                 {
+                    "name": "Toolchain Management",
+                    "recommendations": [{
+                        "name": "rustup",
+                        "link": "https://rustup.rs",
+                        "notes": "Install, manage, and upgrade versions of rustc, cargo, clippy, rustfmt and more."
+                    }]
+                },
+                {
                     "name": "Linting",
                     "recommendations": [{
                         "name": "clippy",
