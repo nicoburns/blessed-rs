@@ -29,8 +29,8 @@
 
           {% for crate in purpose.recommendations %}
             <p style="margin: 3px 6px;max-width: 600px">
-              <b><a href="{% if crate.link %}{{ crate.link }}{% else %}https://lib.rs/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b>{% if not crate.link %}
-                <a style="margin-left: 3px;opacity: 0.7;color: #333;text-decoration: none" href="https://docs.rs/{{ crate.name }}"> [docs]</a>
+              <b><a target="_blank" href="{% if crate.link %}{{ crate.link }}{% else %}https://lib.rs/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b>{% if not crate.link %}
+                <a target="_blank" style="margin-left: 3px;opacity: 0.7;color: #333;text-decoration: none" href="https://docs.rs/{{ crate.name }}"> [docs]</a>
               {% endif %}
               <br />
               {% if crate.notes %}{{ crate.notes | safe }}{% endif %}
@@ -42,8 +42,8 @@
               <summary style="cursor: pointer"><b><i>See also</i></b> <span style="color: #999">(click to open)</span></summary>
               {% for crate in purpose.see_also %}
                 <p style="margin: 3px 6px;max-width: 600px">
-                  <b><a href="{% if crate.link %}{{ crate.link }}{% else %}https://lib.rs/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b>{% if not crate.link %}
-                    <a style="margin-left: 3px;opacity: 0.7;color: #333;text-decoration: none" href="https://docs.rs/{{ crate.name }}"> [docs]</a>
+                  <b><a target="_blank" href="{% if crate.link %}{{ crate.link }}{% else %}https://lib.rs/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b>{% if not crate.link %}
+                    <a target="_blank" style="margin-left: 3px;opacity: 0.7;color: #333;text-decoration: none" href="https://docs.rs/{{ crate.name }}"> [docs]</a>
                   {% endif %}
                   <br />
                   {% if crate.notes %}{{ crate.notes | safe }}{% endif %}
