@@ -618,11 +618,11 @@
                     ]
                 },
                 {
-                    "slug": "other-utilities",
-                    "name": "Other Utilities",
+                    "slug": "sql-utilities",
+                    "name": "Utilities",
                     "purposes": [
                         {
-                            "name": "async pool for connections",
+                            "name": "Connection pool",
                             "recommendations": [{
                                 "name": "deadpool",
                                 "notes": "A dead simple async pool for connections and objects of any type."
