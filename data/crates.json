@@ -7,6 +7,14 @@
             "subgroups": [],
             "purposes": [
                 {
+                    "name": "Linting",
+                    "recommendations": [{
+                        "name": "clippy",
+                        "link": "https://github.com/rust-lang/rust-clippy#usage",
+                        "notes": "The official Rust linter."
+                    }]
+                },
+                {
                     "name": "Managing Dependencies",
                     "recommendations": [{
                         "name": "cargo-edit",
