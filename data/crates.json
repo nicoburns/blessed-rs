@@ -23,6 +23,14 @@
                     }]
                 },
                 {
+                    "name": "Cross Compilation",
+                    "recommendations": [{
+                        "name": "cross",
+                        "link": "https://github.com/cross-rs/cross#cross",
+                        "notes": "Seamless cross-compiling using Docker containers."
+                    }]
+                },
+                {
                     "name": "Managing Dependencies",
                     "recommendations": [{
                         "name": "cargo-edit",
@@ -40,6 +48,10 @@
                         "name": "cargo-license",
                         "link": "https://github.com/onur/cargo-license#cargo-license",
                         "notes": "Lists licenses of all dependencies"
+                    }, {
+                        "name": "cargo-deny",
+                        "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
+                        "notes": "Enforce policies on your code and dependencies."
                     }]
                 },
                 {
@@ -81,14 +93,6 @@
                     }]
                 },
                 {
-                    "name": "Cross Compiling",
-                    "recommendations": [{
-                        "name": "cross",
-                        "link": "https://github.com/cross-rs/cross#cross",
-                        "notes": "Seamless cross-compiling using Docker containers."
-                    }]
-                },
-                {
                     "name": "Release Automation",
                     "recommendations": [{
                         "name": "cargo-release",
@@ -99,10 +103,6 @@
                 {
                     "name": "Continuous Integration",
                     "recommendations": [{
-                        "name": "cargo-deny",
-                        "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
-                        "notes": "Enforce varies policies on your code and dependencies."
-                    }, {
                         "name": "rust-toolchain (github action)",
                         "link": "https://github.com/dtolnay/rust-toolchain#install-rust-toolchain",
                         "notes": "Github action to install Rust components via rustup"
