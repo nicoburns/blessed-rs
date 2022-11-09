@@ -58,6 +58,17 @@
                     }]
                 },
                 {
+                    "name": "Profiling",
+                    "recommendations": [{
+                        "name": "cargo-flamegraph",
+                        "link": "https://github.com/flamegraph-rs/flamegraph#cargo-flamegraph",
+                        "notes": "Execution flamegraph generation"
+                    }, {
+                        "name": "dhat",
+                        "notes": "Heap memory profiling"
+                    }]
+                },
+                {
                     "name": "Debugging Macros",
                     "recommendations": [{
                         "name": "cargo-expand",
