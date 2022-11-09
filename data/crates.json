@@ -48,8 +48,12 @@
                             }]
                         },
                         {
-                            "name": "UUIDs",
+                            "name": "Universally Unique Identifiers",
                             "recommendations": [{
+                                "name": "ulid",
+                                "notes": "Implements generating Universally Unique Lexicographically Sortable Identifiers (ULIDs)"
+                            },
+                            {
                                 "name": "uuid",
                                 "notes": "Implements generating and parsing UUIDs and a number of utility functions"
                             }]
