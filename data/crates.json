@@ -33,6 +33,10 @@
                         "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
                         "notes": "Finds dependencies that have available updates"
                     }, {
+                        "name": "cargo-audit",
+                        "link": "https://github.com/RustSec/rustsec/tree/main/cargo-audit#rustsec-cargo-audit",
+                        "notes": "Check dependencies for reported security vulnerabilities"
+                    },  {
                         "name": "cargo-license",
                         "link": "https://github.com/onur/cargo-license#cargo-license",
                         "notes": "Lists licenses of all dependencies"
