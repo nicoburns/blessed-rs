@@ -15,6 +15,14 @@
                     }]
                 },
                 {
+                    "name": "Code Formatting",
+                    "recommendations": [{
+                        "name": "rustfmt",
+                        "link": "https://github.com/rust-lang/rustfmt#rustfmt----",
+                        "notes": "The official Rust code formatter."
+                    }]
+                },
+                {
                     "name": "Managing Dependencies",
                     "recommendations": [{
                         "name": "cargo-edit",
