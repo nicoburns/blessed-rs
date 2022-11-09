@@ -1,6 +1,65 @@
 {
     "crate_groups": [
         {
+            "slug": "tooling",
+            "name": "Tooling",
+            "description": "Developer tools for working with Rust projects.",
+            "subgroups": [],
+            "purposes": [
+                {
+                    "name": "Managing Dependencies",
+                    "recommendations": [{
+                        "name": "cargo-edit",
+                        "notes": "Adds 'cargo add', 'cargo rm', and 'cargo upgrade' commands to cargo"
+                    }, {
+                        "name": "cargo-outdated",
+                        "notes": "Finds dependencies that have available updates"
+                    }, {
+                        "name": "cargo-license",
+                        "notes": "Lists licenses of all dependencies"
+                    }]
+                },
+                {
+                    "name": "Testing",
+                    "recommendations": [{
+                        "name": "cargo-nextest",
+                        "notes": "Faster, better test runner"
+                    }]
+                },
+                {
+                    "name": "Benchmarking",
+                    "recommendations": [{
+                        "name": "criterion",
+                        "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
+                    }, {
+                        "name": "hyperfine",
+                        "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
+                    }]
+                },
+                {
+                    "name": "Debugging Macros",
+                    "recommendations": [{
+                        "name": "cargo-expand",
+                        "notes": "Allows you to inspect the code that macros expand to"
+                    }]
+                },
+                {
+                    "name": "Cross Compiling",
+                    "recommendations": [{
+                        "name": "cross",
+                        "notes": "Seamless cross-compiling using Docker containers."
+                    }]
+                },
+                {
+                    "name": "Release Automation",
+                    "recommendations": [{
+                        "name": "cargo-release",
+                        "notes": "Helper for publishing new crate versions."
+                    }]
+                }
+            ]
+        },
+        {
             "slug": "common",
             "name": "Common",
             "description": "Very commonly used crates that everyone should know about",
