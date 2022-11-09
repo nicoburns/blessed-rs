@@ -253,13 +253,6 @@
                             }]
                         },
                         {
-                            "name": "Endian conversion",
-                            "recommendations": [{
-                                "name": "byteorder",
-                                "notes": "Utility functions to convert between different endianness or read/write data with a specific endianness"
-                            }]
-                        },
-                        {
                             "name": "Safe type casts",
                             "recommendations": [{
                                 "name": "bytemuck"
