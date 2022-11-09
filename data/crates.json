@@ -557,6 +557,19 @@
                             }]
                         }
                     ]
+                },
+                {
+                    "slug": "other-utilities",
+                    "name": "Other Utilities",
+                    "purposes": [
+                        {
+                            "name": "async pool for connections",
+                            "recommendations": [{
+                                "name": "deadpool",
+                                "notes": "A dead simple async pool for connections and objects of any type."
+                            }]
+                        }
+                    ]
                 }
             ]
         },
