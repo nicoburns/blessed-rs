@@ -10,12 +10,15 @@
                     "name": "Managing Dependencies",
                     "recommendations": [{
                         "name": "cargo-edit",
+                        "link": "https://github.com/killercup/cargo-edit",
                         "notes": "Adds 'cargo add', 'cargo rm', and 'cargo upgrade' commands to cargo"
                     }, {
                         "name": "cargo-outdated",
+                        "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
                         "notes": "Finds dependencies that have available updates"
                     }, {
                         "name": "cargo-license",
+                        "link": "https://github.com/onur/cargo-license#cargo-license",
                         "notes": "Lists licenses of all dependencies"
                     }]
                 },
@@ -23,6 +26,7 @@
                     "name": "Testing",
                     "recommendations": [{
                         "name": "cargo-nextest",
+                        "link": "https://nexte.st",
                         "notes": "Faster, better test runner"
                     }]
                 },
@@ -33,6 +37,7 @@
                         "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
                     }, {
                         "name": "hyperfine",
+                        "link": "https://github.com/sharkdp/hyperfine#hyperfine",
                         "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
                     }]
                 },
@@ -40,6 +45,7 @@
                     "name": "Debugging Macros",
                     "recommendations": [{
                         "name": "cargo-expand",
+                        "link": "https://github.com/dtolnay/cargo-expand#cargo-expand",
                         "notes": "Allows you to inspect the code that macros expand to"
                     }]
                 },
@@ -47,6 +53,7 @@
                     "name": "Cross Compiling",
                     "recommendations": [{
                         "name": "cross",
+                        "link": "https://github.com/cross-rs/cross#cross",
                         "notes": "Seamless cross-compiling using Docker containers."
                     }]
                 },
@@ -54,6 +61,7 @@
                     "name": "Release Automation",
                     "recommendations": [{
                         "name": "cargo-release",
+                        "link": "https://github.com/crate-ci/cargo-release#cargo-release",
                         "notes": "Helper for publishing new crate versions."
                     }]
                 }
