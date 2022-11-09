@@ -1,0 +1,40 @@
+.fixed-layout {
+    table-layout: fixed;
+}
+
+.use-case-column {
+    width: 250px;
+}
+@media screen and (max-width: 800px) {
+    .use-case-column { width: 100px; }
+}
+
+table {
+    border-collapse: collapse;
+    /* border: 1px solid #f9f9f9; */
+
+    // Zebra striping
+    tbody:nth-of-type(odd) { background-color: #f6f8fa; }
+    tbody:nth-of-type(even) { background-color: #FFF; }
+
+    th {
+        padding: 6px 18px 6px 6px;
+        border: 1px solid #CCC;
+        text-align: left;
+        font-size: 0.8em;
+        white-space: nowrap;
+        color: #000;
+    }
+
+    td {
+        padding: 6px 6px;
+        border: 1px solid #CCC;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+

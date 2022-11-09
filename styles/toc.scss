@@ -1,0 +1,48 @@
+.toc {
+      position: sticky;
+      overflow-y: auto;
+      top: 24px;
+      max-height: calc(100vh - 24px);
+
+      ul {
+          list-style: none;
+          padding: 0;
+      }
+
+      li {
+          padding-left: 0;
+          margin: 3px 0px;
+          font-size: 1em;
+          > a {
+              color: #999;
+              text-decoration: none;
+            }
+          > ul {
+              /*display: none;*/
+          }
+      }
+      
+      > ul > li.active:not(.active ~ .active) {
+          > a {
+              color: #333;
+              text-decoration: none;
+          }
+
+          // Sub-lists
+          > ul {
+              display: block;
+
+              > li.active:not(.active ~ .active) > a {
+                  color: #333;
+                  text-decoration: none;
+              }
+          }
+      }
+}
+
+.subtoc {
+    margin-left: 12px;
+}
+.subtoc li {
+    font-size: 0.85em;
+}
