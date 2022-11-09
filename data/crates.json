@@ -95,6 +95,22 @@
                         "link": "https://github.com/crate-ci/cargo-release#cargo-release",
                         "notes": "Helper for publishing new crate versions."
                     }]
+                },
+                {
+                    "name": "Continuous Integration",
+                    "recommendations": [{
+                        "name": "cargo-deny",
+                        "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
+                        "notes": "Enforce varies policies on your code and dependencies."
+                    }, {
+                        "name": "rust-toolchain (github action)",
+                        "link": "https://github.com/dtolnay/rust-toolchain#install-rust-toolchain",
+                        "notes": "Github action to install Rust components via rustup"
+                    }, {
+                        "name": "rust-cache (github action)",
+                        "link": "https://github.com/Swatinem/rust-cache#rust-cache-action",
+                        "notes": "Github action to cache compilation artifacts and speed up subsequent runs."
+                    }]
                 }
             ]
         },
