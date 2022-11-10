@@ -358,6 +358,13 @@
                                 "name": "winapi",
                                 "notes": "Older binding to the windows APIs. Unofficial, but more complete than windows-rs"
                             }]
+                        },
+                        {
+                            "name": "*nix (OSs)",
+                            "recommendations": [{
+                                "name": "nix",
+                                "notes": "Bindings to the various *nix system functions. (Unix, Linux, MacOS, etc.)"
+                            }]
                         }
                     ]
                 }
