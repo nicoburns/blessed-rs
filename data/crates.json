@@ -741,6 +741,18 @@
                             "recommendations": [{
                                 "name": "mongodb"
                             }]
+                        },
+                        {
+                            "name": "ElasticSearch",
+                            "recommendations": [{
+                                "name": "elasticsearch"
+                            }]
+                        },
+                        {
+                            "name": "Rocks DB",
+                            "recommendations": [{
+                                "name": "rocksdb"
+                            }]
                         }
                     ]
                 },
