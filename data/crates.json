@@ -371,6 +371,70 @@
             ]
         },
         {
+            "slug": "ffi",
+            "name": "FFI / Interop",
+            "description": "Crates that allow Rust to interact with code written in other languages.",
+            "subgroups": [],
+            "purposes": [
+                {
+                    "name": "C",
+                    "recommendations": [
+                        { "name": "bindgen", "notes": "Generate Rust bindings to C libraries" },
+                        { "name": "cbindgen", "notes": "Generate C bindings to Rust libraries" }
+                    ]
+                },
+                {
+                    "name": "C++",
+                    "recommendations": [
+                        { "name": "cxx", "notes": "Safe C++ <-> Rust interop by generating code for both sides." }
+                    ]
+                },
+                {
+                    "name": "Python",
+                    "recommendations": [
+                        { "name": "py03", "notes": "Supports both calling python code from Rust and exposing Rust code to Python" }
+                    ]
+                },
+                {
+                    "name": "Node.js",
+                    "recommendations": [
+                        { "name": "napi", "notes": "Supports both calling python code from Rust and exposing Rust code to Python" },
+                        { "name": "neon", "notes": "Slower than napi, but also widely used and well-maintained" }
+                    ]
+                },
+                {
+                    "name": "Ruby",
+                    "recommendations": [
+                        { "name": "rutie", "notes": "Supports bothembedding Rust into Ruby applications and embedding Ruby into Rust applications" }
+                    ]
+                },
+                {
+                    "name": "Objective-C",
+                    "recommendations": [
+                        { "name": "objc", "notes": "Interop with the Objective-C runtime" }
+                    ]
+                },
+                {
+                    "name": "Java/JVM",
+                    "recommendations": [
+                        { "name": "jni", "notes": "Implement Java methods for JVM and Android in Rust. Call Java code from Rust. Embed JVM in Rust applications." }
+                    ]
+                },
+                {
+                    "name": "Lua",
+                    "recommendations": [
+                        { "name": "mlua", "notes": "Bindings to Lua 5.4, 5.3, 5.2, 5.1 (including LuaJIT)" }
+                    ]
+                },
+                {
+                    "name": "Dart/Flutter",
+                    "recommendations": [
+                        { "name": "flutter_rust_bridge", "notes": "Works with Dart with or without Flutter" }
+                    ]
+                }
+            ]
+        },
+        {
             "slug": "cryptography",
             "name": "Cryptography",
             "description": "Crates that provide implementations of cryptographic algorithms. This section attempts to list the best crates for the listed algorithms, but does not intend to make recommendations for the algorithms themselves.<br />",
