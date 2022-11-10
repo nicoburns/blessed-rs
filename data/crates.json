@@ -855,6 +855,58 @@
                     ]
                 }
             ]
+        },
+        {
+            "slug": "graphics",
+            "name": "Graphics",
+            "subgroups": [
+                {
+                    "slug": "gui",
+                    "name": "GUI",
+                    "description": "GTK and Tauri are probably the only options which can be described as production-ready without caveats.<br />The Rust native options are usable for simple projects but are all still quite incomplete.",
+                    "purposes": [
+                        {
+                            "name": "GTK",
+                            "recommendations": [{
+                                "name": "gtk4-rs",
+                                "notes": "Rust bindings to GTK4. These are quite well supported, although you'll often need to use the C documentation."
+                            }, {
+                                "name": "relm4",
+                                "notes": "A higher-level library that sits on top of gtk4-rs"
+                            }]
+                        },
+                        {
+                            "name": "Web-based GUI",
+                            "recommendations": [{
+                                "name": "tauri",
+                                "notes": "Electron-like web-based UI. Except it uses system webviews rather than shipping chromium, and non-UI code is written in Rust rather than node.js"
+                            }]
+                        },
+                        {
+                            "name": "Rust Native GUI",
+                            "recommendations": [{
+                                "name": "iced",
+                                "notes": "Retained mode UI with a nice API. It's useable for basic apps, but has a number of missing features including multiple windows, layers, and proper text rendering."
+                            }, {
+                                "name": "egui",
+                                "notes": "Immediate-mode UI. Lots of widgets. The most useable out of the box if your needs are simple and you don't need to customise of the look and feel"
+                            }, {
+                                "name": "druid",
+                                "notes": "Has better foundations than iced or egui, but the API is quite clunky and poorly documented."
+                            }, {
+                                "name": "slint",
+                                "notes": "The most complete rust-native UI library. But note that it's dual GPL3/commercial licensed."
+                            }]
+                        }, {
+                            "name": "File Dialogs",
+                            "recommendations": [{
+                                "name": "rfd",
+                                "notes": "Platform-native open/save file dialogs. Can be used in conjunction with other UI libraries."
+                            }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
