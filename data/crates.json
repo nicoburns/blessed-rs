@@ -82,7 +82,7 @@
                     }]
                 },
                 {
-                    "name": "Profiling",
+                    "name": "Performance",
                     "recommendations": [{
                         "name": "cargo-flamegraph",
                         "link": "https://github.com/flamegraph-rs/flamegraph#cargo-flamegraph",
@@ -90,6 +90,9 @@
                     }, {
                         "name": "dhat",
                         "notes": "Heap memory profiling"
+                    }, {
+                        "name": "cargo-show-asm",
+                        "notes": "Printed the generated assembly for a Rust function"
                     }]
                 },
                 {
