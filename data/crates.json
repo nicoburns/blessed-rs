@@ -315,7 +315,7 @@
                             "name": "Abstracting over different number types",
                             "recommendations": [{
                                 "name": "num",
-                                "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
+                                "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type. Also provides a bigint/bignum implementation."
                             }]
                         },
                         {
