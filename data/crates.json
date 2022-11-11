@@ -395,7 +395,7 @@
                 {
                     "name": "Python",
                     "recommendations": [
-                        { "name": "py03", "notes": "Supports both calling python code from Rust and exposing Rust code to Python" }
+                        { "name": "pyo3", "notes": "Supports both calling python code from Rust and exposing Rust code to Python" }
                     ]
                 },
                 {
