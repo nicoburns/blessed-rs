@@ -29,7 +29,7 @@
 
           {% for crate in purpose.recommendations %}
             <p style="margin: 3px 6px;max-width: 600px">
-              <b><a target="_blank" href="{% if crate.link %}{{ crate.link }}{% else %}https://lib.rs/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b>{% if not crate.link %}
+              <b><a target="_blank" href="{% if crate.link %}{{ crate.link }}{% else %}https://lib.rs/crate/{{ crate.name }}{% endif %}">{{ crate.name }}</a></b>{% if not crate.link %}
                 <a target="_blank" style="margin-left: 3px;opacity: 0.7;color: #333;text-decoration: none" href="https://docs.rs/{{ crate.name }}"> [docs]</a>
               {% endif %}
               <br />
