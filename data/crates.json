@@ -166,7 +166,7 @@
                             "recommendations": [{
                                 "name": "regex",
                                 "notes": "De facto standard regex library. Very fast, but does not support fancier features such as backtracking."
-                            }, 
+                            },
                             {
                                 "name": "fancy_regex",
                                 "notes": "Use if need features such as backtracking which regex doesn't support"
@@ -516,6 +516,7 @@
                     "name": "Utilities",
                     "recommendations": [{
                         "name": "subtle",
+                        "link": "https://github.com/dalek-cryptography/subtle",
                         "notes": "Utilities for writing constant-time algorithms"
                     },
                     {
