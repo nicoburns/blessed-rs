@@ -408,7 +408,7 @@
                 {
                     "name": "Ruby",
                     "recommendations": [
-                        { "name": "rutie", "notes": "Supports bothembedding Rust into Ruby applications and embedding Ruby into Rust applications" }
+                        { "name": "rutie", "notes": "Supports both embedding Rust into Ruby applications and embedding Ruby into Rust applications" }
                     ]
                 },
                 {
