@@ -401,7 +401,7 @@
                 {
                     "name": "Node.js",
                     "recommendations": [
-                        { "name": "napi", "notes": "Supports both calling python code from Rust and exposing Rust code to Python" },
+                        { "name": "napi", "notes": "Supports both calling Nodejs code from Rust and exposing Rust code to Nodejs" },
                         { "name": "neon", "notes": "Slower than napi, but also widely used and well-maintained" }
                     ]
                 },
