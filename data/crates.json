@@ -707,7 +707,7 @@
                             "recommendations": [{
                                 "name": "sqlx"
                             }, {
-                                "name": "rustqlite",
+                                "name": "rusqlite",
                                 "notes": "Provides a sync API to SQLite + provides access to advanced sqlite features."
                             }]
                         },
