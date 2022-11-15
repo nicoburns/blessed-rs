@@ -893,7 +893,7 @@
                         {
                             "name": "Atomic pointer swapping",
                             "recommendations": [{
-                                "name": "arc_swap",
+                                "name": "arc-swap",
                                 "notes": "Useful for sharing data that has many readers but few writers"
                             }]
                         },
