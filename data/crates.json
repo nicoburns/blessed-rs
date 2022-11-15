@@ -242,6 +242,7 @@
                         },
                         {
                             "name": "For libraries",
+                            "notes": "See also: [Designing error types in Rust](https://mmapped.blog/posts/12-rust-error-handling.html)",
                             "recommendations": [{
                                 "name": "thiserror",
                                 "notes": "Helps with generating boilerplate for enum-style error types."
