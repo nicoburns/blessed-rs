@@ -1001,7 +1001,7 @@
                             }]
                         },
                         {
-                            "name": "3d Math",
+                            "name": "3D Math",
                             "recommendations": [{
                                 "name": "glam",
                                 "notes": "Fast math library optimised for game development use cases"
