@@ -435,6 +435,12 @@
                     "recommendations": [
                         { "name": "flutter_rust_bridge", "notes": "Works with Dart with or without Flutter" }
                     ]
+                },
+                {
+                    "name": "Erlang/Elixir",
+                    "recommendations": [
+                        { "name": "rustler", "notes": "Safe Rust bridge for creating Erlang NIF functions" }
+                    ]
                 }
             ]
         },
