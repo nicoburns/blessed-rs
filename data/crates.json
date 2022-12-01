@@ -933,11 +933,11 @@
                             "notes": "See <a href=\"https://docs.rs/tokio/latest/tokio/sync/mpsc/index.html#communicating-between-sync-and-async-code\">communicating-between-sync-and-async-code</a> for notes on when to use async-specific channels vs general purpose channels.",
                             "recommendations": [
                             {
-                                "name": "crossbeam_channel",
+                                "name": "crossbeam-channel",
                                 "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
                             }, {
                                 "name": "flume",
-                                "notes": "Smaller and simpler than crossbeam_channel and almost as fast"
+                                "notes": "Smaller and simpler than crossbeam-channel and almost as fast"
                             },
                             {
                                 "name": "postage",
