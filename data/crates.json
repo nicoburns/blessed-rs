@@ -168,7 +168,7 @@
                                 "notes": "De facto standard regex library. Very fast, but does not support fancier features such as backtracking."
                             }, 
                             {
-                                "name": "fancy_regex",
+                                "name": "fancy-regex",
                                 "notes": "Use if need features such as backtracking which regex doesn't support"
                             }]
                         },
@@ -497,7 +497,7 @@
                     "notes": "For more formats, see <a href=\"https://github.com/RustCrypto/formats#rustcrypto-formats--\">Rust Crypto Formats</a>.",
                     "recommendations": [
                         { "name": "der" },
-                        { "name": "pem‑rfc7468" },
+                        { "name": "pem-rfc7468" },
                         { "name": "pkcs8" },
                         { "name": "x509-cert" }
                     ]
@@ -933,7 +933,7 @@
                             "notes": "See <a href=\"https://docs.rs/tokio/latest/tokio/sync/mpsc/index.html#communicating-between-sync-and-async-code\">communicating-between-sync-and-async-code</a> for notes on when to use async-specific channels vs general purpose channels.",
                             "recommendations": [
                             {
-                                "name": "crossbeam_channel",
+                                "name": "crossbeam-channel",
                                 "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
                             }, {
                                 "name": "flume",
