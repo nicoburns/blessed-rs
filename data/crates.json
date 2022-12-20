@@ -937,7 +937,7 @@
                                 "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
                             }, {
                                 "name": "flume",
-                                "notes": "Smaller and simpler than crossbeam_channel and almost as fast"
+                                "notes": "Smaller and simpler than crossbeam-channel and almost as fast"
                             },
                             {
                                 "name": "postage",
