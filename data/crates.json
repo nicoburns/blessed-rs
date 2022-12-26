@@ -100,7 +100,11 @@
                     "recommendations": [{
                         "name": "cargo-expand",
                         "link": "https://github.com/dtolnay/cargo-expand#cargo-expand",
-                        "notes": "Allows you to inspect the code that macros expand to"
+                        "notes": "Allows you to inspect the code that macros expand to. More accurate, because it uses rustc."
+                    }, {
+                        "name": "rust-analyzer",
+                        "link": "https://github.com/rust-lang/rust-analyzer#readme",
+                        "notes": "Allows you to expand macros in your text editor. More convenient, as it's in your editor. Also allows partial expansion for debugging."
                     }]
                 },
                 {
