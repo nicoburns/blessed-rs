@@ -697,12 +697,16 @@
                         },
                         {
                             "name": "ORMs",
-                            "recommendations": [{
-                                "name": "sea-orm",
-                                "notes": "Recommended. Built on top of sqlx. There is also a related sea-query crate that provides a query builder without full ORM functionality."
-                            }, {
+                            "recommendations": [
+                            {
                                 "name": "diesel",
-                                "notes": "Stable release is sync only. Pre-release async branch is currently AGPL. Can provide better performance in some circumstances."
+                                "notes": "Sync only. Provides better performance, stricter compile time guarantees and greater extensibility. See diesel-async for an async connection implementation."
+                            }, {
+                                "name": "sea-orm",
+                                "notes": "Async only. Built on top of sqlx. There is also a related sea-query crate that provides a query builder without full ORM functionality."
+                            }, {
+                                "name": "diesel-async",
+                                "notes": "Async connection implementation for diesel"
                             }]
                         },
                         {
@@ -744,6 +748,9 @@
                         {
                             "name": "Oracle",
                             "recommendations": [{
+                                "name": "diesel-oci",
+                                "notes": "Diesel backend and connection implementation for oracle databases",
+                            }, {
                                 "name": "oracle",
                                 "notes": "Rust bindings to ODPI-C"
                             }]
