@@ -150,7 +150,7 @@
                                 "notes": "A smaller, simpler library. Preferrable if covers your needs, but it's quite limited in what it provides."
                             }, {
                                 "name": "chrono",
-                                "notes": "The most comphrehensive and full-featured datetime library, but more complex because of it."
+                                "notes": "The most comprehensive and full-featured datetime library, but more complex because of it."
                             }]
                         },
                         {
@@ -623,7 +623,7 @@
                                 "notes": "Has an excellent API and a solid implementation. However development has been intermittent, and the async branch still doesn't have a stable release. Use of rocket is not recommended until this has been fixed."
                             }, {
                                 "name": "poem",
-                                "notes": "Automatically generates OpenAPI defintions."
+                                "notes": "Automatically generates OpenAPI definitions."
                             }, {
                                 "name": "warp",
                                 "notes": "Very similar to axum but with a quirkier API. This is a solid framework, but you should probably prefer Axum unless you particularly like the API"
