@@ -700,13 +700,10 @@
                             "recommendations": [
                             {
                                 "name": "diesel",
-                                "notes": "Sync only. Provides better performance, stricter compile time guarantees and greater extensibility. See diesel-async for an async connection implementation."
+                                "notes": "Has excellent performance and takes an approach of strict compile time guarantees. The main crate is Sync only, but <a href=\"https://lib.rs/crates/diesel-async\">diesel-async</a> provides an async connection implementation."
                             }, {
                                 "name": "sea-orm",
-                                "notes": "Async only. Built on top of sqlx. There is also a related sea-query crate that provides a query builder without full ORM functionality."
-                            }, {
-                                "name": "diesel-async",
-                                "notes": "Async connection implementation for diesel"
+                                "notes": "Built on top of sqlx (see above). There is also a related sea-query crate that provides a query builder without full ORM functionality."
                             }]
                         },
                         {
@@ -749,7 +746,7 @@
                             "name": "Oracle",
                             "recommendations": [{
                                 "name": "diesel-oci",
-                                "notes": "Diesel backend and connection implementation for oracle databases",
+                                "notes": "Diesel backend and connection implementation for oracle databases"
                             }, {
                                 "name": "oracle",
                                 "notes": "Rust bindings to ODPI-C"
