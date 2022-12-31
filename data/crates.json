@@ -376,6 +376,39 @@
             ]
         },
         {
+            "slug": "math-scientific",
+            "name": "Math / Scientific",
+            "description": "The <a href=\"https://lib.rs/crates/num\">num</a> crate is trusted and has a variety of numberical functionality that is missing from the standard library.",
+            "subgroups": [],
+            "purposes": [
+                {
+                    "name": "Big Integers",
+                    "recommendations": [
+                        { "name": "num-bigint", "notes": "It's not the fastest, but it's part of the trusted num library." },
+                        { "name": "rug", "notes": "LGPL licensed. Wrapper for GMP. Much faster than num-bigint." }
+                    ]
+                },
+                {
+                    "name": "Big Decimals",
+                    "recommendations": [
+                        { "name": "rust_decimal", "notes": "The binary representation consists of a 96 bit integer number, a scaling factor used to specify the decimal fraction and a 1 bit sign." }
+                    ]
+                },
+                {
+                    "name": "Linear Algebra",
+                    "recommendations": [
+                        { "name": "nalgebra", "notes": "General-purpose linear algebra library with transformations and statically-sized or dynamically-sized matrices" }
+                    ]
+                },
+                {
+                    "name": "DataFrames",
+                    "recommendations": [
+                        { "name": "polars", "notes": "Similar to the Pandas library in Python but in pure Rust. Uses the Apache Arrow Columnar Format as the memory model." }
+                    ]
+                }
+            ]
+        },
+        {
             "slug": "ffi",
             "name": "FFI / Interop",
             "description": "Crates that allow Rust to interact with code written in other languages.",
