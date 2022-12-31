@@ -1,7 +1,13 @@
 name: Blessed.rs
-on: [push]
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
 jobs:
   build:
     name: Compile binary
@@ -24,9 +30,11 @@ jobs:
         with:
           name: blessed-rs-release-binary
           path: target/release/blessed-rs
+
   deploy_flyio:
       name: Deploy to Fly.io
       runs-on: ubuntu-latest
+      if: github.ref == 'refs/heads/main'
       needs: build
       steps:
         - name: Checkout repository
