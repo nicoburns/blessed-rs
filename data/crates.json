@@ -687,6 +687,7 @@
                 {
                     "slug": "sql-databases",
                     "name": "SQL Databases",
+                    "description": "The multi-database options (SQLx and Diesel) are generally quite good, and worth considering even if you only need support for a single database.",
                     "purposes": [
                         {
                             "name": "Multi Database",
@@ -709,8 +710,6 @@
                         {
                             "name": "Postgres",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "tokio-postgres",
                                 "notes": "Postgres-specific library. Performs better than SQLx"
                             }]
@@ -718,17 +717,13 @@
                         {
                             "name": "MySQL",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "mysql_async",
-                                "notes": "Has a poorly designed API. Prefer SQLx for MySQL"
+                                "notes": "Has a poorly designed API. Prefer SQLx or Diesel for MySQL"
                             }]
                         },
                         {
                             "name": "SQLite",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "rusqlite",
                                 "notes": "Provides a sync API to SQLite + provides access to advanced sqlite features."
                             }]
@@ -736,8 +731,6 @@
                         {
                             "name": "MS SQL",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "tiberius",
                                 "notes": "MS SQL specific library. Has better support for advanced column types than SQLx."
                             }]
