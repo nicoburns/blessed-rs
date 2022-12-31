@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 EXPOSE 3333
 
 COPY target/release/blessed-rs /usr/local/bin/blessed-rs
