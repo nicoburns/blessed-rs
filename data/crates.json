@@ -687,6 +687,7 @@
                 {
                     "slug": "sql-databases",
                     "name": "SQL Databases",
+                    "description": "The multi-database options (SQLx and Diesel) are generally quite good, and worth considering even if you only need support for a single database.",
                     "purposes": [
                         {
                             "name": "Multi Database",
@@ -697,19 +698,18 @@
                         },
                         {
                             "name": "ORMs",
-                            "recommendations": [{
-                                "name": "sea-orm",
-                                "notes": "Recommended. Built on top of sqlx. There is also a related sea-query crate that provides a query builder without full ORM functionality."
-                            }, {
+                            "recommendations": [
+                            {
                                 "name": "diesel",
-                                "notes": "Stable release is sync only. Pre-release async branch is currently AGPL. Can provide better performance in some circumstances."
+                                "notes": "Has excellent performance and takes an approach of strict compile time guarantees. The main crate is Sync only, but <a href=\"https://lib.rs/crates/diesel-async\">diesel-async</a> provides an async connection implementation."
+                            }, {
+                                "name": "sea-orm",
+                                "notes": "Built on top of sqlx (see above). There is also a related sea-query crate that provides a query builder without full ORM functionality."
                             }]
                         },
                         {
                             "name": "Postgres",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "tokio-postgres",
                                 "notes": "Postgres-specific library. Performs better than SQLx"
                             }]
@@ -717,17 +717,13 @@
                         {
                             "name": "MySQL",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "mysql_async",
-                                "notes": "Has a poorly designed API. Prefer SQLx for MySQL"
+                                "notes": "Has a poorly designed API. Prefer SQLx or Diesel for MySQL"
                             }]
                         },
                         {
                             "name": "SQLite",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "rusqlite",
                                 "notes": "Provides a sync API to SQLite + provides access to advanced sqlite features."
                             }]
@@ -735,8 +731,6 @@
                         {
                             "name": "MS SQL",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "tiberius",
                                 "notes": "MS SQL specific library. Has better support for advanced column types than SQLx."
                             }]
@@ -744,6 +738,9 @@
                         {
                             "name": "Oracle",
                             "recommendations": [{
+                                "name": "diesel-oci",
+                                "notes": "Diesel backend and connection implementation for oracle databases"
+                            }, {
                                 "name": "oracle",
                                 "notes": "Rust bindings to ODPI-C"
                             }]
