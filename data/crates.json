@@ -395,6 +395,12 @@
                     ]
                 },
                 {
+                    "name": "Sortable Floats",
+                    "recommendations": [
+                        { "name": "ordered-float", "notes": "Float types that don't allow NaN and are therefore orderable. You can also use the <code>total_cmp</code> method from the standard library like <code>.sort_by(|a, b| a.total_cmp(&b))</code>." }
+                    ]
+                },
+                {
                     "name": "Linear Algebra",
                     "recommendations": [
                         { "name": "nalgebra", "notes": "General-purpose linear algebra library with transformations and statically-sized or dynamically-sized matrices" }
