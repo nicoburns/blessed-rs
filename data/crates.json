@@ -314,13 +314,6 @@
                             }]
                         },
                         {
-                            "name": "Abstracting over different number types",
-                            "recommendations": [{
-                                "name": "num",
-                                "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
-                            }]
-                        },
-                        {
                             "name": "Safe type casts",
                             "recommendations": [{
                                 "name": "bytemuck"
@@ -381,6 +374,13 @@
             "description": "The <a href=\"https://lib.rs/crates/num\">num</a> crate is trusted and has a variety of numberical functionality that is missing from the standard library.",
             "subgroups": [],
             "purposes": [
+                {
+                    "name": "Abstracting over different number types",
+                    "recommendations": [{
+                        "name": "num-traits",
+                        "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
+                    }]
+                },
                 {
                     "name": "Big Integers",
                     "recommendations": [
