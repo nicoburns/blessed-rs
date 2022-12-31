@@ -24,6 +24,12 @@
     "notes": "If you know you know. Not recommended for beginners."
   },
   {
+    "name": "Helix",
+    "url": "https://helix-editor.com/",
+    "editor_plugins": "Rust Analyzer",
+    "notes": "Similar to vim/neovim. Written in Rust."
+  },
+  {
     "name": "Emacs",
     "url": "https://www.gnu.org/software/emacs/",
     "editor_plugins": "TBD",
