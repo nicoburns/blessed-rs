@@ -35,6 +35,7 @@ jobs:
       name: Deploy to Fly.io
       runs-on: ubuntu-latest
       if: github.ref == 'refs/heads/main'
+      concurrency: production_environment
       needs: build
       steps:
         - name: Checkout repository
