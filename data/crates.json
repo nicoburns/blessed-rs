@@ -43,7 +43,7 @@
                     "recommendations": [{
                         "name": "cargo-edit",
                         "link": "https://github.com/killercup/cargo-edit",
-                        "notes": "Adds 'cargo add', 'cargo rm', and 'cargo upgrade' commands to cargo"
+                        "notes": "Adds 'cargo upgrade' and 'cargo set-version' commands to cargo"
                     }, {
                         "name": "cargo-outdated",
                         "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
