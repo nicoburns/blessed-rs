@@ -904,7 +904,7 @@
                             "name": "Mutex",
                             "recommendations": [{
                                 "name": "parking_lot",
-                                "notes": "std::mutex also works fine. But Parking Lot is faster."
+                                "notes": "std::sync::Mutex also works fine. But Parking Lot is faster."
                             }]
                         },
                         {
