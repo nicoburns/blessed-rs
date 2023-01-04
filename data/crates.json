@@ -403,7 +403,8 @@
                 {
                     "name": "Linear Algebra",
                     "recommendations": [
-                        { "name": "nalgebra", "notes": "General-purpose linear algebra library with transformations and statically-sized or dynamically-sized matrices" }
+                        { "name": "nalgebra", "notes": "General-purpose linear algebra library with transformations and statically-sized or dynamically-sized matrices. However it supports only vectors (1d) and matrices (2d) and not higher-dimensional tensors." },
+                        { "name": "ndarray", "notes": "Less featureful than nalgebra but supports arbitrarily dimensioned arrays" }
                     ]
                 },
                 {
