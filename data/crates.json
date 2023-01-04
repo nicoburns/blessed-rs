@@ -314,13 +314,6 @@
                             }]
                         },
                         {
-                            "name": "Abstracting over different number types",
-                            "recommendations": [{
-                                "name": "num",
-                                "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
-                            }]
-                        },
-                        {
                             "name": "Safe type casts",
                             "recommendations": [{
                                 "name": "bytemuck"
@@ -371,6 +364,53 @@
                                 "notes": "Bindings to the various *nix system functions. (Unix, Linux, MacOS, etc.)"
                             }]
                         }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "math-scientific",
+            "name": "Math / Scientific",
+            "description": "The <a href=\"https://lib.rs/crates/num\">num</a> crate is trusted and has a variety of numberical functionality that is missing from the standard library.",
+            "subgroups": [],
+            "purposes": [
+                {
+                    "name": "Abstracting over different number types",
+                    "recommendations": [{
+                        "name": "num-traits",
+                        "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
+                    }]
+                },
+                {
+                    "name": "Big Integers",
+                    "recommendations": [
+                        { "name": "num-bigint", "notes": "It's not the fastest, but it's part of the trusted num library." },
+                        { "name": "rug", "notes": "LGPL licensed. Wrapper for GMP. Much faster than num-bigint." }
+                    ]
+                },
+                {
+                    "name": "Big Decimals",
+                    "recommendations": [
+                        { "name": "rust_decimal", "notes": "The binary representation consists of a 96 bit integer number, a scaling factor used to specify the decimal fraction and a 1 bit sign." }
+                    ]
+                },
+                {
+                    "name": "Sortable Floats",
+                    "recommendations": [
+                        { "name": "ordered-float", "notes": "Float types that don't allow NaN and are therefore orderable. You can also use the <code>total_cmp</code> method from the standard library like <code>.sort_by(|a, b| a.total_cmp(&b))</code>." }
+                    ]
+                },
+                {
+                    "name": "Linear Algebra",
+                    "recommendations": [
+                        { "name": "nalgebra", "notes": "General-purpose linear algebra library with transformations and statically-sized or dynamically-sized matrices. However it supports only vectors (1d) and matrices (2d) and not higher-dimensional tensors." },
+                        { "name": "ndarray", "notes": "Less featureful than nalgebra but supports arbitrarily dimensioned arrays" }
+                    ]
+                },
+                {
+                    "name": "DataFrames",
+                    "recommendations": [
+                        { "name": "polars", "notes": "Similar to the Pandas library in Python but in pure Rust. Uses the Apache Arrow Columnar Format as the memory model." }
                     ]
                 }
             ]
