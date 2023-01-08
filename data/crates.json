@@ -92,7 +92,7 @@
                         "notes": "Heap memory profiling"
                     }, {
                         "name": "cargo-show-asm",
-                        "notes": "Printed the generated assembly for a Rust function"
+                        "notes": "Print the generated assembly for a Rust function"
                     }]
                 },
                 {
