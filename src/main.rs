@@ -26,12 +26,12 @@ async fn main() {
         .route("/users", post(routes::users::create::run))
         .route("/crates", get(routes::crates::list::run))
         .route("/getting-started", get(routes::getting_started::guide::run))
-        .nest("/static", static_file_service)
+        .nest_service("/static", static_file_service)
         .layer(TraceLayer::new_for_http());
 
     // run our app with hyper
     // `axum::Server` is a re-export of `hyper::Server`
-    let host : IpAddr = std::env::var("HOST").ok().and_then(|h| h.parse().ok()).unwrap_or([127, 0, 0, 1].into());
+    let host : IpAddr = std::env::var("HOST").ok().and_then(|h| h.parse().ok()).unwrap_or("::".parse().unwrap());
     let port = std::env::var("PORT").ok().and_then(|p| p.parse().ok()).unwrap_or(3333);
     let addr = SocketAddr::from((host, port));
     tracing::debug!("listening on {}", addr);

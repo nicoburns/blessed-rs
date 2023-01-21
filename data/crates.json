@@ -43,7 +43,7 @@
                     "recommendations": [{
                         "name": "cargo-edit",
                         "link": "https://github.com/killercup/cargo-edit",
-                        "notes": "Adds 'cargo add', 'cargo rm', and 'cargo upgrade' commands to cargo"
+                        "notes": "Adds 'cargo upgrade' and 'cargo set-version' commands to cargo"
                     }, {
                         "name": "cargo-outdated",
                         "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
@@ -92,7 +92,7 @@
                         "notes": "Heap memory profiling"
                     }, {
                         "name": "cargo-show-asm",
-                        "notes": "Printed the generated assembly for a Rust function"
+                        "notes": "Print the generated assembly for a Rust function"
                     }]
                 },
                 {
@@ -154,7 +154,7 @@
                                 "notes": "A smaller, simpler library. Preferrable if covers your needs, but it's quite limited in what it provides."
                             }, {
                                 "name": "chrono",
-                                "notes": "The most comphrehensive and full-featured datetime library, but more complex because of it."
+                                "notes": "The most comprehensive and full-featured datetime library, but more complex because of it."
                             }]
                         },
                         {
@@ -219,6 +219,7 @@
                         },
                         {
                             "name": "HTTP Requests",
+                            "notes": "See the HTTP section below for server-side libraries",
                             "recommendations": [{
                                 "name": "reqwest",
                                 "notes": "Full-fat HTTP client. Can be used in both synchronous and asynchronous code. Requires tokio runtime."
@@ -317,13 +318,6 @@
                             }]
                         },
                         {
-                            "name": "Abstracting over different number types",
-                            "recommendations": [{
-                                "name": "num",
-                                "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
-                            }]
-                        },
-                        {
                             "name": "Safe type casts",
                             "recommendations": [{
                                 "name": "bytemuck"
@@ -374,6 +368,53 @@
                                 "notes": "Bindings to the various *nix system functions. (Unix, Linux, MacOS, etc.)"
                             }]
                         }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "math-scientific",
+            "name": "Math / Scientific",
+            "description": "The <a href=\"https://lib.rs/crates/num\">num</a> crate is trusted and has a variety of numberical functionality that is missing from the standard library.",
+            "subgroups": [],
+            "purposes": [
+                {
+                    "name": "Abstracting over different number types",
+                    "recommendations": [{
+                        "name": "num-traits",
+                        "notes": "Traits like Number, Add, etc that allow you write functions that are generic over the specific numeric type"
+                    }]
+                },
+                {
+                    "name": "Big Integers",
+                    "recommendations": [
+                        { "name": "num-bigint", "notes": "It's not the fastest, but it's part of the trusted num library." },
+                        { "name": "rug", "notes": "LGPL licensed. Wrapper for GMP. Much faster than num-bigint." }
+                    ]
+                },
+                {
+                    "name": "Big Decimals",
+                    "recommendations": [
+                        { "name": "rust_decimal", "notes": "The binary representation consists of a 96 bit integer number, a scaling factor used to specify the decimal fraction and a 1 bit sign." }
+                    ]
+                },
+                {
+                    "name": "Sortable Floats",
+                    "recommendations": [
+                        { "name": "ordered-float", "notes": "Float types that don't allow NaN and are therefore orderable. You can also use the <code>total_cmp</code> method from the standard library like <code>.sort_by(|a, b| a.total_cmp(&b))</code>." }
+                    ]
+                },
+                {
+                    "name": "Linear Algebra",
+                    "recommendations": [
+                        { "name": "nalgebra", "notes": "General-purpose linear algebra library with transformations and statically-sized or dynamically-sized matrices. However it supports only vectors (1d) and matrices (2d) and not higher-dimensional tensors." },
+                        { "name": "ndarray", "notes": "Less featureful than nalgebra but supports arbitrarily dimensioned arrays" }
+                    ]
+                },
+                {
+                    "name": "DataFrames",
+                    "recommendations": [
+                        { "name": "polars", "notes": "Similar to the Pandas library in Python but in pure Rust. Uses the Apache Arrow Columnar Format as the memory model." }
                     ]
                 }
             ]
@@ -627,7 +668,7 @@
                                 "notes": "Has an excellent API and a solid implementation. However development has been intermittent, and the async branch still doesn't have a stable release. Use of rocket is not recommended until this has been fixed."
                             }, {
                                 "name": "poem",
-                                "notes": "Automatically generates OpenAPI defintions."
+                                "notes": "Automatically generates OpenAPI definitions."
                             }, {
                                 "name": "warp",
                                 "notes": "Very similar to axum but with a quirkier API. This is a solid framework, but you should probably prefer Axum unless you particularly like the API"
@@ -691,6 +732,7 @@
                 {
                     "slug": "sql-databases",
                     "name": "SQL Databases",
+                    "description": "The multi-database options (SQLx and Diesel) are generally quite good, and worth considering even if you only need support for a single database.",
                     "purposes": [
                         {
                             "name": "Multi Database",
@@ -701,19 +743,18 @@
                         },
                         {
                             "name": "ORMs",
-                            "recommendations": [{
-                                "name": "sea-orm",
-                                "notes": "Recommended. Built on top of sqlx. There is also a related sea-query crate that provides a query builder without full ORM functionality."
-                            }, {
+                            "recommendations": [
+                            {
                                 "name": "diesel",
-                                "notes": "Stable release is sync only. Pre-release async branch is currently AGPL. Can provide better performance in some circumstances."
+                                "notes": "Has excellent performance and takes an approach of strict compile time guarantees. The main crate is Sync only, but <a href=\"https://lib.rs/crates/diesel-async\">diesel-async</a> provides an async connection implementation."
+                            }, {
+                                "name": "sea-orm",
+                                "notes": "Built on top of sqlx (see above). There is also a related sea-query crate that provides a query builder without full ORM functionality."
                             }]
                         },
                         {
                             "name": "Postgres",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "tokio-postgres",
                                 "notes": "Postgres-specific library. Performs better than SQLx"
                             }]
@@ -721,17 +762,13 @@
                         {
                             "name": "MySQL",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "mysql_async",
-                                "notes": "Has a poorly designed API. Prefer SQLx for MySQL"
+                                "notes": "Has a poorly designed API. Prefer SQLx or Diesel for MySQL"
                             }]
                         },
                         {
                             "name": "SQLite",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "rusqlite",
                                 "notes": "Provides a sync API to SQLite + provides access to advanced sqlite features."
                             }]
@@ -739,8 +776,6 @@
                         {
                             "name": "MS SQL",
                             "recommendations": [{
-                                "name": "sqlx"
-                            }, {
                                 "name": "tiberius",
                                 "notes": "MS SQL specific library. Has better support for advanced column types than SQLx."
                             }]
@@ -748,6 +783,9 @@
                         {
                             "name": "Oracle",
                             "recommendations": [{
+                                "name": "diesel-oci",
+                                "notes": "Diesel backend and connection implementation for oracle databases"
+                            }, {
                                 "name": "oracle",
                                 "notes": "Rust bindings to ODPI-C"
                             }]
@@ -911,7 +949,7 @@
                             "name": "Mutex",
                             "recommendations": [{
                                 "name": "parking_lot",
-                                "notes": "std::mutex also works fine. But Parking Lot is faster."
+                                "notes": "std::sync::Mutex also works fine. But Parking Lot is faster."
                             }]
                         },
                         {

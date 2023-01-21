@@ -1,5 +1,5 @@
 # Build image
-FROM rust:1.60 as builder
+FROM rust:1.65 as builder
 
 # Run dummy build to build and cache dependencies that only depends on Cargo.toml and Cargo.lock
 WORKDIR /usr/src
