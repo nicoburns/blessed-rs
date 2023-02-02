@@ -888,13 +888,6 @@
                             }]
                         },
                         {
-                            "name": "Filesystem helpers",
-                            "recommendations": [{
-                                "name": "fs_extra",
-                                "notes": "Recursively move, copy, and delete the files in a directory"
-                            }]
-                        },
-                        {
                             "name": "File watching",
                             "recommendations": [{
                                 "name": "notify",
