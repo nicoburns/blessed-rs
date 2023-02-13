@@ -1128,6 +1128,7 @@
                     "purposes": [
                         {
                             "name": "Game Engines",
+                            "notes": "Bevy is the clear winner for complex games (and especially 3D games). For those wanting something simpler, both ggez and macroquad are good options",
                             "recommendations": [{
                                 "name": "bevy",
                                 "notes": "By far the most developed Rust game engine. It's still early, but already impressive and very much useable."
