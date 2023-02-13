@@ -1030,6 +1030,7 @@
                             }],
                             "see_also": [{
                                 "name": "vizia",
+                                "link": "https://github.com/vizia/vizia",
                                 "notes": "Fairly complete with sophisticated layout and text layout  but has yet to make a stable release."
                             }, {
                                 "name": "freya",
@@ -1062,9 +1063,11 @@
                                 "notes": "A fork of winit by the Tauri project which adds support for things like system menus that desktop apps need."
                             }, {
                                 "name": "glazier",
+                                "link": "https://github.com/linebender/glazier",
                                 "notes": "A new competitor to winit based on the old druid-shell. Has a callback that may be better than the event loop architecture for some tasks. Doesn't yet have a stable release."
                             }, {
                                 "name": "baseview",
+                                "link": "https://github.com/RustAudio/baseview",
                                 "notes": "Specialized window creation library targetting windows to be embedded in other applications (e.g. DAW plugins)"
                             }]
                         }, {
@@ -1077,6 +1080,7 @@
                                 "notes": "Based on the Skia C++ library. The most complete option with the best performance. However, it can be difficult to get it to compile."
                             }, {
                                 "name": "vello",
+                                "link": "https://github.com/linebender/vello",
                                 "notes": "Pure Rust, and uses cutting edge techniques to render using the GPU. Still somewhat immature and hasn't yet put out a stable release."
                             }]
                         }, {
@@ -1085,7 +1089,7 @@
                                 "name": "taffy",
                                 "notes": "Supports Flexbox and CSS Grid algorithms."
                             }, {
-                                "name": "morphom",
+                                "name": "morphorm",
                                 "notes": "Implements it's own layout algorithm based on Subform layout"
                             }]
                         }, {
@@ -1095,6 +1099,7 @@
                                 "notes": "Full text layout including rich text and support for BiDi and non-latin scripts. The best option for now."
                             }, {
                                 "name": "parley",
+                                "link": "https://github.com/dfrg/parley",
                                 "notes": "Another very accomplished text layout library used by Druid/Xilem."
                             }]
                         }, {
