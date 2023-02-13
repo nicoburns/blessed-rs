@@ -1134,6 +1134,9 @@
                             }, {
                                 "name": "ggez",
                                 "notes": "A simpler option for 2d games only."
+                            }, {
+                                "name": "macroquad",
+                                "notes": "A simple and easy to use 2d game library, great for beginners."
                             }]
                         },
                         {
