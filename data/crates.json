@@ -1053,6 +1053,67 @@
                                 "notes": "One of the older Rust GUI crates, but it never seems to have caught on for some reason"
                             }]
                         }, {
+                            "name": "Window creation",
+                            "recommendations": [{
+                                "name": "winit",
+                                "notes": "The defacto standard option. Uses an event loop based architecture. Widely used and should probably be the default choice."
+                            }, {
+                                "name": "tao",
+                                "notes": "A fork of winit by the Tauri project which adds support for things like system menus that desktop apps need."
+                            }, {
+                                "name": "glazier",
+                                "notes": "A new competitor to winit based on the old druid-shell. Has a callback that may be better than the event loop architecture for some tasks. Doesn't yet have a stable release."
+                            }, {
+                                "name": "baseview",
+                                "notes": "Specialized window creation library targetting windows to be embedded in other applications (e.g. DAW plugins)"
+                            }]
+                        }, {
+                            "name": "2D Canvas Renders",
+                            "recommendations": [{
+                                "name": "femtovg",
+                                "notes": "Pure Rust. Offers a simple API. Probably the easiest to get started with."
+                            }, {
+                                "name": "skia-safe",
+                                "notes": "Based on the Skia C++ library. The most complete option with the best performance. However, it can be difficult to get it to compile."
+                            }, {
+                                "name": "vello",
+                                "notes": "Pure Rust, and uses cutting edge techniques to render using the GPU. Still somewhat immature and hasn't yet put out a stable release."
+                            }]
+                        }, {
+                            "name": "UI layout",
+                            "recommendations": [{
+                                "name": "taffy",
+                                "notes": "Supports Flexbox and CSS Grid algorithms."
+                            }, {
+                                "name": "morphom",
+                                "notes": "Implements it's own layout algorithm based on Subform layout"
+                            }]
+                        }, {
+                            "name": "Text layout",
+                            "recommendations": [{
+                                "name": "cosmic-text",
+                                "notes": "Full text layout including rich text and support for BiDi and non-latin scripts. The best option for now."
+                            }, {
+                                "name": "parley",
+                                "notes": "Another very accomplished text layout library used by Druid/Xilem."
+                            }]
+                        }, {
+                            "name": "Accessibility",
+                            "recommendations": [{
+                                "name": "accesskit",
+                                "notes": "Allows you to export a semantic tree representing your UI to make accessible to screen readers and other assistive technologies"
+                            }]
+                        }, {
+                            "name": "Clipboard",
+                            "notes": "Both cli-clipboard and copypasta are forks of the original rust-clipboard that add support for wayland.",
+                            "recommendations": [{
+                                "name": "cli-clipboard",
+                                "notes": ""
+                            }, {
+                                "name": "copypasta",
+                                "notes": ""
+                            }]
+                        }, {
                             "name": "File Dialogs",
                             "recommendations": [{
                                 "name": "rfd",
