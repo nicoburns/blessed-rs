@@ -1011,6 +1011,9 @@
                             "recommendations": [{
                                 "name": "tauri",
                                 "notes": "Electron-like web-based UI. Except it uses system webviews rather than shipping chromium, and non-UI code is written in Rust rather than node.js"
+                            }, {
+                                "name": "dioxus",
+                                "notes": "A very nice API layer that has Tauri, Web, and TUI renderers. A native renderer is coming soon."
                             }]
                         },
                         {
@@ -1022,11 +1025,32 @@
                                 "name": "egui",
                                 "notes": "Immediate-mode UI. Lots of widgets. The most useable out of the box if your needs are simple and you don't need to customise of the look and feel"
                             }, {
-                                "name": "druid",
-                                "notes": "Has better foundations than iced or egui, but the API is quite clunky and poorly documented."
-                            }, {
                                 "name": "slint",
-                                "notes": "The most complete rust-native UI library. But note that it's dual GPL3/commercial licensed."
+                                "notes": "Possibly the most complete rust-native UI library. But note that it's dual GPL3/commercial licensed."
+                            }],
+                            "see_also": [{
+                                "name": "vizia",
+                                "notes": "Fairly complete with sophisticated layout and text layout  but has yet to make a stable release."
+                            }, {
+                                "name": "freya",
+                                "link": "https://github.com/marc2332/freya",
+                                "notes": "A very nice API layer in based on Dioxus but it renders using Skia"
+                            }, {
+                                "name": "druid",
+                                "notes": "Druid is a relatively mature alternative to Iced/Slint, however it has been discontinued in favour of Xilem so it's use for new projects is discouraged."
+                            }, {
+                                "name": "xilem",
+                                "link": "https://github.com/linebender/xilem",
+                                "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
+                            }, {
+                                "name": "rui",
+                                "notes": "SwiftUI inspired UI framework."
+                            }, {
+                                "name": "concoct",
+                                "notes": "Jetpack compose inspired UI framework. Promising but still immature, even compared to other Rust GUI frameworks."
+                            }, {
+                                "name": "kas",
+                                "notes": "One of the older Rust GUI crates, but it never seems to have caught on for some reason"
                             }]
                         }, {
                             "name": "File Dialogs",
