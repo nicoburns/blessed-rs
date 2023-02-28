@@ -97,6 +97,7 @@
                 },
                 {
                     "name": "Debugging Macros",
+                    "notes": "<a href=\"https://github.com/rust-lang/rust-analyzer\">Rust Analyzer</a> also allows you to <a href=\"https://rust-analyzer.github.io/manual.html#expand-macro-recursively\">expand macros directly in your editor</a>",
                     "recommendations": [{
                         "name": "cargo-expand",
                         "link": "https://github.com/dtolnay/cargo-expand#cargo-expand",
