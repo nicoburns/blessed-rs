@@ -166,7 +166,7 @@
                             "recommendations": [{
                                 "name": "regex",
                                 "notes": "De facto standard regex library. Very fast, but does not support fancier features such as backtracking."
-                            }, 
+                            },
                             {
                                 "name": "fancy-regex",
                                 "notes": "Use if need features such as backtracking which regex doesn't support"
@@ -634,6 +634,14 @@
                             "recommendations": [{
                                 "name": "hyper",
                                 "notes": "A low-level HTTP implementation (both client and server). Implements HTTP/1, and HTTP/2. Works best with the tokio async runtime, but can support other runtimes."
+                            }]
+                        },
+                        {
+                            "name": "Dominant framework",
+                            "recommendations": [{
+                                "name": "teo",
+                                "link": "https://teocloud.io",
+                                "notes": "A redefined next-generation HTTP framework with builtin schema language and ORM. See <a href=\"https://teocloud.io/docs\" target=\"_blank\">here</a> for docs."
                             }]
                         },
                         {
