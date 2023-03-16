@@ -917,10 +917,13 @@
                             }]
                         },
                         {
-                            "name": "Full TUI library",
+                            "name": "TUI",
                             "recommendations": [{
+                                "name": "ratatui",
+                                "notes": "A high-level TUI library with widgets, layout, etc. "
+                            }, {
                                 "name": "crossterm",
-                                "notes": "Cross-platform terminal rendering and event handling"
+                                "notes": "Low-level cross-platform terminal rendering and event handling"
                             }]
                         }
                     ]
