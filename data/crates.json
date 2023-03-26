@@ -1054,7 +1054,7 @@
                             "recommendations": [
                             {
                                 "name": "crossbeam-channel",
-                                "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
+                                "notes": "The same channel algorithm as in the standard library but with a more powerful API, offering a Go-like 'select' feature."
                             }, {
                                 "name": "flume",
                                 "notes": "Smaller and simpler than crossbeam-channel and almost as fast"
