@@ -973,10 +973,12 @@
                             }, {
                                 "name": "flume",
                                 "notes": "Smaller and simpler than crossbeam-channel and almost as fast"
-                            },
-                            {
+                            },  {
+                                "name": "tokio",
+                                "notes": "Tokio's sync module provides channels for using in async code"
+                            }, {
                                 "name": "postage",
-                                "notes": "Channels that integrate nicely with async code"
+                                "notes": "Channels that integrate nicely with async code, with different options than Tokio"
                             }]
                         },
                         {
