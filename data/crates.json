@@ -372,7 +372,7 @@
         {
             "slug": "math-scientific",
             "name": "Math / Scientific",
-            "description": "The <a href=\"https://lib.rs/crates/num\">num</a> crate is trusted and has a variety of numberical functionality that is missing from the standard library.",
+            "description": "The <a href=\"https://lib.rs/crates/num\">num</a> crate is trusted and has a variety of numerical functionality that is missing from the standard library.",
             "subgroups": [],
             "purposes": [
                 {
