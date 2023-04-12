@@ -816,6 +816,16 @@
                             "recommendations": [{
                                 "name": "rocksdb"
                             }]
+                        },
+                        {
+                            "name": "Cassandra",
+                            "recommendations": [{
+                                "name": "cassandra-protocol",
+                                "notes": "Low-level Cassandra protocol implementation."
+                            }, {
+                                "name": "cdrs-tokio",
+                                "notes": "High-level async Cassandra driver."
+                            }]
                         }
                     ]
                 },
