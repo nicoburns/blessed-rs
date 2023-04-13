@@ -672,6 +672,9 @@
                             }, {
                                 "name": "tide",
                                 "notes": "Similar to Axum, but based on async-std rather than tokio"
+                            }, {
+                                "name": "salvo",
+                                "notes": "A powerful and simplest web server framework in Rust world."
                             }]
                         },
                         {
