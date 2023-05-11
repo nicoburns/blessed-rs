@@ -1051,7 +1051,7 @@
                             }, {
                                 "name": "freya",
                                 "link": "https://github.com/marc2332/freya",
-                                "notes": "A very nice API layer in based on Dioxus but it renders using Skia"
+                                "notes": "Dioxus-based GUI framework using Skia for rendering."
                             }, {
                                 "name": "druid",
                                 "notes": "Druid is a relatively mature alternative to Iced/Slint, however it has been discontinued in favour of Xilem so it's use for new projects is discouraged."
