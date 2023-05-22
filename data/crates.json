@@ -167,7 +167,7 @@
                             "recommendations": [{
                                 "name": "regex",
                                 "notes": "De facto standard regex library. Very fast, but does not support fancier features such as backtracking."
-                            }, 
+                            },
                             {
                                 "name": "fancy-regex",
                                 "notes": "Use if need features such as backtracking which regex doesn't support"
@@ -885,6 +885,7 @@
                             "name": "Globbing",
                             "recommendations": [{
                                 "name": "globset",
+                                "link": "https://crates.io/crates/globset",
                                 "notes": "High-performance globbing that allows multiple globs to be evaluated at once"
                             }]
                         },
@@ -892,9 +893,11 @@
                             "name": "Directory walking",
                             "recommendations": [{
                                 "name": "walkdir",
+                                "link": "https://crates.io/crates/walkdir",
                                 "notes": "Basic recursive filesystem walking."
                             }, {
                                 "name": "ignore",
+                                "link": "https://crates.io/crates/ignore",
                                 "notes": "Recursive filesystem walking that respects ignore files (like .gitignore)"
                             }]
                         },
