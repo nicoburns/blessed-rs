@@ -239,7 +239,7 @@
                                 "notes": "Provides a boxed error type that can hold any error, and helpers for generating an application-level stack trace."
                             }, {
                                 "name": "color-eyre",
-                                "notes": "A fork of anyhow that gives you more control over the format of the generated error messages. Recommended if you need intend to present error messages to end users. Otherwise anyhow is simpler."
+                                "notes": "A fork of anyhow that gives you more control over the format of the generated error messages. Recommended if you intend to present error messages to end users. Otherwise anyhow is simpler."
                             }]
                         },
                         {
