@@ -861,7 +861,7 @@
                             }],
                             "see_also": [{
                                 "name": "bpaf",
-                                "notes": "Fast compile times than clap while still being featureful. But still has some rough edges, and the API can be confusing at times."
+                                "notes": "Faster compile times than clap while still being featureful. But still has some rough edges, and the API can be confusing at times."
                             }]
                         },
                         {
