@@ -938,6 +938,13 @@
                                 "name": "crossterm",
                                 "notes": "Low-level cross-platform terminal rendering and event handling"
                             }]
+                        },
+                        {
+                            "name": "Interactive prompts",
+                            "recommendations": [{
+                                "name": "inquire",
+                                "notes": "Ask for confirmation, selection, text input and more"
+                            }]
                         }
                     ]
                 }
