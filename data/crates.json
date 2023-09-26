@@ -167,7 +167,7 @@
                             "recommendations": [{
                                 "name": "regex",
                                 "notes": "De facto standard regex library. Very fast, but does not support fancier features such as backtracking."
-                            }, 
+                            },
                             {
                                 "name": "fancy-regex",
                                 "notes": "Use if need features such as backtracking which regex doesn't support"
@@ -239,7 +239,7 @@
                                 "notes": "Provides a boxed error type that can hold any error, and helpers for generating an application-level stack trace."
                             }, {
                                 "name": "color-eyre",
-                                "notes": "A fork of anyhow that gives you more control over the format of the generated error messages. Recommended if you need intend to present error messages to end users. Otherwise anyhow is simpler."
+                                "notes": "A fork of anyhow that gives you more control over the format of the generated error messages. Recommended if you intend to present error messages to end users. Otherwise anyhow is simpler."
                             }]
                         },
                         {
@@ -868,7 +868,7 @@
                             }],
                             "see_also": [{
                                 "name": "bpaf",
-                                "notes": "Fast compile times than clap while still being featureful. But still has some rough edges, and the API can be confusing at times."
+                                "notes": "Faster compile times than clap while still being featureful. But still has some rough edges, and the API can be confusing at times."
                             }]
                         },
                         {
@@ -892,6 +892,7 @@
                             "name": "Globbing",
                             "recommendations": [{
                                 "name": "globset",
+                                "link": "https://crates.io/crates/globset",
                                 "notes": "High-performance globbing that allows multiple globs to be evaluated at once"
                             }]
                         },
@@ -899,9 +900,11 @@
                             "name": "Directory walking",
                             "recommendations": [{
                                 "name": "walkdir",
+                                "link": "https://crates.io/crates/walkdir",
                                 "notes": "Basic recursive filesystem walking."
                             }, {
                                 "name": "ignore",
+                                "link": "https://crates.io/crates/ignore",
                                 "notes": "Recursive filesystem walking that respects ignore files (like .gitignore)"
                             }]
                         },
@@ -941,6 +944,13 @@
                             }, {
                                 "name": "crossterm",
                                 "notes": "Low-level cross-platform terminal rendering and event handling"
+                            }]
+                        },
+                        {
+                            "name": "Interactive prompts",
+                            "recommendations": [{
+                                "name": "inquire",
+                                "notes": "Ask for confirmation, selection, text input and more"
                             }]
                         }
                     ]
@@ -1058,7 +1068,7 @@
                             }, {
                                 "name": "freya",
                                 "link": "https://github.com/marc2332/freya",
-                                "notes": "A very nice API layer in based on Dioxus but it renders using Skia"
+                                "notes": "Dioxus-based GUI framework using Skia for rendering."
                             }, {
                                 "name": "druid",
                                 "notes": "Druid is a relatively mature alternative to Iced/Slint, however it has been discontinued in favour of Xilem so it's use for new projects is discouraged."
