@@ -1159,10 +1159,10 @@
                     "purposes": [
                         {
                             "name": "Game Engines",
-                            "notes": "Bevy is the clear winner for complex games (and especially 3D games). For a full GUI editor, use Fyrox; for those wanting something simpler, both ggez and macroquad are good options",
+                            "notes": "",
                             "recommendations": [{
                                 "name": "bevy",
-                                "notes": "By far the most developed Rust game engine. It's still early, but already impressive and very much useable."
+                                "notes": "An ECS based game engine, good for 3D but also capable of 2D."
                             }, {
                                 "name": "fyrox",
                                 "notes": "An OOP-focused game engine with 3D and 2D support and a full GUI scene editor."
