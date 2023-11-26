@@ -938,6 +938,13 @@
                                 "name": "crossterm",
                                 "notes": "Low-level cross-platform terminal rendering and event handling"
                             }]
+                        },
+                        {
+                            "name": "Interactive prompts",
+                            "recommendations": [{
+                                "name": "inquire",
+                                "notes": "Ask for confirmation, selection, text input and more"
+                            }]
                         }
                     ]
                 }
@@ -1156,6 +1163,9 @@
                             "recommendations": [{
                                 "name": "bevy",
                                 "notes": "An ECS based game engine, good for 3D but also capable of 2D."
+                            }, {
+                                "name": "fyrox",
+                                "notes": "An OOP-focused game engine with 3D and 2D support and a full GUI scene editor."
                             }, {
                                 "name": "ggez",
                                 "notes": "A simpler option for 2d games only."
