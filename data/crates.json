@@ -434,7 +434,8 @@
                 {
                     "name": "DataFrames",
                     "recommendations": [
-                        { "name": "polars", "notes": "Similar to the Pandas library in Python but in pure Rust. Uses the Apache Arrow Columnar Format as the memory model." }
+                        { "name": "polars", "notes": "Similar to the Pandas library in Python but in pure Rust. Uses the Apache Arrow Columnar Format as the memory model." },
+                        { "name": "datafusion", "notes": "<a href=\"https://arrow.apache.org/datafusion\">Apache DataFusion</a> is an in-memory query engine that uses Apache Arrow as the memory model" }
                     ]
                 }
             ]
