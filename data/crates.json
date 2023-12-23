@@ -76,6 +76,9 @@
                         "name": "criterion",
                         "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
                     }, {
+                        "name": "divan",
+                        "notes": "Simple yet powerful benchmarking library with allocation profiling"
+                    }, {
                         "name": "hyperfine",
                         "link": "https://github.com/sharkdp/hyperfine#hyperfine",
                         "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
