@@ -298,9 +298,10 @@
                     "purposes": [
                         {
                             "name": "Lazy static variable initialization",
+                            "notes": "The core functionality of once_cell is now <a href=\"https://doc.rust-lang.org/stable/std/cell/struct.OnceCell.html\">included in the standard library</a> with the remaining parts <a href=\"https://github.com/rust-lang/rust/issues/109736\">on track</a> to be stabilised in future.",
                             "recommendations": [{
                                 "name": "once_cell",
-                                "notes": "Newer crate with more ergonomic API. On track to be incorporated into the standard library. Should be preferred for all new projects."
+                                "notes": "Newer crate with more ergonomic API. Should be preferred for all new projects."
                             }, {
                                 "name": "lazy_static",
                                 "notes": "Older crate. API is less convenient, but crate is stable and maintained."
