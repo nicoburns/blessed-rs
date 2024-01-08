@@ -36,6 +36,10 @@
                         "name": "cross",
                         "link": "https://github.com/cross-rs/cross#cross",
                         "notes": "Seamless cross-compiling using Docker containers."
+                    }, {
+                        "name": "cargo-zigbuild",
+                        "link": "https://github.com/rust-cross/cargo-zigbuild",
+                        "notes": "Easily cross-compile using Zig as the linker."
                     }]
                 },
                 {
@@ -68,6 +72,11 @@
                         "name": "cargo-nextest",
                         "link": "https://nexte.st",
                         "notes": "Faster, better test runner"
+                    },
+                    {
+                        "name": "insta",
+                        "link": "https://insta.rs",
+                        "notes": "Snapshot testing with inline snapshot support"
                     }]
                 },
                 {
