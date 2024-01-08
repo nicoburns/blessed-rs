@@ -72,6 +72,11 @@
                         "name": "cargo-nextest",
                         "link": "https://nexte.st",
                         "notes": "Faster, better test runner"
+                    },
+                    {
+                        "name": "insta",
+                        "link": "https://insta.rs",
+                        "notes": "Snapshot testing with inline snapshot support"
                     }]
                 },
                 {
