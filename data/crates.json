@@ -76,7 +76,7 @@
                     {
                         "name": "insta",
                         "link": "https://insta.rs",
-                        "notes": "Golden testing with inline snapshot support"
+                        "notes": "Snapshot testing with inline snapshot support"
                     }]
                 },
                 {
