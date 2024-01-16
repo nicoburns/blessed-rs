@@ -331,6 +331,8 @@
                             "name": "Safe type casts",
                             "recommendations": [{
                                 "name": "bytemuck"
+                            }, {
+                                "name": "zerocopy"
                             }]
                         },
                         {
