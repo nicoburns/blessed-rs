@@ -1151,13 +1151,9 @@
                             }]
                         }, {
                             "name": "Clipboard",
-                            "notes": "Both cli-clipboard and copypasta are forks of the original rust-clipboard that add support for wayland.",
                             "recommendations": [{
-                                "name": "cli-clipboard",
-                                "notes": ""
-                            }, {
-                                "name": "copypasta",
-                                "notes": ""
+                                "name": "arboard",
+                                "notes": "A fork of rust-clipboard that supports copy and pasting of both text and images on Linux (X11/Wayland), MacOS and Windows."
                             }]
                         }, {
                             "name": "File Dialogs",
