@@ -72,6 +72,11 @@
                         "name": "cargo-nextest",
                         "link": "https://nexte.st",
                         "notes": "Faster, better test runner"
+                    },
+                    {
+                        "name": "insta",
+                        "link": "https://insta.rs",
+                        "notes": "Snapshot testing with inline snapshot support"
                     }]
                 },
                 {
@@ -79,6 +84,9 @@
                     "recommendations": [{
                         "name": "criterion",
                         "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
+                    }, {
+                        "name": "divan",
+                        "notes": "Simple yet powerful benchmarking library with allocation profiling"
                     }, {
                         "name": "hyperfine",
                         "link": "https://github.com/sharkdp/hyperfine#hyperfine",
@@ -290,9 +298,10 @@
                     "purposes": [
                         {
                             "name": "Lazy static variable initialization",
+                            "notes": "The core functionality of once_cell is now <a href=\"https://doc.rust-lang.org/stable/std/cell/struct.OnceCell.html\">included in the standard library</a> with the remaining parts <a href=\"https://github.com/rust-lang/rust/issues/109736\">on track</a> to be stabilised in future.",
                             "recommendations": [{
                                 "name": "once_cell",
-                                "notes": "Newer crate with more ergonomic API. On track to be incorporated into the standard library. Should be preferred for all new projects."
+                                "notes": "Newer crate with more ergonomic API. Should be preferred for all new projects."
                             }, {
                                 "name": "lazy_static",
                                 "notes": "Older crate. API is less convenient, but crate is stable and maintained."
@@ -322,6 +331,8 @@
                             "name": "Safe type casts",
                             "recommendations": [{
                                 "name": "bytemuck"
+                            }, {
+                                "name": "zerocopy"
                             }]
                         },
                         {
