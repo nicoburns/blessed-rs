@@ -827,6 +827,14 @@
                             }]
                         },
                         {
+                            "name": "LMDB",
+                            "notes": "<a href=\"https://github.com/mozilla/rkv\">The rkv crate</a> depends on <a href=\"https://github.com/mozilla/lmdb-rs\">the lmdb-rkv dependency</a> which is archived and is inactive.",
+                            "recommendations": [{
+                                "name": "heed",
+                                "notes": "A fully typed LMDB wrapper with minimum overhead."
+                            }]
+                        },
+                        {
                             "name": "Rocks DB",
                             "recommendations": [{
                                 "name": "rocksdb"
@@ -1103,9 +1111,9 @@
                                 "name": "ribir",
                                 "link": "https://ribir.org/"
                             },
-                            { "name": "cushy" }, 
-                            { "name": "rui" }, 
-                            { "name": "concoct" }, 
+                            { "name": "cushy" },
+                            { "name": "rui" },
+                            { "name": "concoct" },
                             { "name": "kas" }]
                         }, {
                             "name": "Window creation",
