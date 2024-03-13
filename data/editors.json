@@ -14,8 +14,8 @@
   {
     "name": "Sublime Text",
     "url": "https://www.sublimetext.com/",
-    "editor_plugins": "sublime-lsp and lsp-rust-analyzer plugins",
-    "notes": "Well supported. A good option if you like Intellij products."
+    "editor_plugins": "sublime-lsp combined with lsp-rust-analyzer, Rustfmt and Rust Enhanced plugins",
+    "notes": "Great if you like a distraction-free editor."
   },
   {
     "name": "Vim/NeoVim",
