@@ -36,6 +36,10 @@
                         "name": "cross",
                         "link": "https://github.com/cross-rs/cross#cross",
                         "notes": "Seamless cross-compiling using Docker containers."
+                    }, {
+                        "name": "cargo-zigbuild",
+                        "link": "https://github.com/rust-cross/cargo-zigbuild",
+                        "notes": "Easily cross-compile using Zig as the linker."
                     }]
                 },
                 {
@@ -68,6 +72,11 @@
                         "name": "cargo-nextest",
                         "link": "https://nexte.st",
                         "notes": "Faster, better test runner"
+                    },
+                    {
+                        "name": "insta",
+                        "link": "https://insta.rs",
+                        "notes": "Snapshot testing with inline snapshot support"
                     }]
                 },
                 {
@@ -75,6 +84,9 @@
                     "recommendations": [{
                         "name": "criterion",
                         "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
+                    }, {
+                        "name": "divan",
+                        "notes": "Simple yet powerful benchmarking library with allocation profiling"
                     }, {
                         "name": "hyperfine",
                         "link": "https://github.com/sharkdp/hyperfine#hyperfine",
@@ -286,9 +298,10 @@
                     "purposes": [
                         {
                             "name": "Lazy static variable initialization",
+                            "notes": "The core functionality of once_cell is now <a href=\"https://doc.rust-lang.org/stable/std/cell/struct.OnceCell.html\">included in the standard library</a> with the remaining parts <a href=\"https://github.com/rust-lang/rust/issues/109736\">on track</a> to be stabilised in future.",
                             "recommendations": [{
                                 "name": "once_cell",
-                                "notes": "Newer crate with more ergonomic API. On track to be incorporated into the standard library. Should be preferred for all new projects."
+                                "notes": "Newer crate with more ergonomic API. Should be preferred for all new projects."
                             }, {
                                 "name": "lazy_static",
                                 "notes": "Older crate. API is less convenient, but crate is stable and maintained."
@@ -318,6 +331,8 @@
                             "name": "Safe type casts",
                             "recommendations": [{
                                 "name": "bytemuck"
+                            }, {
+                                "name": "zerocopy"
                             }]
                         },
                         {
@@ -938,6 +953,13 @@
                                 "name": "crossterm",
                                 "notes": "Low-level cross-platform terminal rendering and event handling"
                             }]
+                        },
+                        {
+                            "name": "Interactive prompts",
+                            "recommendations": [{
+                                "name": "inquire",
+                                "notes": "Ask for confirmation, selection, text input and more"
+                            }]
                         }
                     ]
                 }
@@ -1013,7 +1035,6 @@
                 {
                     "slug": "gui",
                     "name": "GUI",
-                    "description": "GTK and Tauri are probably the only options which can be described as production-ready without caveats.<br />The Rust native options are usable for simple projects but are all still quite incomplete.",
                     "purposes": [
                         {
                             "name": "GTK",
@@ -1036,42 +1057,56 @@
                             }]
                         },
                         {
-                            "name": "Rust Native GUI",
+                            "name": "Immediate Mode Native GUI",
+                            "recommendations": [{
+                                "name": "egui",
+                                "notes": "Immediate-mode UI. Lots of widgets. The most useable out of the box if your needs are simple and you don't need to customise of the look and feel"
+                            }]
+                        },
+                        {
+                            "name": "Retained Mode Native GUI",
                             "recommendations": [{
                                 "name": "iced",
                                 "notes": "Retained mode UI with a nice API. It's useable for basic apps, but has a number of missing features including multiple windows, layers, and proper text rendering."
                             }, {
-                                "name": "egui",
-                                "notes": "Immediate-mode UI. Lots of widgets. The most useable out of the box if your needs are simple and you don't need to customise of the look and feel"
+                                "name": "floem",
+                                "link": "https://github.com/lapce/floem",
+                                "notes": "Inspired by Xilem, Leptos and rui, floem is currently more complete than any of them for native UI. Used by the Lapce text editor."
                             }, {
-                                "name": "slint",
-                                "notes": "Possibly the most complete rust-native UI library. But note that it's dual GPL3/commercial licensed."
-                            }],
-                            "see_also": [{
                                 "name": "vizia",
                                 "link": "https://github.com/vizia/vizia",
-                                "notes": "Fairly complete with sophisticated layout and text layout  but has yet to make a stable release."
+                                "notes": "Fairly complete with sophisticated layout and text layout, but has yet to make a stable release."
+                            }],
+                            "see_also": [{
+                                "name": "xilem",
+                                "link": "https://github.com/linebender/xilem",
+                                "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
                             }, {
                                 "name": "freya",
                                 "link": "https://github.com/marc2332/freya",
                                 "notes": "Dioxus-based GUI framework using Skia for rendering."
                             }, {
+                                "name": "slint",
+                                "notes": "Possibly the most complete rust-native UI library. But note that it's dual GPL3/commercial licensed."
+                            }, {
                                 "name": "druid",
                                 "notes": "Druid is a relatively mature alternative to Iced/Slint, however it has been discontinued in favour of Xilem so it's use for new projects is discouraged."
                             }, {
-                                "name": "xilem",
-                                "link": "https://github.com/linebender/xilem",
-                                "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
+                                "name": "gpui",
+                                "link": "https://github.com/zed-industries/zed/tree/main/crates/gpui",
+                                "notes": "High performance framework used in the Zed text editor. Currently macOS only."
                             }, {
-                                "name": "rui",
-                                "notes": "SwiftUI inspired UI framework."
+                                "name": "makepad",
+                                "link": "https://makepad.dev/",
+                                "notes": "Makepad has a strong focus on performance and minimising bloat but is consequently less feature complete in areas such as accessibility and system integration."
                             }, {
-                                "name": "concoct",
-                                "notes": "Jetpack compose inspired UI framework. Promising but still immature, even compared to other Rust GUI frameworks."
-                            }, {
-                                "name": "kas",
-                                "notes": "One of the older Rust GUI crates, but it never seems to have caught on for some reason"
-                            }]
+                                "name": "ribir",
+                                "link": "https://ribir.org/"
+                            },
+                            { "name": "cushy" }, 
+                            { "name": "rui" }, 
+                            { "name": "concoct" }, 
+                            { "name": "kas" }]
                         }, {
                             "name": "Window creation",
                             "recommendations": [{
@@ -1090,17 +1125,23 @@
                                 "notes": "Specialized window creation library targetting windows to be embedded in other applications (e.g. DAW plugins)"
                             }]
                         }, {
-                            "name": "2D Canvas Renders",
+                            "name": "2D Renderers",
                             "recommendations": [{
                                 "name": "femtovg",
-                                "notes": "Pure Rust. Offers a simple API. Probably the easiest to get started with."
+                                "notes": "OpenGL based. Offers a simple API. Probably the easiest to get started with."
                             }, {
                                 "name": "skia-safe",
-                                "notes": "Based on the Skia C++ library. The most complete option with the best performance. However, it can be difficult to get it to compile."
+                                "notes": "Bindings to the Skia C++ library. The most complete option with excellent performance. However, it can be difficult to get it to compile."
                             }, {
                                 "name": "vello",
                                 "link": "https://github.com/linebender/vello",
-                                "notes": "Pure Rust, and uses cutting edge techniques to render using the GPU. Still somewhat immature and hasn't yet put out a stable release."
+                                "notes": "WGPU based and uses cutting edge techniques to render vector paths using the GPU. Still somewhat immature and hasn't yet put out a stable release."
+                            }, {
+                                "name": "vger",
+                                "notes": "A simpler WGPU based option which is less innovative but currently more stable than vello."
+                            }, {
+                                "name": "webrender",
+                                "notes": "OpenGL based. Mature with production usage in Firefox but documentation and OSS maintenance are lacking."
                             }]
                         }, {
                             "name": "UI layout",
@@ -1129,13 +1170,9 @@
                             }]
                         }, {
                             "name": "Clipboard",
-                            "notes": "Both cli-clipboard and copypasta are forks of the original rust-clipboard that add support for wayland.",
                             "recommendations": [{
-                                "name": "cli-clipboard",
-                                "notes": ""
-                            }, {
-                                "name": "copypasta",
-                                "notes": ""
+                                "name": "arboard",
+                                "notes": "A fork of rust-clipboard that supports copy and pasting of both text and images on Linux (X11/Wayland), MacOS and Windows."
                             }]
                         }, {
                             "name": "File Dialogs",
@@ -1152,10 +1189,13 @@
                     "purposes": [
                         {
                             "name": "Game Engines",
-                            "notes": "Bevy is the clear winner for complex games (and especially 3D games). For those wanting something simpler, both ggez and macroquad are good options",
+                            "notes": "",
                             "recommendations": [{
                                 "name": "bevy",
-                                "notes": "By far the most developed Rust game engine. It's still early, but already impressive and very much useable."
+                                "notes": "An ECS based game engine, good for 3D but also capable of 2D."
+                            }, {
+                                "name": "fyrox",
+                                "notes": "An OOP-focused game engine with 3D and 2D support and a full GUI scene editor."
                             }, {
                                 "name": "ggez",
                                 "notes": "A simpler option for 2d games only."
