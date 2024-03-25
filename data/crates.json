@@ -563,7 +563,7 @@
                     "name": "TLS / SSL",
                     "recommendations": [{
                         "name": "rustls",
-                        "notes": "A portable pure-rust high-level implementation of TLS. Implements TLS 1.2 and higher."
+                        "notes": "Rustls is a modern TLS library that aims to provide a good level of cryptographic security and no unsafe features or obsolete cryptography by default."
                     }, {
                         "name": "native-tls",
                         "notes": "Delegates to the system TLS implementations on windows and macOS, and uses OpenSSL on linux."
