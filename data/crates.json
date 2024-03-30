@@ -1072,6 +1072,10 @@
                                 "name": "floem",
                                 "link": "https://github.com/lapce/floem",
                                 "notes": "Inspired by Xilem, Leptos and rui, floem is currently more complete than any of them for native UI. Used by the Lapce text editor."
+                            },{
+                                "name": "fltk-rs",
+                                "link": "https://fltk-rs.github.io/fltk-rs/",
+                                "notes": "FLTK is a Cross-platform ultra-lightweight (less than 2.3 mb) gui-library,Stable and production ready with low-level compartibility and stability for OS systems (X11_linux, WIN32_windows and MacOS_apple), FLTK-RS is the implementation made for rust."
                             }, {
                                 "name": "vizia",
                                 "link": "https://github.com/vizia/vizia",
