@@ -122,6 +122,10 @@
                         "name": "cargo-release",
                         "link": "https://github.com/crate-ci/cargo-release#cargo-release",
                         "notes": "Helper for publishing new crate versions."
+                    }, {
+                        "name": "Release-plz",
+                        "link": "https://release-plz.ieni.dev/",
+                        "notes": "Release Rust crates from CI with a Release PR."
                     }]
                 },
                 {
@@ -677,7 +681,7 @@
                             }],
                             "see_also": [{
                                 "name": "rocket",
-                                "notes": "Has an excellent API and a solid implementation. However development has been intermittent, and the async branch still doesn't have a stable release. Use of rocket is not recommended until this has been fixed."
+                                "notes": "Has an excellent API and a solid implementation. However development has been intermittent."
                             }, {
                                 "name": "poem",
                                 "notes": "Automatically generates OpenAPI definitions."
