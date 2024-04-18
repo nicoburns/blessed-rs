@@ -122,6 +122,10 @@
                         "name": "cargo-release",
                         "link": "https://github.com/crate-ci/cargo-release#cargo-release",
                         "notes": "Helper for publishing new crate versions."
+                    }, {
+                        "name": "Release-plz",
+                        "link": "https://release-plz.ieni.dev/",
+                        "notes": "Release Rust crates from CI with a Release PR."
                     }]
                 },
                 {
