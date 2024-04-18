@@ -20,6 +20,10 @@
                         "name": "clippy",
                         "link": "https://github.com/rust-lang/rust-clippy#usage",
                         "notes": "The official Rust linter."
+                    }, {
+                        "name": "cargo-semver-checks",
+                        "link": "https://github.com/obi1kenobi/cargo-semver-checks",
+                        "notes": "Lint your crate releases for semantic versioning violations."
                     }]
                 },
                 {
