@@ -20,6 +20,10 @@
                         "name": "clippy",
                         "link": "https://github.com/rust-lang/rust-clippy#usage",
                         "notes": "The official Rust linter."
+                    }, {
+                        "name": "cargo-semver-checks",
+                        "link": "https://github.com/obi1kenobi/cargo-semver-checks",
+                        "notes": "Lint your crate releases for semantic versioning violations."
                     }]
                 },
                 {
@@ -122,6 +126,10 @@
                         "name": "cargo-release",
                         "link": "https://github.com/crate-ci/cargo-release#cargo-release",
                         "notes": "Helper for publishing new crate versions."
+                    }, {
+                        "name": "Release-plz",
+                        "link": "https://release-plz.ieni.dev/",
+                        "notes": "Release Rust crates from CI with a Release PR."
                     }]
                 },
                 {
@@ -134,6 +142,10 @@
                         "name": "rust-cache (github action)",
                         "link": "https://github.com/Swatinem/rust-cache#rust-cache-action",
                         "notes": "Github action to cache compilation artifacts and speed up subsequent runs."
+                    }, {
+                        "name": "install-action (github action",
+                        "link": "https://github.com/taiki-e/install-action",
+                        "notes": "GitHub Action for installing development tools (mainly from GitHub Releases)."
                     }]
                 }
             ]
@@ -426,7 +438,8 @@
                 {
                     "name": "DataFrames",
                     "recommendations": [
-                        { "name": "polars", "notes": "Similar to the Pandas library in Python but in pure Rust. Uses the Apache Arrow Columnar Format as the memory model." }
+                        { "name": "polars", "notes": "Similar to the Pandas library in Python but in pure Rust. Uses the Apache Arrow Columnar Format as the memory model." },
+                        { "name": "datafusion", "notes": "<a href=\"https://arrow.apache.org/datafusion\">Apache DataFusion</a> is an in-memory query engine that uses Apache Arrow as the memory model" }
                     ]
                 }
             ]
@@ -677,7 +690,7 @@
                             }],
                             "see_also": [{
                                 "name": "rocket",
-                                "notes": "Has an excellent API and a solid implementation. However development has been intermittent, and the async branch still doesn't have a stable release. Use of rocket is not recommended until this has been fixed."
+                                "notes": "Has an excellent API and a solid implementation. However development has been intermittent."
                             }, {
                                 "name": "poem",
                                 "notes": "Automatically generates OpenAPI definitions."
