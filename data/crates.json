@@ -511,6 +511,12 @@
                     "recommendations": [
                         { "name": "rustler", "notes": "Safe Rust bridge for creating Erlang NIF functions" }
                     ]
+                },
+                {
+                    "name": "Kotlin/Swift/Python/Ruby",
+                    "recommendations": [
+                        { "name": "uniffi", "notes": "Share Rust codebase to create cross-platform apps (also 3rd party support for Kotlin Multiplatform, Go, C#, Dart)" }
+                    ]
                 }
             ]
         },
