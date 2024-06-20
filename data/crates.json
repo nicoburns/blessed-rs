@@ -775,6 +775,10 @@
                             }, {
                                 "name": "sea-orm",
                                 "notes": "Built on top of sqlx (see above). There is also a related sea-query crate that provides a query builder without full ORM functionality."
+                            },
+                            {
+                                "name": "njord",
+                                "notes": "A lightweight and extensible ORM library for Rust that allows you to only focus on writing Rust with DSL."
                             }]
                         },
                         {
