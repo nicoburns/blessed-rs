@@ -2,14 +2,14 @@
   {
     "name": "VS Code",
     "url": "https://code.visualstudio.com/",
-    "editor_plugins": "Rust Analyzer (note: avoid the \"Rust\" plugin. It is in the process of being deprecated and has a number of issues that are solved in the new Rust Analyzer plugin)",
+    "editor_plugins": "Rust Analyzer (note: avoid the \"Rust\" plugin. It is deprecated and has a number of issues that are solved in the new Rust Analyzer plugin)",
     "notes": "Generally recommended"
   },
   {
-    "name": "Intellij/CLion",
+    "name": "RustRover",
     "url": "https://www.jetbrains.com/rust/",
-    "editor_plugins": "Rust Plugin",
-    "notes": "Well supported. A good option if you like Intellij products."
+    "editor_plugins": "None needed, everything works out of the box",
+    "notes": "A full blown Rust IDE by JetBrains. A good option if you like Intellij products."
   },
   {
     "name": "Sublime Text",
