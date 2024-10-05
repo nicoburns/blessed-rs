@@ -1121,7 +1121,7 @@
                             }, {
                                 "name": "gpui",
                                 "link": "https://github.com/zed-industries/zed/tree/main/crates/gpui",
-                                "notes": "High performance framework used in the Zed text editor. Currently macOS only."
+                                "notes": "High performance framework used in the Zed text editor. Now available on macOS and linux."
                             }, {
                                 "name": "makepad",
                                 "link": "https://makepad.dev/",
