@@ -337,6 +337,9 @@
                             }, {
                                 "name": "paste",
                                 "notes": "Concatenating and manipulating identifiers"
+                            }, {
+                                "name": "darling",
+                                "notes": "Derive macro to easily parse derive macro inputs"
                             }]
                         },
                         {
