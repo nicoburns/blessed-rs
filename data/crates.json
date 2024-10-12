@@ -825,6 +825,9 @@
                             }, {
                                 "name": "oracle",
                                 "notes": "Rust bindings to ODPI-C"
+                            }, {
+                                "name": "sibyl",
+                                "notes": "An OCI-based interface supporting both blocking (threads) and nonblocking (async) AP"
                             }]
                         }
                     ]
