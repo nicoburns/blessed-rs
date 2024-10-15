@@ -958,6 +958,17 @@
                                 "name": "notify",
                                 "notes": "Watch files or directories and execute a function when they change"
                             }]
+                        },
+                        {
+                            "name": "User directories",
+                            "recommendations": [{
+                                "name": "dirs",
+                                "notes": "Provide platform-specific locations for configuration, cache, and other data"
+                            }],
+                            "see_also": [{
+                                "name": "directories",
+                                "notes": "A higher-level library that can also compute paths for applications"
+                            }]
                         }
                     ]
                 },
