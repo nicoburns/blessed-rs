@@ -6,7 +6,9 @@
     width: 250px;
 }
 @media screen and (max-width: 800px) {
-    .use-case-column { width: 100px; }
+    .use-case-column {
+        width: 100px;
+    }
 }
 
 table {
@@ -14,27 +16,42 @@ table {
     /* border: 1px solid #f9f9f9; */
 
     // Zebra striping
-    tbody:nth-of-type(odd) { background-color: #f6f8fa; }
-    tbody:nth-of-type(even) { background-color: #FFF; }
+    tbody:nth-of-type(odd) {
+        background-color: var(--bg-0-color);
+    }
+    tbody:nth-of-type(even) {
+        background-color: var(--bg-1-color);
+    }
 
     th {
         padding: 6px 18px 6px 6px;
-        border: 1px solid #CCC;
+        border: 1px solid var(--border-color);
         text-align: left;
         font-size: 0.8em;
         white-space: nowrap;
-        color: #000;
+        color: var(--heading-color);
     }
 
     td {
         padding: 6px 6px;
-        border: 1px solid #CCC;
+        border: 1px solid var(--border-color);
         font-size: 14px;
     }
 }
 
+.crate-notes {
+    margin: 3px 6px 6px 6px;
+    font-style: italic;
+    color: var(--text-muted-color);
+}
 
+.docrs-link {
+    color: var(--anchor-color);
+}
+.docrs-link:visited {
+    color: var(--anchor-visited-color);
+}
 
-
-
-
+.summary-cto {
+    color: var(--text-muted-color);
+}
