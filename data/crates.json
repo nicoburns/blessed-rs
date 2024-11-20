@@ -47,6 +47,14 @@
                     }]
                 },
                 {
+                    "name": "Cache",
+                    "recommendations": [{
+                        "name": "sccache",
+                        "link": "https://github.com/mozilla/sccache/#sccache---shared-compilation-cache",
+                        "notes": "Sccache is a ccache-like compiler caching tool."
+                    }]
+                },
+                {
                     "name": "Managing Dependencies",
                     "recommendations": [{
                         "name": "cargo-edit",
@@ -142,6 +150,10 @@
                         "name": "rust-cache (github action)",
                         "link": "https://github.com/Swatinem/rust-cache#rust-cache-action",
                         "notes": "Github action to cache compilation artifacts and speed up subsequent runs."
+                    }, {
+                        "name": "Sccache Action (github action)",
+                        "link": "https://github.com/marketplace/actions/sccache-action#sccache-action",
+                        "notes": "Github action to integrate sccache into CI."
                     }, {
                         "name": "install-action (github action",
                         "link": "https://github.com/taiki-e/install-action",
