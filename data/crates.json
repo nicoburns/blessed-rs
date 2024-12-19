@@ -184,6 +184,9 @@
                             "recommendations": [{
                                 "name": "serde",
                                 "notes": "De facto standard serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using."
+                            }, {
+                                "name": "prost",
+                                "notes": "Protocol buffer serialization. Use in conjunction with prost-build for codegen of Rust types based on protobuf types."
                             }]
                         },
                         {
