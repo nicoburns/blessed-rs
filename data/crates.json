@@ -748,8 +748,8 @@
                     ]
                 },
                 {
-                    "slug": "grpc",
-                    "name": "gRPC",
+                    "slug": "rpc",
+                    "name": "RPC",
                     "purposes": [
                         {
                             "name": "General Purpose",
@@ -757,11 +757,27 @@
                                 "name": "tonic",
                                 "notes": "gRPC over HTTP/2 with full support for asynchronous code. Works with tokio"
                             }]
+                        },
+                        {
+                            "name": "Protocol Buffer",
+                            "recommendations": [{
+                                "name": "prost",
+                                "notes": "Runtime protocol buffer serialization and deserialization"
+                            },
+                            {
+                                "name": "prost-build",
+                                "notes": "Build-time code generation of `.proto` files into Rust modules"
+                            },
+                            {
+                                "name": "protox",
+                                "notes": "Rust-native protobuf compiler, to avoid dependency on `protoc` "
+                            }]
                         }
                     ]
                 }
             ]
-        },
+        }
+        ,
         {
             "slug": "databases",
             "name": "Databases",
