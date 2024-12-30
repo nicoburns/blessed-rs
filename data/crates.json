@@ -360,6 +360,42 @@
                     ]
                 },
                 {
+                    "slug": "serialization",
+                    "name": "Serialization",
+                    "description": "Encode/decode between in-memory representations and general-purpose wire formats. Wire formats can be text (human readable) or binary (machine-readable only). Protocols can be self-describing (the receiving end does not need prior knowledge of the protocol) or non-self-describing (receiving end needs external context to deserialize). Some non-self-describing formats have an external schema file, which better supports cross-language bindings and schema evolution. Non-self-describing formats without a schema file tend to be Rust-only, with a shared Rust type definition.",
+                    "purposes": [
+                        {
+                            "name": "General-purpose / format agnostic",
+                            "recommendations": [{
+                                "name": "serde",
+                                "notes": "De facto standard serialization library. Use in conjunction with sub-crates like `serde_json` for the specific format that you are using (JSON, YAML, etc). Supports a variety of both text and binary protocols, including self-describing ones."
+                            }]
+                        },
+                        {
+                            "name": "Non-self-describing, external schema file",
+                            "recommendations": [{
+                                "name": "prost",
+                                "notes": "Protocol buffer library with strong ergonomics and wide industry adoption. Commonly used with gRPC / `tonic`. Use in conjunction with `protox` to avoid dependency on `protoc`."
+                            }, {
+                                "name": "capnp",
+                                "notes": "Cap'n Proto library. Offers zero-copy usage mode that is optimal for large messages, along with other improvements over Protocol Buffers .Tradeoffs are less widely usage and less developer-friendly."
+                            }, {
+                                "name": "flatbuffers",
+                                "notes": "Flatbuffers library. Also offers zero-copy usage and is more widely used than cap'n proto, with further cost of ergonomics."
+                            }]
+                        },
+                        {
+                            "name": "Non-self-describing, no external schema file",
+                            "recommendations": [{
+                                "name": "postcard",
+                                "notes": "`!#[no_std]`-focused Serde serializer/deserializer, aimed at constrained environments."
+                            }, {
+                                "name": "rkyv",
+                                "notes": "Fast zero-copy deserialization framework that allows arbitrary field types and safe zero-copy mutation."
+                            }]
+                        }]
+                },
+                {
                     "slug": "system",
                     "name": "System",
                     "description": "For low-level interaction with the underling platform / operating system",
