@@ -35,6 +35,14 @@
                     }]
                 },
                 {
+                    "name": "Code Visualization",
+                    "recommendations": [{
+                        "name": "cargo-modules",
+                        "link": "https://github.com/regexident/cargo-modules",
+                        "notes": "Renders a crate's module/item structure as a tree or graph"
+                    }]
+                },
+                {
                     "name": "Cross Compilation",
                     "recommendations": [{
                         "name": "cross",
