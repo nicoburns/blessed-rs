@@ -209,7 +209,6 @@
                     "purposes": [
                         {
                             "name": "General-purpose / format agnostic",
-                            "notes": "This includes self-describing formats (receiving end needs no prior knowledge of protocol) that are both text (human readable) and binary (not human-readable).",
                             "recommendations": [{
                                 "name": "serde",
                                 "notes": "De facto standard serialization library. Use in conjunction with sub-crates like `serde_json` for the specific format that you are using (JSON, YAML, etc). Supports a variety of both text and binary protocols, including self-describing ones."
@@ -217,7 +216,6 @@
                         },
                         {
                             "name": "Non-self-describing, external schema file",
-                            "notes": "Non-self-describing formats with an external schema file tend to better support cross-language bindings as well as schema evolution.",
                             "recommendations": [{
                                 "name": "prost",
                                 "notes": "Protocol buffer library with strong ergonomics and wide industry adoption. Commonly used with gRPC / `tonic`. Use in conjunction with `protox` to avoid dependency on `protoc`."
@@ -231,10 +229,9 @@
                         },
                         {
                             "name": "Non-self-describing, no external schema file",
-                            "notes": "Non-self-describing formats without a schema file tend to be Rust-only, with a shared Rust type definition.",
                             "recommendations": [{
                                 "name": "postcard",
-                                "notes": "`!#[no_std]`-focused Serde serializer/deserializer, aimed at constrained environments."
+                                "notes": "<code>no_std</code> focused Serde serializer/deserializer, aimed at constrained environments."
                             }, {
                                 "name": "rkyv",
                                 "notes": "Fast zero-copy deserialization framework that allows arbitrary field types and safe zero-copy mutation."
