@@ -34,7 +34,10 @@ async fn main() {
     let host : IpAddr = std::env::var("HOST").ok().and_then(|h| h.parse().ok()).unwrap_or("::".parse().unwrap());
     let port = std::env::var("PORT").ok().and_then(|p| p.parse().ok()).unwrap_or(3333);
     let addr = SocketAddr::from((host, port));
-    tracing::debug!("listening on {}", addr);
+    
+    let msg = format!("Serving blessed-rs at http://{addr}").replace("[::]", "localhost");
+    println!("{msg}");
+
     axum::Server::bind(&addr)
         .serve(app.into_make_service())
         .await
