@@ -133,7 +133,6 @@ a, a:hover, a:visited, a:active {
     margin-top: 14px;
   }
 }
-
 .toc {
   position: sticky;
   overflow-y: auto;
@@ -189,7 +188,6 @@ a, a:hover, a:visited, a:active {
     width: 100px;
   }
 }
-
 table {
   border-collapse: collapse;
   /* border: 1px solid #f9f9f9; */
