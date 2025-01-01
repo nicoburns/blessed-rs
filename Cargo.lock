@@ -134,7 +134,6 @@ version = "0.1.0"
 dependencies = [
  "axum",
  "fxhash",
- "once_cell",
  "rsass",
  "serde",
  "serde_json",

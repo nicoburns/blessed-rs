@@ -1,12 +1,12 @@
 use tera::Tera;
-use once_cell::sync::Lazy;
+use std::sync::LazyLock;
 use fxhash::hash32;
 use std::fs::read_to_string;
 use std::env::current_dir;
 use serde::{ Serialize, Deserialize };
 use serde_json::{ Value,  Number };
 
-pub(crate) static TERA: Lazy<Tera> = Lazy::new(|| {
+pub(crate) static TERA: LazyLock<Tera> = LazyLock::new(|| {
     let mut tera = match Tera::new("templates/**/*.html") {
         Ok(t) => t,
         Err(e) => {
