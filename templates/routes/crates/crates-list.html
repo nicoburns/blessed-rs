@@ -20,24 +20,14 @@
   <!-- Main page content -->
   <div id="content">
 
-<!--     <p class="introduction">
-      Many programming langauges (such as Python and Go) take a "kitchen sink" approach to their standard libraries, including functionality
-      like regular expressions, random number generation, serialization (JSON, XML, etc), and HTTP clients and servers directly in the stdlib.
-    </p> -->
-
     <h3>What is blessed.rs?</h3>
     <p class="introduction">
-      The standard library in Rust is much smaller than in Python or Go, for example. Those
-      languages come with "batteries included" support for things like HTTP(S), JSON, timezones,
-      random numbers, and async IO. Rust, on the other hand, gets things like that from the
-      <a href="https://crates.io">crates.io</a> ecosystem and the Cargo package manager. But with
-      almost 100&nbsp;thousand crates to choose from, a common complaint from new Rust developers is
-      that they don't know where to start, which crates they ought to use, and which crates they
-      ought to trust. This list attempts to answer those questions.
+      The standard library in Rust is not "batteries included", excluding support for things like HTTP(S),
+      JSON, timezones, random numbers, and async IO. Blessed.rs is guide to which
+      <a href="https://crates.io">crates.io</a> crates to use.
     </p>
-
     <p class="introduction">
-      See also <a href="https://lib.rs">lib.rs</a> which takes a more automated approach (ordering crates by number of downloads) and also has an excellent search function.
+      Blessed.rs is <a href="https://github.com/nicoburns/blessed-rs">open source</a> and contributions are welcome.
     </p>
 
     {% for group in crate_groups %}
