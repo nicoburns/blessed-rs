@@ -1,155 +1,6 @@
 {
     "crate_groups": [
-        {
-            "slug": "tooling",
-            "name": "Tooling",
-            "description": "Developer tools for working with Rust projects.",
-            "subgroups": [],
-            "purposes": [
-                {
-                    "name": "Toolchain Management",
-                    "recommendations": [{
-                        "name": "rustup",
-                        "link": "https://rustup.rs",
-                        "notes": "Install, manage, and upgrade versions of rustc, cargo, clippy, rustfmt and more."
-                    }]
-                },
-                {
-                    "name": "Linting",
-                    "recommendations": [{
-                        "name": "clippy",
-                        "link": "https://github.com/rust-lang/rust-clippy#usage",
-                        "notes": "The official Rust linter."
-                    }, {
-                        "name": "cargo-semver-checks",
-                        "link": "https://github.com/obi1kenobi/cargo-semver-checks",
-                        "notes": "Lint your crate releases for semantic versioning violations."
-                    }]
-                },
-                {
-                    "name": "Code Formatting",
-                    "recommendations": [{
-                        "name": "rustfmt",
-                        "link": "https://github.com/rust-lang/rustfmt#rustfmt----",
-                        "notes": "The official Rust code formatter."
-                    }]
-                },
-                {
-                    "name": "Cross Compilation",
-                    "recommendations": [{
-                        "name": "cross",
-                        "link": "https://github.com/cross-rs/cross#cross",
-                        "notes": "Seamless cross-compiling using Docker containers."
-                    }, {
-                        "name": "cargo-zigbuild",
-                        "link": "https://github.com/rust-cross/cargo-zigbuild",
-                        "notes": "Easily cross-compile using Zig as the linker."
-                    }]
-                },
-                {
-                    "name": "Managing Dependencies",
-                    "recommendations": [{
-                        "name": "cargo-edit",
-                        "link": "https://github.com/killercup/cargo-edit",
-                        "notes": "Adds 'cargo upgrade' and 'cargo set-version' commands to cargo"
-                    }, {
-                        "name": "cargo-outdated",
-                        "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
-                        "notes": "Finds dependencies that have available updates"
-                    }, {
-                        "name": "cargo-audit",
-                        "link": "https://github.com/RustSec/rustsec/tree/main/cargo-audit#rustsec-cargo-audit",
-                        "notes": "Check dependencies for reported security vulnerabilities"
-                    },  {
-                        "name": "cargo-license",
-                        "link": "https://github.com/onur/cargo-license#cargo-license",
-                        "notes": "Lists licenses of all dependencies"
-                    }, {
-                        "name": "cargo-deny",
-                        "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
-                        "notes": "Enforce policies on your code and dependencies."
-                    }]
-                },
-                {
-                    "name": "Testing",
-                    "recommendations": [{
-                        "name": "cargo-nextest",
-                        "link": "https://nexte.st",
-                        "notes": "Faster, better test runner"
-                    },
-                    {
-                        "name": "insta",
-                        "link": "https://insta.rs",
-                        "notes": "Snapshot testing with inline snapshot support"
-                    }]
-                },
-                {
-                    "name": "Benchmarking",
-                    "recommendations": [{
-                        "name": "criterion",
-                        "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
-                    }, {
-                        "name": "divan",
-                        "notes": "Simple yet powerful benchmarking library with allocation profiling"
-                    }, {
-                        "name": "hyperfine",
-                        "link": "https://github.com/sharkdp/hyperfine#hyperfine",
-                        "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
-                    }]
-                },
-                {
-                    "name": "Performance",
-                    "recommendations": [{
-                        "name": "cargo-flamegraph",
-                        "link": "https://github.com/flamegraph-rs/flamegraph#cargo-flamegraph",
-                        "notes": "Execution flamegraph generation"
-                    }, {
-                        "name": "dhat",
-                        "notes": "Heap memory profiling"
-                    }, {
-                        "name": "cargo-show-asm",
-                        "notes": "Print the generated assembly for a Rust function"
-                    }]
-                },
-                {
-                    "name": "Debugging Macros",
-                    "notes": "<a href=\"https://github.com/rust-lang/rust-analyzer\">Rust Analyzer</a> also allows you to <a href=\"https://rust-analyzer.github.io/manual.html#expand-macro-recursively\">expand macros directly in your editor</a>",
-                    "recommendations": [{
-                        "name": "cargo-expand",
-                        "link": "https://github.com/dtolnay/cargo-expand#cargo-expand",
-                        "notes": "Allows you to inspect the code that macros expand to"
-                    }]
-                },
-                {
-                    "name": "Release Automation",
-                    "recommendations": [{
-                        "name": "cargo-release",
-                        "link": "https://github.com/crate-ci/cargo-release#cargo-release",
-                        "notes": "Helper for publishing new crate versions."
-                    }, {
-                        "name": "Release-plz",
-                        "link": "https://release-plz.ieni.dev/",
-                        "notes": "Release Rust crates from CI with a Release PR."
-                    }]
-                },
-                {
-                    "name": "Continuous Integration",
-                    "recommendations": [{
-                        "name": "rust-toolchain (github action)",
-                        "link": "https://github.com/dtolnay/rust-toolchain#install-rust-toolchain",
-                        "notes": "Github action to install Rust components via rustup"
-                    }, {
-                        "name": "rust-cache (github action)",
-                        "link": "https://github.com/Swatinem/rust-cache#rust-cache-action",
-                        "notes": "Github action to cache compilation artifacts and speed up subsequent runs."
-                    }, {
-                        "name": "install-action (github action)",
-                        "link": "https://github.com/taiki-e/install-action",
-                        "notes": "GitHub Action for installing development tools (mainly from GitHub Releases)."
-                    }]
-                }
-            ]
-        },
+
         {
             "slug": "common",
             "name": "Common",
@@ -427,6 +278,156 @@
                             }, {
                                 "name": "nix",
                                 "notes": "Bindings to the various *nix system functions. (Unix, Linux, MacOS, etc.)"
+                            }]
+                        }
+                    ]
+                },
+               {
+                    "slug": "tooling",
+                    "name": "Tooling",
+                    "description": "Developer tools for working with Rust projects.",
+                    "subgroups": [],
+                    "purposes": [
+                        {
+                            "name": "Toolchain Management",
+                            "recommendations": [{
+                                "name": "rustup",
+                                "link": "https://rustup.rs",
+                                "notes": "Install, manage, and upgrade versions of rustc, cargo, clippy, rustfmt and more."
+                            }]
+                        },
+                        {
+                            "name": "Linting",
+                            "recommendations": [{
+                                "name": "clippy",
+                                "link": "https://github.com/rust-lang/rust-clippy#usage",
+                                "notes": "The official Rust linter."
+                            }, {
+                                "name": "cargo-semver-checks",
+                                "link": "https://github.com/obi1kenobi/cargo-semver-checks",
+                                "notes": "Lint your crate releases for semantic versioning violations."
+                            }]
+                        },
+                        {
+                            "name": "Code Formatting",
+                            "recommendations": [{
+                                "name": "rustfmt",
+                                "link": "https://github.com/rust-lang/rustfmt#rustfmt----",
+                                "notes": "The official Rust code formatter."
+                            }]
+                        },
+                        {
+                            "name": "Cross Compilation",
+                            "recommendations": [{
+                                "name": "cross",
+                                "link": "https://github.com/cross-rs/cross#cross",
+                                "notes": "Seamless cross-compiling using Docker containers."
+                            }, {
+                                "name": "cargo-zigbuild",
+                                "link": "https://github.com/rust-cross/cargo-zigbuild",
+                                "notes": "Easily cross-compile using Zig as the linker."
+                            }]
+                        },
+                        {
+                            "name": "Managing Dependencies",
+                            "recommendations": [{
+                                "name": "cargo-edit",
+                                "link": "https://github.com/killercup/cargo-edit",
+                                "notes": "Adds 'cargo upgrade' and 'cargo set-version' commands to cargo"
+                            }, {
+                                "name": "cargo-outdated",
+                                "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
+                                "notes": "Finds dependencies that have available updates"
+                            }, {
+                                "name": "cargo-audit",
+                                "link": "https://github.com/RustSec/rustsec/tree/main/cargo-audit#rustsec-cargo-audit",
+                                "notes": "Check dependencies for reported security vulnerabilities"
+                            },  {
+                                "name": "cargo-license",
+                                "link": "https://github.com/onur/cargo-license#cargo-license",
+                                "notes": "Lists licenses of all dependencies"
+                            }, {
+                                "name": "cargo-deny",
+                                "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
+                                "notes": "Enforce policies on your code and dependencies."
+                            }]
+                        },
+                        {
+                            "name": "Testing",
+                            "recommendations": [{
+                                "name": "cargo-nextest",
+                                "link": "https://nexte.st",
+                                "notes": "Faster, better test runner"
+                            },
+                            {
+                                "name": "insta",
+                                "link": "https://insta.rs",
+                                "notes": "Snapshot testing with inline snapshot support"
+                            }]
+                        },
+                        {
+                            "name": "Benchmarking",
+                            "recommendations": [{
+                                "name": "criterion",
+                                "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
+                            }, {
+                                "name": "divan",
+                                "notes": "Simple yet powerful benchmarking library with allocation profiling"
+                            }, {
+                                "name": "hyperfine",
+                                "link": "https://github.com/sharkdp/hyperfine#hyperfine",
+                                "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
+                            }]
+                        },
+                        {
+                            "name": "Performance",
+                            "recommendations": [{
+                                "name": "cargo-flamegraph",
+                                "link": "https://github.com/flamegraph-rs/flamegraph#cargo-flamegraph",
+                                "notes": "Execution flamegraph generation"
+                            }, {
+                                "name": "dhat",
+                                "notes": "Heap memory profiling"
+                            }, {
+                                "name": "cargo-show-asm",
+                                "notes": "Print the generated assembly for a Rust function"
+                            }]
+                        },
+                        {
+                            "name": "Debugging Macros",
+                            "notes": "<a href=\"https://github.com/rust-lang/rust-analyzer\">Rust Analyzer</a> also allows you to <a href=\"https://rust-analyzer.github.io/manual.html#expand-macro-recursively\">expand macros directly in your editor</a>",
+                            "recommendations": [{
+                                "name": "cargo-expand",
+                                "link": "https://github.com/dtolnay/cargo-expand#cargo-expand",
+                                "notes": "Allows you to inspect the code that macros expand to"
+                            }]
+                        },
+                        {
+                            "name": "Release Automation",
+                            "recommendations": [{
+                                "name": "cargo-release",
+                                "link": "https://github.com/crate-ci/cargo-release#cargo-release",
+                                "notes": "Helper for publishing new crate versions."
+                            }, {
+                                "name": "Release-plz",
+                                "link": "https://release-plz.ieni.dev/",
+                                "notes": "Release Rust crates from CI with a Release PR."
+                            }]
+                        },
+                        {
+                            "name": "Continuous Integration",
+                            "recommendations": [{
+                                "name": "rust-toolchain (github action)",
+                                "link": "https://github.com/dtolnay/rust-toolchain#install-rust-toolchain",
+                                "notes": "Github action to install Rust components via rustup"
+                            }, {
+                                "name": "rust-cache (github action)",
+                                "link": "https://github.com/Swatinem/rust-cache#rust-cache-action",
+                                "notes": "Github action to cache compilation artifacts and speed up subsequent runs."
+                            }, {
+                                "name": "install-action (github action)",
+                                "link": "https://github.com/taiki-e/install-action",
+                                "notes": "GitHub Action for installing development tools (mainly from GitHub Releases)."
                             }]
                         }
                     ]
