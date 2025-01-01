@@ -12,7 +12,7 @@ body {
 #main-container {
   margin: 0;
   padding: 0;
-  margin: 24px;
+  margin: 0 24px;
 }
 
 #left-sidebar {
@@ -25,7 +25,6 @@ body {
 }
 
 #header {
-  border-bottom: 1px solid #CCC;
   display: flex;
   align-items: center;
   background-color: #FFF;
@@ -52,6 +51,11 @@ body {
   color: white;
 }
 
+#see-also-banner {
+  padding: 12px;
+  border-bottom: 1px solid #CCC;
+}
+
 .full-width {
   width: 100%;
 }
@@ -65,6 +69,7 @@ body {
 
 p.introduction {
   color: #494949;
+  max-width: 80ch;
 }
 
 p, li {
