@@ -520,7 +520,10 @@
                 {
                     "name": "Objective-C",
                     "recommendations": [
-                        { "name": "objc", "notes": "Interop with the Objective-C runtime" }
+                        { "name": "objc2", "notes": "Sound and Idiomatic Rust to Objective-C interface and runtime bindings. Main crate in the objc2 project." }
+                    ],
+                    "see_also": [
+                        { "name": "objc", "notes": "Older non-idiomatic bindings crate. Has been superseded by objc2." }
                     ]
                 },
                 {
