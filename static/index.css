@@ -114,6 +114,13 @@ a, a:hover, a:visited, a:active {
   color: #3298dc;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 800px) {
   #main-container {
     margin: 0 12px;
