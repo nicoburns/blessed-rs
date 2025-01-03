@@ -12,6 +12,15 @@
 
 {% block main %}
 
+
+<h1>Recommended Crate Directory</h1>
+
+<p class="introduction">
+  The standard library in Rust is not "batteries included", excluding support for things like HTTP(S),
+  JSON, timezones, random numbers, and async IO. The blessed.rs recommended crate directory is a hand-curated guide to which
+  <a href="https://crates.io">crates.io</a> crates to use.
+</p>
+
 <div class="hflex">
 
   <!-- Table of contents -->
@@ -20,15 +29,7 @@
   <!-- Main page content -->
   <div id="content">
 
-    <h3>What is blessed.rs?</h3>
-    <p class="introduction">
-      The standard library in Rust is not "batteries included", excluding support for things like HTTP(S),
-      JSON, timezones, random numbers, and async IO. Blessed.rs is guide to which
-      <a href="https://crates.io">crates.io</a> crates to use.
-    </p>
-    <p class="introduction">
-      Blessed.rs is <a href="https://github.com/nicoburns/blessed-rs">open source</a> and contributions are welcome.
-    </p>
+
 
     {% for group in crate_groups %}
     <section data-toc-section id="section-{{ group.slug }}">

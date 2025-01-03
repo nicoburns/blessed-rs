@@ -92,6 +92,16 @@ section {
   margin-bottom: 24px;
 }
 
+h1 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
 h3 {
   font-size: 1.8em;
   font-weight: normal;
