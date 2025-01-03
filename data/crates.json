@@ -1016,6 +1016,7 @@
                             "name": "Coloured Output",
                             "recommendations": [{
                                 "name": "termcolor",
+                                "link": "https://crates.io/crates/termcolor",
                                 "notes": "Cross-platform terminal colour output"
                             }]
                         },
