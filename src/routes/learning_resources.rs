@@ -14,12 +14,13 @@ pub(crate) async fn run() -> impl IntoResponse {
         ]},
         TocSection { name: "Other".into(), slug: "learning-resources".into(), subsections: vec![
             TocSubSection { name: "Learning by doing".into(), slug: "by-doing".into() },
+            TocSubSection { name: "Videos".into(), slug: "videos".into() },
         ]},
-        TocSection { name: "Community".into(), slug: "community".into(), subsections: vec![
-            TocSubSection { name: "Crate Discovery".into(), slug: "crate-discovery".into() },
-            TocSubSection { name: "Community Updates".into(), slug: "community-updates".into() },
-            TocSubSection { name: "Asking for help".into(), slug: "help".into() },
-        ]}
+        // TocSection { name: "Community".into(), slug: "community".into(), subsections: vec![
+        //     TocSubSection { name: "Crate Discovery".into(), slug: "crate-discovery".into() },
+        //     TocSubSection { name: "Community Updates".into(), slug: "community-updates".into() },
+        //     TocSubSection { name: "Asking for help".into(), slug: "help".into() },
+        // ]}
     ];
     
     // Render template
