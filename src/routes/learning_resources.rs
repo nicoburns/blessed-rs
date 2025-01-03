@@ -2,26 +2,17 @@ use axum::{
     http::StatusCode,
     response::{ IntoResponse, Html },
 };
-use serde::{Serialize, Deserialize};
-use serde_json;
 use tera::Context;
 use crate::templates::{ TERA, TocSection, TocSubSection };
 
 pub(crate) async fn run() -> impl IntoResponse {
 
-    // Load editor data
-    let data_file_contents : &str = include_str!("../../../data/editors.json");
-    let editors : Vec<Editor> = serde_json::from_str(&data_file_contents).unwrap();
-
     let toc_sections = vec![
-        TocSection { name: "Installation".into(), slug: "installation".into(), subsections: vec![
-            TocSubSection { name: "Rust Compiler".into(), slug: "cargo-rustc".into() },
-            TocSubSection { name: "Editor Setup".into(), slug: "editor-setup".into() },
-            TocSubSection { name: "Cargo Plugins".into(), slug: "cargo-plugins".into() },
-        ]},
-        TocSection { name: "Learning Resources".into(), slug: "learning-resources".into(), subsections: vec![
+        TocSection { name: "Books".into(), slug: "learning-resources".into(), subsections: vec![
             TocSubSection { name: "Introductory Books".into(), slug: "introductory-books".into() },
             TocSubSection { name: "Advanced Books".into(), slug: "advanced-books".into() },
+        ]},
+        TocSection { name: "Other".into(), slug: "learning-resources".into(), subsections: vec![
             TocSubSection { name: "Learning by doing".into(), slug: "by-doing".into() },
         ]},
         TocSection { name: "Community".into(), slug: "community".into(), subsections: vec![
@@ -33,9 +24,8 @@ pub(crate) async fn run() -> impl IntoResponse {
     
     // Render template
     let mut context = Context::new();
-    context.insert("editors", &editors);
     context.insert("toc_sections", &toc_sections);
-    let rendered = TERA.render("routes/getting_started/guide.html", &context);
+    let rendered = TERA.render("routes/learning_resources.html", &context);
 
     // Handle template rendering errors
     let res  = match rendered {
@@ -48,12 +38,4 @@ pub(crate) async fn run() -> impl IntoResponse {
 
     // Return response
     (StatusCode::OK, res)
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-struct Editor {
-    name: String,
-    url: String,
-    editor_plugins: String,
-    notes: String,
 }

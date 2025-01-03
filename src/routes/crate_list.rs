@@ -26,7 +26,7 @@ pub(crate) async fn run() -> impl IntoResponse {
 
 
     // Load crate data
-    let data_file_contents : &str = include_str!("../../../data/crates.json");
+    let data_file_contents : &str = include_str!("../../data/crates.json");
     // let data_file_contents = String::from_utf8(std::fs::read("data/crates.json").unwrap()).unwrap();
     let data : CrateDefinitionFile = serde_json::from_str(&data_file_contents).unwrap();
     
@@ -34,7 +34,7 @@ pub(crate) async fn run() -> impl IntoResponse {
     let mut context = Context::new();
     context.insert("crate_groups", &data.crate_groups);
     context.insert("toc_sections", &crates_to_toc(&data.crate_groups));
-    let rendered = TERA.render("routes/crates/crates-list.html", &context);
+    let rendered = TERA.render("routes/crate_list.html", &context);
 
     // Handle template rendering errors
     let res  = match rendered {

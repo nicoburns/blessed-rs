@@ -19,8 +19,9 @@ async fn main() {
     let app = Router::new()
         .route("/", get(|| async { Redirect::to("/crates") }))
         .route("/users", post(routes::users::create::run))
-        .route("/crates", get(routes::crates::list::run))
-        .route("/getting-started", get(routes::getting_started::guide::run))
+        .route("/crates", get(routes::crate_list::run))
+        .route("/getting-started", get(routes::getting_started::run))
+        .route("/learning-resources", get(routes::learning_resources::run))
         .nest_service("/static", get_service(ServeDir::new("static")))
         .layer(TraceLayer::new_for_http());
 
