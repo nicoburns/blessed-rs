@@ -24,24 +24,26 @@
       <section data-toc-section id="section-installation-subsection-cargo-rustc">
         <h4>Rust Compiler</h4>
         <p>
-          The recommended way to install Rust is using <a href="https://rustup.rs/" target="_blank">rustup</a>. Rustup is an official first-party tool released by the Rust project which allows you to install and manage versions of rustc (the rust compiler), cargo (the rust build tool), clippy (the rust linter), rustfmt (the rust code formatter) and more. Rustup also allows you to easily upgrade to the latest version of rust when a new version, and even install multiple versions of Rust and switch between them.
+          The recommended way to install Rust is using <a href="https://rustup.rs/" target="_blank">rustup</a>.
         </p>
         <p>
-         It is <strong>not</strong> recommended to install Rust through your distribution package manager. These packages are intended to compile programs packaged by the distribution, not for Rust development, and they are often so outdated that the latest versions of libraries won't compile.
+          Rustup is an official first-party tool which allows you to install and manage versions of rustc (the rust compiler), cargo (the rust build tool), clippy (the rust linter), rustfmt (the rust code formatter) and more. It allows you to easily upgrade to the latest version of rust, and to have multiple versions of Rust concurrently.
         </p>
-        <p>To install Rustup:</p>
+
+        <h5>To install Rust using rustup:</h5>
         <ul>
           <li>
-            <b>On macOS or Linux</b><br />
-            Run the following command:
+            On macOS or Linux, run:<br />
             <code><pre style="margin-left: 24px">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</pre></code>
           </li>
           <li>
-            <b>On Windows</b><br />
-            Download and run this installer: <a href="https://win.rustup.rs/x86_64">rustup-init.exe</a>
+            On Windows, download and run <a href="https://win.rustup.rs/x86_64">rustup-init.exe</a>
           </li>
         </ul>
-        <p>For more details and documentation on rustup are available in <a href="https://rust-lang.github.io/rustup/">the rustup book</a>.</p>
+        <p>More details and documentation on rustup are available in <a href="https://rust-lang.github.io/rustup/">the rustup book</a>.</p>
+        <p style="font-size: 0.8em;">
+          It is <strong>not</strong> recommended to install Rust through your distribution package manager. These packages are intended to compile programs packaged by the distribution, not for Rust development, and they are often so outdated that the latest versions of libraries won't compile.
+        </p>
       </section>
       <section data-toc-section id="section-installation-subsection-editor-setup">
         <h4>Editor Setup</h4>
