@@ -32,7 +32,7 @@ body {
   background-color: #b66340;
 }
 #header .logo {
-  height: 80px;
+  height: 120px;
 }
 #header .page-heading-group {
   flex: 0 0 auto;
@@ -41,12 +41,12 @@ body {
 #header .page-heading-group .page-heading {
   color: #333;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: normal;
   margin: 0;
 }
 #header .page-heading-group .page-subheading {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: normal;
   margin: 0;
   color: white;
