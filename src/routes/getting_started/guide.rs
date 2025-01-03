@@ -20,7 +20,11 @@ pub(crate) async fn run() -> impl IntoResponse {
             TocSubSection { name: "Cargo Plugins".into(), slug: "cargo-plugins".into() },
         ]},
         TocSection { name: "Learning Resources".into(), slug: "learning-resources".into(), subsections: vec![
-            TocSubSection { name: "Books".into(), slug: "books".into() },
+            TocSubSection { name: "Introductory Books".into(), slug: "introductory-books".into() },
+            TocSubSection { name: "Advanced Books".into(), slug: "advanced-books".into() },
+            TocSubSection { name: "Learning by doing".into(), slug: "by-doing".into() },
+        ]},
+        TocSection { name: "Community".into(), slug: "community".into(), subsections: vec![
             TocSubSection { name: "Crate Discovery".into(), slug: "crate-discovery".into() },
             TocSubSection { name: "Community Updates".into(), slug: "community-updates".into() },
             TocSubSection { name: "Asking for help".into(), slug: "help".into() },
