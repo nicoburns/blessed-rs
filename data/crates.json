@@ -290,6 +290,7 @@
                             "recommendations": [{
                                 "name": "rustup",
                                 "link": "https://rustup.rs",
+                                "docs": "https://rust-lang.github.io/rustup",
                                 "notes": "Install, manage, and upgrade versions of rustc, cargo, clippy, rustfmt and more."
                             }]
                         },
@@ -298,6 +299,7 @@
                             "recommendations": [{
                                 "name": "clippy",
                                 "link": "https://github.com/rust-lang/rust-clippy#usage",
+                                "docs": "https://doc.rust-lang.org/clippy/",
                                 "notes": "The official Rust linter."
                             }, {
                                 "name": "cargo-semver-checks",
@@ -310,6 +312,7 @@
                             "recommendations": [{
                                 "name": "rustfmt",
                                 "link": "https://github.com/rust-lang/rustfmt#rustfmt----",
+                                "docs": "https://rust-lang.github.io/rustfmt/",
                                 "notes": "The official Rust code formatter."
                             }]
                         },
@@ -318,6 +321,7 @@
                             "recommendations": [{
                                 "name": "cross",
                                 "link": "https://github.com/cross-rs/cross#cross",
+                                "docs": "https://github.com/cross-rs/cross/wiki/Getting-Started",
                                 "notes": "Seamless cross-compiling using Docker containers."
                             }, {
                                 "name": "cargo-zigbuild",
@@ -346,6 +350,7 @@
                             }, {
                                 "name": "cargo-deny",
                                 "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
+                                "docs": "https://embarkstudios.github.io/cargo-deny/",
                                 "notes": "Enforce policies on your code and dependencies."
                             }]
                         },
@@ -359,6 +364,7 @@
                             {
                                 "name": "insta",
                                 "link": "https://insta.rs",
+                                "docs": "https://insta.rs/docs/",
                                 "notes": "Snapshot testing with inline snapshot support"
                             }]
                         },
@@ -404,10 +410,12 @@
                             "recommendations": [{
                                 "name": "cargo-release",
                                 "link": "https://github.com/crate-ci/cargo-release#cargo-release",
+                                "docs": "https://github.com/crate-ci/cargo-release/tree/master/docs",
                                 "notes": "Helper for publishing new crate versions."
                             }, {
                                 "name": "Release-plz",
                                 "link": "https://release-plz.ieni.dev/",
+                                "docs": "https://release-plz.ieni.dev/docs",
                                 "notes": "Release Rust crates from CI with a Release PR."
                             }]
                         },
@@ -970,6 +978,7 @@
                             "recommendations": [{
                                 "name": "globset",
                                 "link": "https://crates.io/crates/globset",
+                                "docs": "https://docs.rs/globset",
                                 "notes": "High-performance globbing that allows multiple globs to be evaluated at once"
                             }]
                         },
@@ -978,10 +987,12 @@
                             "recommendations": [{
                                 "name": "walkdir",
                                 "link": "https://crates.io/crates/walkdir",
+                                "docs": "https://docs.rs/walkdir",
                                 "notes": "Basic recursive filesystem walking."
                             }, {
                                 "name": "ignore",
                                 "link": "https://crates.io/crates/ignore",
+                                "docs": "https://docs.rs/ignore",
                                 "notes": "Recursive filesystem walking that respects ignore files (like .gitignore)"
                             }]
                         },
@@ -1018,6 +1029,7 @@
                             "recommendations": [{
                                 "name": "termcolor",
                                 "link": "https://crates.io/crates/termcolor",
+                                "docs": "https://docs.rs/termcolor",
                                 "notes": "Cross-platform terminal colour output"
                             }]
                         },
@@ -1154,20 +1166,22 @@
                                 "notes": "Retained mode UI with a nice API. It's useable for basic apps, but has a number of missing features including multiple windows, layers, and proper text rendering."
                             }, {
                                 "name": "floem",
-                                "link": "https://github.com/lapce/floem",
                                 "notes": "Inspired by Xilem, Leptos and rui, floem is currently more complete than any of them for native UI. Used by the Lapce text editor."
                             }, {
                                 "name": "vizia",
                                 "link": "https://github.com/vizia/vizia",
+                                "docs": "https://book.vizia.dev/",
                                 "notes": "Fairly complete with sophisticated layout and text layout, but has yet to make a stable release."
                             }],
                             "see_also": [{
                                 "name": "xilem",
                                 "link": "https://github.com/linebender/xilem",
+                                "docs": "https://docs.rs/xilem",
                                 "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
                             }, {
                                 "name": "freya",
                                 "link": "https://github.com/marc2332/freya",
+                                "docs": "https://book.freyaui.dev/",
                                 "notes": "Dioxus-based GUI framework using Skia for rendering."
                             }, {
                                 "name": "slint",
@@ -1178,14 +1192,16 @@
                             }, {
                                 "name": "gpui",
                                 "link": "https://github.com/zed-industries/zed/tree/main/crates/gpui",
+                                "docs": "https://www.gpui.rs/#docs",
                                 "notes": "High performance framework used in the Zed text editor. Now available on macOS and linux."
                             }, {
                                 "name": "makepad",
-                                "link": "https://makepad.dev/",
+                                "link": "https://github.com/makepad/makepad",
                                 "notes": "Makepad has a strong focus on performance and minimising bloat but is consequently less feature complete in areas such as accessibility and system integration."
                             }, {
                                 "name": "ribir",
-                                "link": "https://ribir.org/"
+                                "link": "https://ribir.org/",
+                                "docs": "https://ribir.org/docs/introduction/"
                             },
                             { "name": "cushy" },
                             { "name": "rui" },
@@ -1214,7 +1230,6 @@
                                 "notes": "Bindings to the Skia C++ library. The most complete option with excellent performance. However, it can be difficult to get it to compile."
                             }, {
                                 "name": "vello",
-                                "link": "https://github.com/linebender/vello",
                                 "notes": "WGPU based and uses cutting edge techniques to render vector paths using the GPU. Still somewhat immature and hasn't yet put out a stable release."
                             }, {
                                 "name": "vger",
@@ -1240,6 +1255,7 @@
                             }, {
                                 "name": "parley",
                                 "link": "https://github.com/dfrg/parley",
+                                "docs": "https://docs.rs/parley/latest/parley/",
                                 "notes": "Another very accomplished text layout library used by Druid/Xilem."
                             }]
                         }, {
