@@ -514,6 +514,7 @@
                 {
                     "name": "Ruby",
                     "recommendations": [
+                        { "name": "magnus", "notes": "Ruby bindings for Rust. Write Ruby extension gems in Rust, or call Ruby from Rust. Supported by Ruby's rubygems and bundler" },
                         { "name": "rutie", "notes": "Supports both embedding Rust into Ruby applications and embedding Ruby into Rust applications" }
                     ]
                 },
