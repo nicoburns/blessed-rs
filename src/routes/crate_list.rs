@@ -54,6 +54,7 @@ struct Crate {
     name: String,
     notes: Option<String>,
     link: Option<String>,
+    docs: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
