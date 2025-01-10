@@ -1200,10 +1200,6 @@
                                 "name": "tao",
                                 "notes": "A fork of winit by the Tauri project which adds support for things like system menus that desktop apps need."
                             }, {
-                                "name": "glazier",
-                                "link": "https://github.com/linebender/glazier",
-                                "notes": "A new competitor to winit based on the old druid-shell. Has a callback that may be better than the event loop architecture for some tasks. Doesn't yet have a stable release."
-                            }, {
                                 "name": "baseview",
                                 "link": "https://github.com/RustAudio/baseview",
                                 "notes": "Specialized window creation library targetting windows to be embedded in other applications (e.g. DAW plugins)"
