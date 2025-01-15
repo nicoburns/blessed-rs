@@ -586,9 +586,8 @@
                     "name": "General Purpose Hashing",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/hashes#rustcrypto-hashes\">Rust Crypto Hashes</a>.",
                     "recommendations": [
-                        { "name": "sha2" },
-                        { "name": "sha1" },
-                        { "name": "md-5" }
+                        { "name": "blake3" },
+                        { "name": "sha2" }
                     ]
                 },
                 {
