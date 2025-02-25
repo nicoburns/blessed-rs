@@ -1089,7 +1089,7 @@
                                 "name": "dashmap",
                                 "notes": "The fastest for general purpose workloads"
                             }, {
-                                "name": "flurry",
+                                "name": "papaya",
                                 "notes": "Particularly good for read-heavy workloads."
                             }]
                         },
