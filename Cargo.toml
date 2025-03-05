@@ -13,11 +13,14 @@ tower-http = { version = "0.6", features = ["fs", "trace"] }
 fxhash = "0.2"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-tera = "1"
+dioxus = { version = "0.6", default-features = false, features = ["html", "macro", "signals", "hooks"] }
+dioxus-ssr = "0.6.2"
 
 # Logging
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+dioxus-html-macro = "0.3.0"
+dashmap = "6.1.0"
 
 [build-dependencies]
 grass = { version = "0.13", default-features = false }
