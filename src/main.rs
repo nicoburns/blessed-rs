@@ -98,7 +98,7 @@ fn render_component(render_fn: fn() -> Element) -> (String, Duration) {
     let mut dom = VirtualDom::new(render_fn);
     dom.rebuild_in_place();
     let rendered = dioxus_ssr::render(&dom);
-    let html = format!("<!DOCTYPE html><html{}", &rendered[4..]);
+    let html = format!("<!DOCTYPE html><html{}</html>", &rendered[4..(rendered.len()-6)]);
 
     (html, start.elapsed())
 }
