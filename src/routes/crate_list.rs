@@ -138,8 +138,9 @@ pub fn CrateTable(purposes: Vec<Purpose>) -> Element {
                         td { "{ purpose.name }" }
                         td {
                             if let Some(notes) = purpose.notes {
-                                p { style: "margin: 3px 6px 6px 6px;font-style: italic;color: #666",
-                                    "{ notes }"
+                                p {
+                                    style: "margin: 3px 6px 6px 6px;font-style: italic;color: #666",
+                                    dangerous_inner_html: notes,
                                 }
                             }
                             if let Some(recommendations) = purpose.recommendations {
