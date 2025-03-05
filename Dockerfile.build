@@ -20,6 +20,5 @@ COPY --from=builder  /usr/src/blessed-rs/target/release/blessed-rs /usr/local/bi
 
 WORKDIR /usr/blessed-rs
 COPY ./static ./static
-COPY ./templates ./templates
 COPY ./data ./data
 CMD ["blessed-rs"]
