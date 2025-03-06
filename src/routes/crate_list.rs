@@ -174,7 +174,7 @@ fn CrateListItem(krate: Crate) -> Element {
     let show_doc_link = krate.docs.is_some() || krate.link.is_none();
     let main_href = krate
         .link
-        .unwrap_or_else(|| format!("https://lib.rs/krates/{}", &krate.name));
+        .unwrap_or_else(|| format!("https://lib.rs/crates/{}", &krate.name));
     let doc_href = krate
         .docs
         .unwrap_or_else(|| format!("https://docs.rs/{}", &krate.name));
