@@ -6,7 +6,6 @@ use crate::components::{MainContent, Page, Section, TocSection, TocSubSection};
 
 #[component]
 pub fn LearningResourcesPage() -> Element {
-
     let toc_sections = vec![
         TocSection {
             name: "Books".into(),

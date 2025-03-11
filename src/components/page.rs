@@ -12,7 +12,6 @@ pub fn Page(
     footer: Option<Element>,
     children: Element,
 ) -> Element {
-
     // Register function to get hash of CSS file. Hash doesn't need to be secure as it is
     // purely to prevent the old version of the file being cached when the file it updated
     let cwd = current_dir().unwrap();
