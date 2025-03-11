@@ -231,7 +231,7 @@
                             "name": "Non-self-describing, no external schema file",
                             "recommendations": [{
                                 "name": "postcard",
-                                "notes": "<code>no_std</code> focused Serde serializer/deserializer, aimed at constrained environments."
+                                "notes": "`no_std` focused Serde serializer/deserializer, aimed at constrained environments."
                             }, {
                                 "name": "rkyv",
                                 "notes": "Fast zero-copy deserialization framework that allows arbitrary field types and safe zero-copy mutation."
@@ -468,7 +468,7 @@
                 {
                     "name": "Sortable Floats",
                     "recommendations": [
-                        { "name": "ordered-float", "notes": "Float types that don't allow NaN and are therefore orderable. You can also use the <code>total_cmp</code> method from the standard library like <code>.sort_by(|a, b| a.total_cmp(&b))</code>." }
+                        { "name": "ordered-float", "notes": "Float types that don't allow NaN and are therefore orderable. You can also use the `total_cmp` method from the standard library like `.sort_by(|a, b| a.total_cmp(&b))`." }
                     ]
                 },
                 {
