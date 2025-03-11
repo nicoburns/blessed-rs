@@ -10,7 +10,6 @@ use dioxus::prelude::*;
 use dioxus_html_macro::html;
 use routes::{CrateListPage, GettingStartedPage, LearningResourcesPage};
 use std::{
-    any::{Any, TypeId},
     net::{IpAddr, SocketAddr},
     sync::LazyLock,
     time::{Duration, Instant},
@@ -66,11 +65,10 @@ async fn main() {
 }
 
 async fn dx_route_cached(render_fn: fn() -> Element) -> impl IntoResponse {
-    static CACHE: LazyLock<DashMap<TypeId, Bytes>> = LazyLock::new(|| DashMap::new());
+    static CACHE: LazyLock<DashMap<usize, Bytes>> = LazyLock::new(|| DashMap::new());
 
-    let type_id = Any::type_id(&render_fn);
-
-    let html = CACHE.entry(type_id).or_insert_with(|| {
+    let cache_key = render_fn as *const () as usize;
+    let html = CACHE.entry(cache_key).or_insert_with(|| {
         let (html, duration) = render_component(render_fn);
 
         let duration_millis = duration.as_micros() as f64 / 1000.0;
