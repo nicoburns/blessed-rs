@@ -185,7 +185,7 @@ fn CrateListItem(krate: Crate) -> Element {
         <p style="margin: 3px 6px;max-width: 600px">
             <CrateLink href={main_href} label={krate.name} /> {doc_link}
             <br />
-            {krate.notes}
+            <span dangerous_inner_html={krate.notes} />
         </p>
     )
 }

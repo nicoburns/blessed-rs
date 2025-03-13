@@ -38,9 +38,7 @@ pub fn Section(
             }
 
             p { class: "group-description",
-                if let Some(desc) = description {
-                    {desc}
-                }
+                dangerous_inner_html: description
             }
             {children}
         }
