@@ -147,13 +147,13 @@ a:hover {
   #content {
     margin-left: 0;
   }
-  .logo {
+  #header .logo {
     height: 70px;
   }
-  .page-heading {
+  #header .page-heading-group .page-heading {
     font-size: 2rem;
   }
-  .page-subheading {
+  #header .page-heading-group .page-subheading {
     font-size: 1rem;
   }
   h3 {

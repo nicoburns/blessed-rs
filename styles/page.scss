@@ -21,8 +21,6 @@ body {
     flex-shrink: 0;
 }
 
-
-
 #content {
     max-width: 1200px;
     margin-left: 24px;
@@ -148,9 +146,13 @@ a {
     #left-sidebar { display: none; }
     #content { margin-left: 0; }
 
-    .logo { height: 70px }
-    .page-heading { font-size: 2rem }
-    .page-subheading { font-size: 1rem }
+    #header {
+        .logo { height: 70px }
+        .page-heading-group {
+            .page-heading { font-size: 2rem }
+            .page-subheading { font-size: 1rem }
+        }
+    }
 
     h3 { margin-top: 14px }
 }
