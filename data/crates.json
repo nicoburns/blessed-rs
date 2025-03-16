@@ -673,10 +673,9 @@
                             }, {
                                 "name": "futures-executor",
                                 "notes": "A minimal executor. In particular, the <a href=\"https://docs.rs/futures-executor/latest/futures_executor/fn.block_on.html\">block_on</a> function is useful if you want to run an async function synchronously in codebase that is mostly synchronous."
-                            }],
-                            "see_also": [{
-                                "name": "async-std",
-                                "notes": "A newer option that is very similar to tokio. Its API more closely mirrors the std library, but it doesn't have as much traction or ecosystem support as Tokio."
+                            }, {
+                                "name": "smol",
+                                "notes": "A small and modular async runtime. Since the implementation is modularized in smaller crates, you can directly use only the required crates instead of depending on the entire runtime."
                             }]
                         },
                         {
