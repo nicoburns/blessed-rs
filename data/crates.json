@@ -16,6 +16,9 @@
                             "recommendations": [{
                                 "name": "rand",
                                 "notes": "De facto standard random number generation library split out from the standard library"
+                            }, {
+                                "name": "fastrand",
+                                "notes": "A simple and fast random number generator (but not cryptographically secure)."
                             }]
                         },
                         {
