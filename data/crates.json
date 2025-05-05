@@ -500,7 +500,8 @@
                     "name": "C",
                     "recommendations": [
                         { "name": "bindgen", "notes": "Generate Rust bindings to C libraries" },
-                        { "name": "cbindgen", "notes": "Generate C bindings to Rust libraries" }
+                        { "name": "cbindgen", "notes": "Generate C bindings to Rust libraries" },
+                        { "name": "cc", "notes": "Compile and link C code as part of your Cargo build" }
                     ]
                 },
                 {
