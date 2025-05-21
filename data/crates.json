@@ -1175,10 +1175,20 @@
                                 "docs": "https://book.vizia.dev/",
                                 "notes": "Fairly complete with sophisticated layout and text layout, but has yet to make a stable release."
                             }, {
+                               "name": "xilem",
+                                "link": "https://github.com/linebender/xilem",
+                                "docs": "https://docs.rs/xilem",
+                                "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
+                            }, {
                                 "name": "freya",
                                 "link": "https://github.com/marc2332/freya",
                                 "docs": "https://book.freyaui.dev/",
                                 "notes": "Dioxus-based GUI framework using Skia for rendering."
+                            }, {
+                                "name": "gpui",
+                                "link": "https://github.com/zed-industries/zed/tree/main/crates/gpui",
+                                "docs": "https://www.gpui.rs/#docs",
+                                "notes": "High performance framework used in the Zed text editor. Now available on macOS and linux."
                             }, {
                                 "name": "makepad",
                                 "link": "https://github.com/makepad/makepad",
