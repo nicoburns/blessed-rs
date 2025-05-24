@@ -23,13 +23,25 @@
                         },
                         {
                             "name": "Time & Date",
-                            "notes": "Unfortunately there is no clear answer as to which is best between time and chrono.<br />Evaluate for yourself between these two, but be resassured that both are trusted and well-maintained.",
+                            "notes": "jiff is the best option if you're starting a new project...<br />...but it currently lacks some of the ecosystem integration that time and chrono have.<br />Unfortunately there is no clear answer as to which is better between time and chrono.<br />Evaluate for yourself between the two, but be reassured that both are trusted and well-maintained.",
                             "recommendations": [{
+                                "name": "jiff",
+                                "link": "https://crates.io/crates/jiff",
+                                "docs": "https://docs.rs/jiff",
+                                "notes": "A relatively new general-purpose datetime library with automatic time zone database integration and convenient zone-aware calendar arithmetic."
+                            }, {
                                 "name": "time",
-                                "notes": "A smaller, simpler library. Preferrable if covers your needs, but it's quite limited in what it provides."
+                                "notes": "A powerful, popular datetime library with an easy-to-use API, helper macros, and a smaller binary size. Also has some third-party integrations (e.g. <a href=\"https://lib.rs/time-tz\">time-tz</a> for timezone support)."
                             }, {
                                 "name": "chrono",
-                                "notes": "The most comprehensive and full-featured datetime library, but more complex because of it."
+                                "notes": "A widely-used datetime library with strong ecosystem support, with crates like <a href=\"https://lib.rs/tzfile\">tzfile</a> and <a href=\"https://lib.rs/chrono-tz\">chrono-tz</a> providing additional features like timezone conversions."
+                            }],
+                            "see_also": [{
+                                "name": "icu_datetime",
+                                "notes": "A library focused on providing support for datetime internationalization using the <a href=\"https://icu.unicode.org/\">International Components for Unicode</a>. The <a href=\"https://lib.rs/icu\">icu</a> crate re-exports this along with other ICU-focused crates, so you might want that instead."
+                            }, {
+                                "name": "hifitime",
+                                "notes": "An ultra-precise datetime library focused towards scientific applications."
                             }]
                         },
                         {
