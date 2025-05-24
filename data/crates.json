@@ -1155,18 +1155,18 @@
                             }]
                         },
                         {
-                            "name": "Immediate Mode Native GUI",
+                            "name": "Native GUI",
                             "recommendations": [{
                                 "name": "egui",
-                                "notes": "Immediate-mode UI. Lots of widgets. The most useable out of the box if your needs are simple and you don't need to customise of the look and feel"
-                            }]
-                        },
-                        {
-                            "name": "Retained Mode Native GUI",
-                            "recommendations": [{
+                                "notes": "Immediate-mode UI with lots of widgets. Very useable out of the box if your needs are simple and you don't need to customise the look and feel"
+                            }, {
                                 "name": "iced",
                                 "notes": "Retained mode UI with a nice API. It's useable for basic apps, but has a number of missing features including multiple windows, layers, and proper text rendering."
                             }, {
+                                "name": "slint",
+                                "notes": "A stable and feature-rich UI toolkit with a declarative language. Licensed under GPL, royalty-free for desktop/mobile, or with paid options for proprietary embedded use."
+                            }],
+                            "see_also": [{
                                 "name": "floem",
                                 "notes": "Inspired by Xilem, Leptos and rui, floem is currently more complete than any of them for native UI. Used by the Lapce text editor."
                             }, {
@@ -1174,9 +1174,8 @@
                                 "link": "https://github.com/vizia/vizia",
                                 "docs": "https://book.vizia.dev/",
                                 "notes": "Fairly complete with sophisticated layout and text layout, but has yet to make a stable release."
-                            }],
-                            "see_also": [{
-                                "name": "xilem",
+                            }, {
+                               "name": "xilem",
                                 "link": "https://github.com/linebender/xilem",
                                 "docs": "https://docs.rs/xilem",
                                 "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
@@ -1185,12 +1184,6 @@
                                 "link": "https://github.com/marc2332/freya",
                                 "docs": "https://book.freyaui.dev/",
                                 "notes": "Dioxus-based GUI framework using Skia for rendering."
-                            }, {
-                                "name": "slint",
-                                "notes": "Possibly the most complete rust-native UI library. But note that it's dual GPL3/commercial licensed."
-                            }, {
-                                "name": "druid",
-                                "notes": "Druid is a relatively mature alternative to Iced/Slint, however it has been discontinued in favour of Xilem so it's use for new projects is discouraged."
                             }, {
                                 "name": "gpui",
                                 "link": "https://github.com/zed-industries/zed/tree/main/crates/gpui",
@@ -1205,9 +1198,6 @@
                                 "link": "https://ribir.org/",
                                 "docs": "https://ribir.org/docs/introduction/"
                             },
-                            { "name": "cushy" },
-                            { "name": "rui" },
-                            { "name": "concoct" },
                             { "name": "kas" }]
                         }, {
                             "name": "Window creation",
