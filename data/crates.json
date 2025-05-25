@@ -85,6 +85,22 @@
                             }]
                         },
                         {
+                            "name": "Arena allocators",
+                            "recommendations": [{
+                                "name": "bumpalo",
+                                "notes": "Fast \"bump allocator\", ideal for heterogeneous contents and short-lived objects, with the caveat that it only allows for cycles if you don't need destructors to run."
+                            }, {
+                                "name": "typed-arena",
+                                "notes": "Straightforward, single-type arena allocator in Rust that supports efficient object creation and can handle cyclic references within its stored data."
+                            }, {
+                                "name": "slotmap",
+                                "notes": "Unordered map-like data structure, useful for managing self-referential data through generational indexing; ensures keys remain valid even after removals."
+                            }, {
+                                "name": "slab",
+                                "notes": "Offers pre-allocated storage for a single, uniform data type, minimizing memory fragmentation and optimizing efficiency by returning reusable keys upon insertion."
+                            }]
+                        },
+                        {
                             "name": "HTTP Requests",
                             "notes": "See the HTTP section below for server-side libraries",
                             "recommendations": [{
