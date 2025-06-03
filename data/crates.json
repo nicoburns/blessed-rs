@@ -728,10 +728,6 @@
                             }, {
                                 "name": "ureq",
                                 "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
-                            }],
-                            "see_also": [{
-                                "name": "surf",
-                                "notes": "Client that uses the async-std runtime rather than the tokio runtime. Not well maintained."
                             }]
                         },
                         {
