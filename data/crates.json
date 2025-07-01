@@ -1289,6 +1289,14 @@
                             }]
                         },
                         {
+                            "name": "Game Controller Input",
+                            "notes": "",
+                            "recommendations": [{
+                                "name": "gilrs",
+                                "notes": "Versatile platform-agnostic approach to deal with gamepads."
+                            }]
+                        },
+                        {
                             "name": "3D Math",
                             "recommendations": [{
                                 "name": "glam",
