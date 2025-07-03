@@ -154,7 +154,7 @@ pub fn CrateTable(purposes: Vec<Purpose>) -> Element {
                                         b {
                                             i { "See also" }
                                         }
-                                        span { style: "color: #999", "(click to open)" }
+                                        span { style: "color: #999", " (click to open)" }
                                     }
                                     for krate in see_also {
                                         CrateListItem { krate }
