@@ -798,6 +798,27 @@
                             }]
                         }
                     ]
+                },
+                {
+                    "slug": "dbus",
+                    "name": "D-Bus",
+                    "description": "For cross-platform D-Bus clients and services.",
+                    "purposes": [
+                        {
+                            "name": "General Purpose",
+                            "recommendations": [{
+                                "name": "zbus",
+                                "notes": "A Rust-only (a)sync implementation of the protocol. Provides high-level proxies and zbus_xmlgen for scaffolding. Includes a book for D-Bus/zbus beginners."
+                            }]
+                        },
+                        {
+                            "name": "Bindings",
+                            "recommendations": [{
+                                "name": "dbus",
+                                "notes": "Bindings for the battle-tested libdbus implementation. Has sister crates for asynchrony, codegen, etc."
+                            }]
+                        }
+                    ]
                 }
             ]
         },
