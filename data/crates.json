@@ -265,9 +265,6 @@
                             "recommendations": [{
                                 "name": "windows",
                                 "notes": "The official Microsoft-provided crate for interacting with windows APIs"
-                            }, {
-                                "name": "winapi",
-                                "notes": "Older binding to the windows APIs. Unofficial, but more complete than windows-rs"
                             }]
                         },
                         {
