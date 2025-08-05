@@ -242,7 +242,23 @@
                                 "name": "configparser",
                                 "notes":"Highly convenient and simple library for reading and writing INI-style configuration files with section-based key-value pairs."
                             }]
+                        },
+                        {
+                            "name": "Self-describing, no external schema file",
+                            "recommendations": [
+                        {
+                            "name": "serde_json",
+                            "notes": "A fast and flexible library for parsing and generating JSON using Serde’s powerful data model."
+                        },
+                        {
+                            "name": "configparser",
+                            "notes": "A simple library for reading and writing INI-style configuration files with section-based key-value pairs."
+                        },
+                        {
+                            "name": "toml",
+                            "notes": "A robust TOML parser for Rust, ideal for config files with readable syntax and rich data types."
                         }]
+            }]
                 },
                 {
                     "slug": "system",
