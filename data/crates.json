@@ -238,6 +238,9 @@
                             }, {
                                 "name": "rkyv",
                                 "notes": "Fast zero-copy deserialization framework that allows arbitrary field types and safe zero-copy mutation."
+                            }, {
+                                "name": "configparser",
+                                "notes":"Highly convenient and simple library for reading and writing INI-style configuration files with section-based key-value pairs."
                             }]
                         }]
                 },
