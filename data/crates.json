@@ -26,7 +26,7 @@
                             "notes": "Unfortunately there is no clear answer as to which is best between time and chrono.<br />Evaluate for yourself between these two, but be resassured that both are trusted and well-maintained.",
                             "recommendations": [{
                                 "name": "time",
-                                "notes": "A smaller, simpler library. Preferrable if covers your needs, but it's quite limited in what it provides."
+                                "notes": "A smaller, simpler library. Preferable if covers your needs, but it's quite limited in what it provides."
                             }, {
                                 "name": "chrono",
                                 "notes": "The most comprehensive and full-featured datetime library, but more complex because of it."
@@ -68,7 +68,7 @@
                             "name": "Insertion-ordered map",
                             "recommendations": [{
                                 "name": "indexmap",
-                                "notes": "A HashMap that seperately keeps track of insertion order and allows you to efficiently iterate over its elements in that order"
+                                "notes": "A HashMap that separately keeps track of insertion order and allows you to efficiently iterate over its elements in that order"
                             }]
                         },
                         {
@@ -125,7 +125,7 @@
                 {
                     "slug": "logging",
                     "name": "Logging",
-                    "description": "Crates for logging. Note that in general you will need a seperate crate for actually printing/storing the logs",
+                    "description": "Crates for logging. Note that in general you will need a separate crate for actually printing/storing the logs",
                     "purposes": [
                         {
                             "name": "Text-based logging",
@@ -1224,7 +1224,7 @@
                             }, {
                                 "name": "baseview",
                                 "link": "https://github.com/RustAudio/baseview",
-                                "notes": "Specialized window creation library targetting windows to be embedded in other applications (e.g. DAW plugins)"
+                                "notes": "Specialized window creation library targeting windows to be embedded in other applications (e.g. DAW plugins)"
                             }]
                         }, {
                             "name": "2D Renderers",
