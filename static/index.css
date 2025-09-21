@@ -12,11 +12,12 @@ body {
 #main-container {
   margin: 0;
   padding: 0;
-  margin: 24px;
+  margin: 0 24px;
 }
 
 #left-sidebar {
   width: 200px;
+  flex-shrink: 0;
 }
 
 #content {
@@ -25,11 +26,10 @@ body {
 }
 
 #header {
-  border-bottom: 1px solid #CCC;
   display: flex;
   align-items: center;
   background-color: #FFF;
-  background-color: #fef6f1;
+  background-color: #b66340;
 }
 #header .logo {
   height: 120px;
@@ -40,7 +40,7 @@ body {
 }
 #header .page-heading-group .page-heading {
   color: #333;
-  color: #4d4a45;
+  color: white;
   font-size: 3rem;
   font-weight: normal;
   margin: 0;
@@ -49,9 +49,18 @@ body {
   font-size: 1.5rem;
   font-weight: normal;
   margin: 0;
-  color: #666;
-  color: #77482d;
-  color: #644735;
+  color: white;
+}
+
+nav, #see-also-banner {
+  padding: 12px;
+  border-bottom: 1px solid #CCC;
+}
+
+.hero {
+  border-bottom: 1px solid #CCC;
+  margin: 0 -24px;
+  padding: 0 24px;
 }
 
 .full-width {
@@ -67,6 +76,7 @@ body {
 
 p.introduction {
   color: #494949;
+  max-width: 80ch;
 }
 
 p, li {
@@ -86,6 +96,16 @@ p, li {
 
 section {
   margin-bottom: 24px;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -110,6 +130,13 @@ a, a:hover, a:visited, a:active {
   color: #3298dc;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 800px) {
   #main-container {
     margin: 0 12px;
@@ -120,24 +147,23 @@ a, a:hover, a:visited, a:active {
   #content {
     margin-left: 0;
   }
-  .logo {
+  #header .logo {
     height: 70px;
   }
-  .page-heading {
+  #header .page-heading-group .page-heading {
     font-size: 2rem;
   }
-  .page-subheading {
+  #header .page-heading-group .page-subheading {
     font-size: 1rem;
   }
   h3 {
     margin-top: 14px;
   }
 }
-
 .toc {
   position: sticky;
   overflow-y: auto;
-  top: 24px;
+  top: 0px;
   max-height: calc(100vh - 24px);
 }
 .toc ul {
@@ -189,7 +215,6 @@ a, a:hover, a:visited, a:active {
     width: 100px;
   }
 }
-
 table {
   border-collapse: collapse;
   /* border: 1px solid #f9f9f9; */
@@ -212,4 +237,5 @@ table td {
   padding: 6px 6px;
   border: 1px solid #CCC;
   font-size: 14px;
+  overflow-wrap: break-word;
 }

@@ -1,43 +1,105 @@
 use axum::{
-    routing::{get, post, get_service},
-    Router,
+    body::Bytes,
     http::StatusCode,
-    response::Redirect,
+    response::{Html, IntoResponse, Redirect},
+    routing::{get, get_service},
+    Router,
 };
-use std::net::{SocketAddr, IpAddr};
+use dashmap::DashMap;
+use dioxus::prelude::*;
+use dioxus_html_macro::html;
+use routes::{CrateListPage, GettingStartedPage, LearningResourcesPage};
+use std::{
+    net::{IpAddr, SocketAddr},
+    sync::LazyLock,
+    time::{Duration, Instant},
+};
+use tokio::net::TcpListener;
 use tower_http::{services::ServeDir, trace::TraceLayer};
 
+mod components;
 mod routes;
-mod templates;
 
 #[tokio::main]
 async fn main() {
     // initialize tracing
     tracing_subscriber::fmt::init();
 
-    let static_file_service = get_service(ServeDir::new("static"))
-    .handle_error(|error: std::io::Error| async move {
-        (StatusCode::INTERNAL_SERVER_ERROR, format!("Unhandled internal error: {}", error))
-    });
-
     // build our application with a route
     let app = Router::new()
         .route("/", get(|| async { Redirect::to("/crates") }))
-        .route("/users", post(routes::users::create::run))
-        .route("/crates", get(routes::crates::list::run))
-        .route("/getting-started", get(routes::getting_started::guide::run))
-        .nest_service("/static", static_file_service)
+        .route(
+            "/crates",
+            get(|| dx_route_cached(|| html!(<CrateListPage />))),
+        )
+        .route(
+            "/getting-started",
+            get(|| dx_route_cached(|| html!(<GettingStartedPage />))),
+        )
+        .route(
+            "/learning-resources",
+            get(|| dx_route_cached(|| html!(<LearningResourcesPage />))),
+        )
+        .nest_service("/static", get_service(ServeDir::new("static")))
         .layer(TraceLayer::new_for_http());
 
     // run our app with hyper
     // `axum::Server` is a re-export of `hyper::Server`
-    let host : IpAddr = std::env::var("HOST").ok().and_then(|h| h.parse().ok()).unwrap_or("::".parse().unwrap());
-    let port = std::env::var("PORT").ok().and_then(|p| p.parse().ok()).unwrap_or(3333);
+    let host: IpAddr = std::env::var("HOST")
+        .ok()
+        .and_then(|h| h.parse().ok())
+        .unwrap_or("::".parse().unwrap());
+    let port = std::env::var("PORT")
+        .ok()
+        .and_then(|p| p.parse().ok())
+        .unwrap_or(3333);
     let addr = SocketAddr::from((host, port));
-    tracing::debug!("listening on {}", addr);
-    axum::Server::bind(&addr)
-        .serve(app.into_make_service())
+    let listener = TcpListener::bind(addr).await.unwrap();
+
+    let msg = format!("Serving blessed-rs at http://{addr}").replace("[::]", "localhost");
+    println!("{msg}");
+
+    axum::serve(listener, app.into_make_service())
         .await
         .unwrap();
 }
 
+async fn dx_route_cached(render_fn: fn() -> Element) -> impl IntoResponse {
+    static CACHE: LazyLock<DashMap<usize, Bytes>> = LazyLock::new(|| DashMap::new());
+
+    let cache_key = render_fn as *const () as usize;
+    let html = CACHE.entry(cache_key).or_insert_with(|| {
+        let (html, duration) = render_component(render_fn);
+
+        let duration_millis = duration.as_micros() as f64 / 1000.0;
+        println!("Rendered in {duration_millis:.2}ms",);
+
+        Bytes::from(html)
+    });
+
+    (StatusCode::OK, Html(html.clone()))
+}
+
+#[allow(unused)]
+async fn dx_route(render_fn: fn() -> Element) -> impl IntoResponse {
+    let (html, duration) = render_component(render_fn);
+
+    let duration_millis = duration.as_micros() as f64 / 1000.0;
+    println!("Rendered dx in {duration_millis:.2}ms",);
+
+    (StatusCode::OK, Html(html))
+}
+
+fn render_component(render_fn: fn() -> Element) -> (String, Duration) {
+    let start = Instant::now();
+
+    let mut dom = VirtualDom::new(render_fn);
+    dom.rebuild_in_place();
+    let rendered = dioxus_ssr::render(&dom);
+    let html = format!(
+        "<!DOCTYPE html><html{}</html>",
+        &rendered[4..(rendered.len() - 6)]
+    );
+
+    (html, start.elapsed())
+}

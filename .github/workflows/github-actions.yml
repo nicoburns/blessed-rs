@@ -16,7 +16,7 @@ jobs:
     # the glibc version of the OS running inside the docker container.
     #
     # To be safe, the OS version here should be kept to an older version than the OS version in the Dockerfile
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
       - name: Compile release build
         run: cargo build --release --all-features
       - name: Upload binary as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: blessed-rs-release-binary
           path: target/release/blessed-rs
@@ -41,7 +41,7 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v3
         - name: Download binary artifact
-          uses: actions/download-artifact@v3
+          uses: actions/download-artifact@v4
           with:
             name: blessed-rs-release-binary
             path: target/release

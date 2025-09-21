@@ -1,155 +1,6 @@
 {
     "crate_groups": [
-        {
-            "slug": "tooling",
-            "name": "Tooling",
-            "description": "Developer tools for working with Rust projects.",
-            "subgroups": [],
-            "purposes": [
-                {
-                    "name": "Toolchain Management",
-                    "recommendations": [{
-                        "name": "rustup",
-                        "link": "https://rustup.rs",
-                        "notes": "Install, manage, and upgrade versions of rustc, cargo, clippy, rustfmt and more."
-                    }]
-                },
-                {
-                    "name": "Linting",
-                    "recommendations": [{
-                        "name": "clippy",
-                        "link": "https://github.com/rust-lang/rust-clippy#usage",
-                        "notes": "The official Rust linter."
-                    }, {
-                        "name": "cargo-semver-checks",
-                        "link": "https://github.com/obi1kenobi/cargo-semver-checks",
-                        "notes": "Lint your crate releases for semantic versioning violations."
-                    }]
-                },
-                {
-                    "name": "Code Formatting",
-                    "recommendations": [{
-                        "name": "rustfmt",
-                        "link": "https://github.com/rust-lang/rustfmt#rustfmt----",
-                        "notes": "The official Rust code formatter."
-                    }]
-                },
-                {
-                    "name": "Cross Compilation",
-                    "recommendations": [{
-                        "name": "cross",
-                        "link": "https://github.com/cross-rs/cross#cross",
-                        "notes": "Seamless cross-compiling using Docker containers."
-                    }, {
-                        "name": "cargo-zigbuild",
-                        "link": "https://github.com/rust-cross/cargo-zigbuild",
-                        "notes": "Easily cross-compile using Zig as the linker."
-                    }]
-                },
-                {
-                    "name": "Managing Dependencies",
-                    "recommendations": [{
-                        "name": "cargo-edit",
-                        "link": "https://github.com/killercup/cargo-edit",
-                        "notes": "Adds 'cargo upgrade' and 'cargo set-version' commands to cargo"
-                    }, {
-                        "name": "cargo-outdated",
-                        "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
-                        "notes": "Finds dependencies that have available updates"
-                    }, {
-                        "name": "cargo-audit",
-                        "link": "https://github.com/RustSec/rustsec/tree/main/cargo-audit#rustsec-cargo-audit",
-                        "notes": "Check dependencies for reported security vulnerabilities"
-                    },  {
-                        "name": "cargo-license",
-                        "link": "https://github.com/onur/cargo-license#cargo-license",
-                        "notes": "Lists licenses of all dependencies"
-                    }, {
-                        "name": "cargo-deny",
-                        "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
-                        "notes": "Enforce policies on your code and dependencies."
-                    }]
-                },
-                {
-                    "name": "Testing",
-                    "recommendations": [{
-                        "name": "cargo-nextest",
-                        "link": "https://nexte.st",
-                        "notes": "Faster, better test runner"
-                    },
-                    {
-                        "name": "insta",
-                        "link": "https://insta.rs",
-                        "notes": "Snapshot testing with inline snapshot support"
-                    }]
-                },
-                {
-                    "name": "Benchmarking",
-                    "recommendations": [{
-                        "name": "criterion",
-                        "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
-                    }, {
-                        "name": "divan",
-                        "notes": "Simple yet powerful benchmarking library with allocation profiling"
-                    }, {
-                        "name": "hyperfine",
-                        "link": "https://github.com/sharkdp/hyperfine#hyperfine",
-                        "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
-                    }]
-                },
-                {
-                    "name": "Performance",
-                    "recommendations": [{
-                        "name": "cargo-flamegraph",
-                        "link": "https://github.com/flamegraph-rs/flamegraph#cargo-flamegraph",
-                        "notes": "Execution flamegraph generation"
-                    }, {
-                        "name": "dhat",
-                        "notes": "Heap memory profiling"
-                    }, {
-                        "name": "cargo-show-asm",
-                        "notes": "Print the generated assembly for a Rust function"
-                    }]
-                },
-                {
-                    "name": "Debugging Macros",
-                    "notes": "<a href=\"https://github.com/rust-lang/rust-analyzer\">Rust Analyzer</a> also allows you to <a href=\"https://rust-analyzer.github.io/manual.html#expand-macro-recursively\">expand macros directly in your editor</a>",
-                    "recommendations": [{
-                        "name": "cargo-expand",
-                        "link": "https://github.com/dtolnay/cargo-expand#cargo-expand",
-                        "notes": "Allows you to inspect the code that macros expand to"
-                    }]
-                },
-                {
-                    "name": "Release Automation",
-                    "recommendations": [{
-                        "name": "cargo-release",
-                        "link": "https://github.com/crate-ci/cargo-release#cargo-release",
-                        "notes": "Helper for publishing new crate versions."
-                    }, {
-                        "name": "Release-plz",
-                        "link": "https://release-plz.ieni.dev/",
-                        "notes": "Release Rust crates from CI with a Release PR."
-                    }]
-                },
-                {
-                    "name": "Continuous Integration",
-                    "recommendations": [{
-                        "name": "rust-toolchain (github action)",
-                        "link": "https://github.com/dtolnay/rust-toolchain#install-rust-toolchain",
-                        "notes": "Github action to install Rust components via rustup"
-                    }, {
-                        "name": "rust-cache (github action)",
-                        "link": "https://github.com/Swatinem/rust-cache#rust-cache-action",
-                        "notes": "Github action to cache compilation artifacts and speed up subsequent runs."
-                    }, {
-                        "name": "install-action (github action",
-                        "link": "https://github.com/taiki-e/install-action",
-                        "notes": "GitHub Action for installing development tools (mainly from GitHub Releases)."
-                    }]
-                }
-            ]
-        },
+
         {
             "slug": "common",
             "name": "Common",
@@ -165,6 +16,9 @@
                             "recommendations": [{
                                 "name": "rand",
                                 "notes": "De facto standard random number generation library split out from the standard library"
+                            }, {
+                                "name": "fastrand",
+                                "notes": "A simple and fast random number generator (but not cryptographically secure)."
                             }]
                         },
                         {
@@ -172,18 +26,10 @@
                             "notes": "Unfortunately there is no clear answer as to which is best between time and chrono.<br />Evaluate for yourself between these two, but be resassured that both are trusted and well-maintained.",
                             "recommendations": [{
                                 "name": "time",
-                                "notes": "A smaller, simpler library. Preferrable if covers your needs, but it's quite limited in what it provides."
+                                "notes": "A smaller, simpler library. Preferable if covers your needs, but it's quite limited in what it provides."
                             }, {
                                 "name": "chrono",
                                 "notes": "The most comprehensive and full-featured datetime library, but more complex because of it."
-                            }]
-                        },
-                        {
-                            "name": "Serialization (JSON, YAML, etc)",
-                            "notes": "See <a href=\"https://docs.rs/serde/latest/serde/#data-formats\">here</a> for supported formats.",
-                            "recommendations": [{
-                                "name": "serde",
-                                "notes": "De facto standard serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using."
                             }]
                         },
                         {
@@ -222,7 +68,7 @@
                             "name": "Insertion-ordered map",
                             "recommendations": [{
                                 "name": "indexmap",
-                                "notes": "A HashMap that seperately keeps track of insertion order and allows you to efficiently iterate over its elements in that order"
+                                "notes": "A HashMap that separately keeps track of insertion order and allows you to efficiently iterate over its elements in that order"
                             }]
                         },
                         {
@@ -279,7 +125,7 @@
                 {
                     "slug": "logging",
                     "name": "Logging",
-                    "description": "Crates for logging. Note that in general you will need a seperate crate for actually printing/storing the logs",
+                    "description": "Crates for logging. Note that in general you will need a separate crate for actually printing/storing the logs",
                     "purposes": [
                         {
                             "name": "Text-based logging",
@@ -310,10 +156,10 @@
                     "purposes": [
                         {
                             "name": "Lazy static variable initialization",
-                            "notes": "The core functionality of once_cell is now <a href=\"https://doc.rust-lang.org/stable/std/cell/struct.OnceCell.html\">included in the standard library</a> with the remaining parts <a href=\"https://github.com/rust-lang/rust/issues/109736\">on track</a> to be stabilised in future.",
+                            "notes": "This functionality is now <a href=\"https://doc.rust-lang.org/stable/std/sync/struct.LazyLock.html\">included in the standard library</a>",
                             "recommendations": [{
                                 "name": "once_cell",
-                                "notes": "Newer crate with more ergonomic API. Should be preferred for all new projects."
+                                "notes": "Newer crate with more ergonomic API. Has since been adopted into the std library"
                             }, {
                                 "name": "lazy_static",
                                 "notes": "Older crate. API is less convenient, but crate is stable and maintained."
@@ -337,6 +183,9 @@
                             }, {
                                 "name": "paste",
                                 "notes": "Concatenating and manipulating identifiers"
+                            }, {
+                                "name": "darling",
+                                "notes": "Derive macro to easily parse derive macro inputs"
                             }]
                         },
                         {
@@ -355,6 +204,42 @@
                             }]
                         }
                     ]
+                },
+                {
+                    "slug": "serialization",
+                    "name": "Serialization",
+                    "description": "Encode/decode between in-memory representations and general-purpose wire formats",
+                    "purposes": [
+                        {
+                            "name": "General-purpose / format agnostic",
+                            "recommendations": [{
+                                "name": "serde",
+                                "notes": "De facto standard serialization library. Use in conjunction with sub-crates like `serde_json` for the specific format that you are using (JSON, YAML, etc). Supports a variety of both text and binary protocols, including self-describing ones."
+                            }]
+                        },
+                        {
+                            "name": "Non-self-describing, external schema file",
+                            "recommendations": [{
+                                "name": "prost",
+                                "notes": "Protocol buffer library with strong ergonomics and wide industry adoption. Commonly used with gRPC / `tonic`. Use in conjunction with `protox` to avoid dependency on `protoc`."
+                            }, {
+                                "name": "capnp",
+                                "notes": "Cap'n Proto library. Offers zero-copy usage mode that is optimal for large messages, along with other improvements over Protocol Buffers. Tradeoffs are less wide usage and less developer-friendly."
+                            }, {
+                                "name": "flatbuffers",
+                                "notes": "Flatbuffers library. Also offers zero-copy usage and is more widely used than cap'n proto, with further cost to ergonomics."
+                            }]
+                        },
+                        {
+                            "name": "Non-self-describing, no external schema file",
+                            "recommendations": [{
+                                "name": "postcard",
+                                "notes": "<code>no_std</code> focused Serde serializer/deserializer, aimed at constrained environments."
+                            }, {
+                                "name": "rkyv",
+                                "notes": "Fast zero-copy deserialization framework that allows arbitrary field types and safe zero-copy mutation."
+                            }]
+                        }]
                 },
                 {
                     "slug": "system",
@@ -380,16 +265,174 @@
                             "recommendations": [{
                                 "name": "windows",
                                 "notes": "The official Microsoft-provided crate for interacting with windows APIs"
-                            }, {
-                                "name": "winapi",
-                                "notes": "Older binding to the windows APIs. Unofficial, but more complete than windows-rs"
                             }]
                         },
                         {
                             "name": "*nix (OSs)",
                             "recommendations": [{
+                                "name": "rustix",
+                                "notes": "Efficient and safe POSIX / *nix / Winsock syscall-like APIs. It uses idiomatic Rust types: refs, slices, Results instead of raw pointers, safe wrappers around raw file descriptors, bitflags instead of bare integer flags, and several other conveniences."
+                            }, {
                                 "name": "nix",
                                 "notes": "Bindings to the various *nix system functions. (Unix, Linux, MacOS, etc.)"
+                            }]
+                        }
+                    ]
+                },
+               {
+                    "slug": "tooling",
+                    "name": "Tooling",
+                    "description": "Developer tools for working with Rust projects.",
+                    "subgroups": [],
+                    "purposes": [
+                        {
+                            "name": "Toolchain Management",
+                            "recommendations": [{
+                                "name": "rustup",
+                                "link": "https://rustup.rs",
+                                "docs": "https://rust-lang.github.io/rustup",
+                                "notes": "Install, manage, and upgrade versions of rustc, cargo, clippy, rustfmt and more."
+                            }]
+                        },
+                        {
+                            "name": "Linting",
+                            "recommendations": [{
+                                "name": "clippy",
+                                "link": "https://github.com/rust-lang/rust-clippy#usage",
+                                "docs": "https://doc.rust-lang.org/clippy/",
+                                "notes": "The official Rust linter."
+                            }, {
+                                "name": "cargo-semver-checks",
+                                "link": "https://github.com/obi1kenobi/cargo-semver-checks",
+                                "notes": "Lint your crate releases for semantic versioning violations."
+                            }]
+                        },
+                        {
+                            "name": "Code Formatting",
+                            "recommendations": [{
+                                "name": "rustfmt",
+                                "link": "https://github.com/rust-lang/rustfmt#rustfmt----",
+                                "docs": "https://rust-lang.github.io/rustfmt/",
+                                "notes": "The official Rust code formatter."
+                            }]
+                        },
+                        {
+                            "name": "Cross Compilation",
+                            "recommendations": [{
+                                "name": "cross",
+                                "link": "https://github.com/cross-rs/cross#cross",
+                                "docs": "https://github.com/cross-rs/cross/wiki/Getting-Started",
+                                "notes": "Seamless cross-compiling using Docker containers."
+                            }, {
+                                "name": "cargo-zigbuild",
+                                "link": "https://github.com/rust-cross/cargo-zigbuild",
+                                "notes": "Easily cross-compile using Zig as the linker."
+                            }]
+                        },
+                        {
+                            "name": "Managing Dependencies",
+                            "recommendations": [{
+                                "name": "cargo-edit",
+                                "link": "https://github.com/killercup/cargo-edit",
+                                "notes": "Adds 'cargo upgrade' and 'cargo set-version' commands to cargo"
+                            }, {
+                                "name": "cargo-outdated",
+                                "link": "https://github.com/kbknapp/cargo-outdated#cargo-outdated",
+                                "notes": "Finds dependencies that have available updates"
+                            }, {
+                                "name": "cargo-audit",
+                                "link": "https://github.com/RustSec/rustsec/tree/main/cargo-audit#rustsec-cargo-audit",
+                                "notes": "Check dependencies for reported security vulnerabilities"
+                            },  {
+                                "name": "cargo-license",
+                                "link": "https://github.com/onur/cargo-license#cargo-license",
+                                "notes": "Lists licenses of all dependencies"
+                            }, {
+                                "name": "cargo-deny",
+                                "link": "https://github.com/EmbarkStudios/cargo-deny#-cargo-deny",
+                                "docs": "https://embarkstudios.github.io/cargo-deny/",
+                                "notes": "Enforce policies on your code and dependencies."
+                            }]
+                        },
+                        {
+                            "name": "Testing",
+                            "recommendations": [{
+                                "name": "cargo-nextest",
+                                "link": "https://nexte.st",
+                                "notes": "Faster, better test runner"
+                            },
+                            {
+                                "name": "insta",
+                                "link": "https://insta.rs",
+                                "docs": "https://insta.rs/docs/",
+                                "notes": "Snapshot testing with inline snapshot support"
+                            }]
+                        },
+                        {
+                            "name": "Benchmarking",
+                            "recommendations": [{
+                                "name": "criterion",
+                                "notes": "Statistically accurate benchmarking tool for benchmarking libraries"
+                            }, {
+                                "name": "divan",
+                                "notes": "Simple yet powerful benchmarking library with allocation profiling"
+                            }, {
+                                "name": "hyperfine",
+                                "link": "https://github.com/sharkdp/hyperfine#hyperfine",
+                                "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
+                            }]
+                        },
+                        {
+                            "name": "Performance",
+                            "recommendations": [{
+                                "name": "cargo-flamegraph",
+                                "link": "https://github.com/flamegraph-rs/flamegraph#cargo-flamegraph",
+                                "notes": "Execution flamegraph generation"
+                            }, {
+                                "name": "dhat",
+                                "notes": "Heap memory profiling"
+                            }, {
+                                "name": "cargo-show-asm",
+                                "notes": "Print the generated assembly for a Rust function"
+                            }]
+                        },
+                        {
+                            "name": "Debugging Macros",
+                            "notes": "<a href=\"https://github.com/rust-lang/rust-analyzer\">Rust Analyzer</a> also allows you to <a href=\"https://rust-analyzer.github.io/manual.html#expand-macro-recursively\">expand macros directly in your editor</a>",
+                            "recommendations": [{
+                                "name": "cargo-expand",
+                                "link": "https://github.com/dtolnay/cargo-expand#cargo-expand",
+                                "notes": "Allows you to inspect the code that macros expand to"
+                            }]
+                        },
+                        {
+                            "name": "Release Automation",
+                            "recommendations": [{
+                                "name": "cargo-release",
+                                "link": "https://github.com/crate-ci/cargo-release#cargo-release",
+                                "docs": "https://github.com/crate-ci/cargo-release/tree/master/docs",
+                                "notes": "Helper for publishing new crate versions."
+                            }, {
+                                "name": "Release-plz",
+                                "link": "https://release-plz.ieni.dev/",
+                                "docs": "https://release-plz.ieni.dev/docs",
+                                "notes": "Release Rust crates from CI with a Release PR."
+                            }]
+                        },
+                        {
+                            "name": "Continuous Integration",
+                            "recommendations": [{
+                                "name": "rust-toolchain (github action)",
+                                "link": "https://github.com/dtolnay/rust-toolchain#install-rust-toolchain",
+                                "notes": "Github action to install Rust components via rustup"
+                            }, {
+                                "name": "rust-cache (github action)",
+                                "link": "https://github.com/Swatinem/rust-cache#rust-cache-action",
+                                "notes": "Github action to cache compilation artifacts and speed up subsequent runs."
+                            }, {
+                                "name": "install-action (github action)",
+                                "link": "https://github.com/taiki-e/install-action",
+                                "notes": "GitHub Action for installing development tools (mainly from GitHub Releases)."
                             }]
                         }
                     ]
@@ -454,7 +497,8 @@
                     "name": "C",
                     "recommendations": [
                         { "name": "bindgen", "notes": "Generate Rust bindings to C libraries" },
-                        { "name": "cbindgen", "notes": "Generate C bindings to Rust libraries" }
+                        { "name": "cbindgen", "notes": "Generate C bindings to Rust libraries" },
+                        { "name": "cc", "notes": "Compile and link C code as part of your Cargo build" }
                     ]
                 },
                 {
@@ -479,13 +523,17 @@
                 {
                     "name": "Ruby",
                     "recommendations": [
+                        { "name": "magnus", "notes": "Ruby bindings for Rust. Write Ruby extension gems in Rust, or call Ruby from Rust. Supported by Ruby's rubygems and bundler" },
                         { "name": "rutie", "notes": "Supports both embedding Rust into Ruby applications and embedding Ruby into Rust applications" }
                     ]
                 },
                 {
                     "name": "Objective-C",
                     "recommendations": [
-                        { "name": "objc", "notes": "Interop with the Objective-C runtime" }
+                        { "name": "objc2", "notes": "Sound and Idiomatic Rust to Objective-C interface and runtime bindings. Main crate in the objc2 project." }
+                    ],
+                    "see_also": [
+                        { "name": "objc", "notes": "Older non-idiomatic bindings crate. Has been superseded by objc2." }
                     ]
                 },
                 {
@@ -539,9 +587,8 @@
                     "name": "General Purpose Hashing",
                     "notes": "For more algorithms, see <a href=\"https://github.com/RustCrypto/hashes#rustcrypto-hashes\">Rust Crypto Hashes</a>.",
                     "recommendations": [
-                        { "name": "sha2" },
-                        { "name": "sha1" },
-                        { "name": "md-5" }
+                        { "name": "blake3" },
+                        { "name": "sha2" }
                     ]
                 },
                 {
@@ -627,10 +674,9 @@
                             }, {
                                 "name": "futures-executor",
                                 "notes": "A minimal executor. In particular, the <a href=\"https://docs.rs/futures-executor/latest/futures_executor/fn.block_on.html\">block_on</a> function is useful if you want to run an async function synchronously in codebase that is mostly synchronous."
-                            }],
-                            "see_also": [{
-                                "name": "async-std",
-                                "notes": "A newer option that is very similar to tokio. Its API more closely mirrors the std library, but it doesn't have as much traction or ecosystem support as Tokio."
+                            }, {
+                                "name": "smol",
+                                "notes": "A small and modular async runtime. Since the implementation is modularized in smaller crates, you can directly use only the required crates instead of depending on the entire runtime."
                             }]
                         },
                         {
@@ -679,10 +725,6 @@
                             }, {
                                 "name": "ureq",
                                 "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
-                            }],
-                            "see_also": [{
-                                "name": "surf",
-                                "notes": "Client that uses the async-std runtime rather than the tokio runtime. Not well maintained."
                             }]
                         },
                         {
@@ -753,6 +795,27 @@
                             }]
                         }
                     ]
+                },
+                {
+                    "slug": "dbus",
+                    "name": "D-Bus",
+                    "description": "For cross-platform D-Bus clients and services.",
+                    "purposes": [
+                        {
+                            "name": "General Purpose",
+                            "recommendations": [{
+                                "name": "zbus",
+                                "notes": "A Rust-only (a)sync implementation of the protocol. Provides high-level proxies and zbus_xmlgen for scaffolding. Includes a book for D-Bus/zbus beginners."
+                            }]
+                        },
+                        {
+                            "name": "Bindings",
+                            "recommendations": [{
+                                "name": "dbus",
+                                "notes": "Bindings for the battle-tested libdbus implementation. Has sister crates for asynchrony, codegen, etc."
+                            }]
+                        }
+                    ]
                 }
             ]
         },
@@ -819,6 +882,9 @@
                             }, {
                                 "name": "oracle",
                                 "notes": "Rust bindings to ODPI-C"
+                            }, {
+                                "name": "sibyl",
+                                "notes": "An OCI-based interface supporting both blocking (threads) and nonblocking (async) AP"
                             }]
                         }
                     ]
@@ -928,6 +994,7 @@
                             "recommendations": [{
                                 "name": "globset",
                                 "link": "https://crates.io/crates/globset",
+                                "docs": "https://docs.rs/globset",
                                 "notes": "High-performance globbing that allows multiple globs to be evaluated at once"
                             }]
                         },
@@ -936,10 +1003,12 @@
                             "recommendations": [{
                                 "name": "walkdir",
                                 "link": "https://crates.io/crates/walkdir",
+                                "docs": "https://docs.rs/walkdir",
                                 "notes": "Basic recursive filesystem walking."
                             }, {
                                 "name": "ignore",
                                 "link": "https://crates.io/crates/ignore",
+                                "docs": "https://docs.rs/ignore",
                                 "notes": "Recursive filesystem walking that respects ignore files (like .gitignore)"
                             }]
                         },
@@ -948,6 +1017,20 @@
                             "recommendations": [{
                                 "name": "notify",
                                 "notes": "Watch files or directories and execute a function when they change"
+                            }]
+                        },
+                        {
+                            "name": "User directories",
+                            "recommendations": [{
+                                "name": "dirs",
+                                "notes": "Provide platform-specific locations for configuration, cache, and other data"
+                            }, {
+                                "name": "directories",
+                                "notes": "A higher-level library that can also compute paths for applications"
+                            }],
+                            "see_also": [{
+                                "name": "etcetera",
+                                "notes": "An alternative with a different license"
                             }]
                         }
                     ]
@@ -961,6 +1044,8 @@
                             "name": "Coloured Output",
                             "recommendations": [{
                                 "name": "termcolor",
+                                "link": "https://crates.io/crates/termcolor",
+                                "docs": "https://docs.rs/termcolor",
                                 "notes": "Cross-platform terminal colour output"
                             }]
                         },
@@ -1021,7 +1106,7 @@
                                 "name": "dashmap",
                                 "notes": "The fastest for general purpose workloads"
                             }, {
-                                "name": "flurry",
+                                "name": "papaya",
                                 "notes": "Particularly good for read-heavy workloads."
                             }]
                         },
@@ -1031,7 +1116,7 @@
                             "recommendations": [
                             {
                                 "name": "crossbeam-channel",
-                                "notes": "The absolute fastest channel implementation available. Implements Go-like 'select' feature."
+                                "notes": "The same channel algorithm as in the standard library but with a more powerful API, offering a Go-like 'select' feature."
                             }, {
                                 "name": "flume",
                                 "notes": "Smaller and simpler than crossbeam-channel and almost as fast"
@@ -1084,55 +1169,49 @@
                             }]
                         },
                         {
-                            "name": "Immediate Mode Native GUI",
+                            "name": "Native GUI",
                             "recommendations": [{
                                 "name": "egui",
-                                "notes": "Immediate-mode UI. Lots of widgets. The most useable out of the box if your needs are simple and you don't need to customise of the look and feel"
-                            }]
-                        },
-                        {
-                            "name": "Retained Mode Native GUI",
-                            "recommendations": [{
+                                "notes": "Immediate-mode UI with lots of widgets. Very useable out of the box if your needs are simple and you don't need to customise the look and feel"
+                            }, {
                                 "name": "iced",
                                 "notes": "Retained mode UI with a nice API. It's useable for basic apps, but has a number of missing features including multiple windows, layers, and proper text rendering."
                             }, {
+                                "name": "slint",
+                                "notes": "A stable and feature-rich UI toolkit with a declarative language. Licensed under GPL, royalty-free for desktop/mobile, or with paid options for proprietary embedded use."
+                            }],
+                            "see_also": [{
                                 "name": "floem",
-                                "link": "https://github.com/lapce/floem",
                                 "notes": "Inspired by Xilem, Leptos and rui, floem is currently more complete than any of them for native UI. Used by the Lapce text editor."
                             }, {
                                 "name": "vizia",
                                 "link": "https://github.com/vizia/vizia",
+                                "docs": "https://book.vizia.dev/",
                                 "notes": "Fairly complete with sophisticated layout and text layout, but has yet to make a stable release."
-                            }],
-                            "see_also": [{
-                                "name": "xilem",
+                            }, {
+                               "name": "xilem",
                                 "link": "https://github.com/linebender/xilem",
+                                "docs": "https://docs.rs/xilem",
                                 "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
                             }, {
                                 "name": "freya",
                                 "link": "https://github.com/marc2332/freya",
+                                "docs": "https://book.freyaui.dev/",
                                 "notes": "Dioxus-based GUI framework using Skia for rendering."
-                            }, {
-                                "name": "slint",
-                                "notes": "Possibly the most complete rust-native UI library. But note that it's dual GPL3/commercial licensed."
-                            }, {
-                                "name": "druid",
-                                "notes": "Druid is a relatively mature alternative to Iced/Slint, however it has been discontinued in favour of Xilem so it's use for new projects is discouraged."
                             }, {
                                 "name": "gpui",
                                 "link": "https://github.com/zed-industries/zed/tree/main/crates/gpui",
-                                "notes": "High performance framework used in the Zed text editor. Currently macOS only."
+                                "docs": "https://www.gpui.rs/#docs",
+                                "notes": "High performance framework used in the Zed text editor. Now available on macOS and linux."
                             }, {
                                 "name": "makepad",
-                                "link": "https://makepad.dev/",
+                                "link": "https://github.com/makepad/makepad",
                                 "notes": "Makepad has a strong focus on performance and minimising bloat but is consequently less feature complete in areas such as accessibility and system integration."
                             }, {
                                 "name": "ribir",
-                                "link": "https://ribir.org/"
+                                "link": "https://ribir.org/",
+                                "docs": "https://ribir.org/docs/introduction/"
                             },
-                            { "name": "cushy" },
-                            { "name": "rui" },
-                            { "name": "concoct" },
                             { "name": "kas" }]
                         }, {
                             "name": "Window creation",
@@ -1143,13 +1222,9 @@
                                 "name": "tao",
                                 "notes": "A fork of winit by the Tauri project which adds support for things like system menus that desktop apps need."
                             }, {
-                                "name": "glazier",
-                                "link": "https://github.com/linebender/glazier",
-                                "notes": "A new competitor to winit based on the old druid-shell. Has a callback that may be better than the event loop architecture for some tasks. Doesn't yet have a stable release."
-                            }, {
                                 "name": "baseview",
                                 "link": "https://github.com/RustAudio/baseview",
-                                "notes": "Specialized window creation library targetting windows to be embedded in other applications (e.g. DAW plugins)"
+                                "notes": "Specialized window creation library targeting windows to be embedded in other applications (e.g. DAW plugins)"
                             }]
                         }, {
                             "name": "2D Renderers",
@@ -1161,7 +1236,6 @@
                                 "notes": "Bindings to the Skia C++ library. The most complete option with excellent performance. However, it can be difficult to get it to compile."
                             }, {
                                 "name": "vello",
-                                "link": "https://github.com/linebender/vello",
                                 "notes": "WGPU based and uses cutting edge techniques to render vector paths using the GPU. Still somewhat immature and hasn't yet put out a stable release."
                             }, {
                                 "name": "vger",
@@ -1187,6 +1261,7 @@
                             }, {
                                 "name": "parley",
                                 "link": "https://github.com/dfrg/parley",
+                                "docs": "https://docs.rs/parley/latest/parley/",
                                 "notes": "Another very accomplished text layout library used by Druid/Xilem."
                             }]
                         }, {
