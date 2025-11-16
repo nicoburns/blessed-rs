@@ -276,6 +276,13 @@
                                 "name": "nix",
                                 "notes": "Bindings to the various *nix system functions. (Unix, Linux, MacOS, etc.)"
                             }]
+                        },
+                        {
+                            "name": "Signal handling",
+                            "recommendations": [{
+                                "name": "signal-hook",
+                                "notes": "Provides high-level, sync APIs for handling signals safely. The low-level machinery is also exposed as a separate crate, <a href=\"https://lib.rs/crates/signal-hook-registry\"><code>signal-hook-registry</code></a>, which lets other libraries like <a href=\"https://docs.rs/tokio/latest/tokio/signal\"><code>tokio::signal</code></a> interoperate with it."
+                            }]
                         }
                     ]
                 },
