@@ -93,6 +93,9 @@
                             }, {
                                 "name": "ureq",
                                 "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
+                            }, {
+                                "name": "nyquest",
+                                "notes": "Synchronous and runtime-agnostic asynchronous HTTP client facade and bindings to OS native HTTP APIs for lightweight HTTP client use cases with minimal binary size footprint."
                             }]
                         }
                     ]
@@ -732,6 +735,9 @@
                             }, {
                                 "name": "ureq",
                                 "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
+                            }, {
+                                "name": "nyquest",
+                                "notes": "Synchronous and runtime-agnostic asynchronous HTTP client facade and bindings to OS native HTTP APIs for lightweight HTTP client use cases with minimal binary size footprint."
                             }]
                         },
                         {
