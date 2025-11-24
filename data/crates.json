@@ -941,6 +941,13 @@
                                 "name": "cdrs-tokio",
                                 "notes": "High-level async Cassandra driver."
                             }]
+                        },
+                        {
+                            "name": "ZooKeeper",
+                            "recommendations": [{
+                                "name": "zookeeper-async",
+                                "notes": "An async ZooKeeper client with high-level recipes."
+                            }]
                         }
                     ]
                 },
