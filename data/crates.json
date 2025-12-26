@@ -980,6 +980,14 @@
                             }]
                         },
                         {
+                            "name": "Some features, quite minimal",
+                            "recommendations": [{
+                                "name": "xflags",
+                                "link": "https://github.com/matklad/xflags",
+                                "notes": "If you want to get things done fast (eg, you want auto help, but not at the cost of waiting for syn to compile), consider xflags."
+                            }]
+                        },
+                        {
                             "name": "Minimal",
                             "recommendations": [{
                                 "name": "lexopt",
