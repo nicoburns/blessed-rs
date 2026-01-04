@@ -1166,50 +1166,62 @@
                             }]
                         },
                         {
-                            "name": "Web-based GUI",
+                            "name": "Frontend Web GUI",
+                            "recommendations": [{
+                                "name": "leptos",
+                                "notes": ""
+                            }, {
+                                "name": "dioxus-web",
+                                "notes": ""
+                            }]
+                        },
+                        {
+                            "name": "Webview-based GUI",
                             "recommendations": [{
                                 "name": "tauri",
                                 "notes": "Electron-like web-based UI. Except it uses system webviews rather than shipping chromium, and non-UI code is written in Rust rather than node.js"
                             }, {
-                                "name": "dioxus",
-                                "notes": "A very nice API layer that has Tauri, Web, and TUI renderers. A native renderer is coming soon."
+                                "name": "dioxus-desktop",
+                                "notes": "Uses the same webview as Tauri for rendering but the UI is defined in Rust/Dioxus rather than JavaScript. Dioxus runs outside the webview with the framework handling IPC to update the DOM"
                             }]
                         },
                         {
                             "name": "Native GUI",
                             "recommendations": [{
+                                "name": "iced",
+                                "notes": "Retained mode UI with a nice API. "
+                            }, {
                                 "name": "egui",
                                 "notes": "Immediate-mode UI with lots of widgets. Very useable out of the box if your needs are simple and you don't need to customise the look and feel"
                             }, {
-                                "name": "iced",
-                                "notes": "Retained mode UI with a nice API. It's useable for basic apps, but has a number of missing features including multiple windows, layers, and proper text rendering."
-                            }, {
                                 "name": "slint",
                                 "notes": "A stable and feature-rich UI toolkit with a declarative language. Licensed under GPL, royalty-free for desktop/mobile, or with paid options for proprietary embedded use."
+                            }, {
+                                "name": "gpui",
+                                "docs": "https://www.gpui.rs/#docs",
+                                "notes": "High performance framework used in the Zed text editor. However, focus has recently moved away from community contributions."
                             }],
                             "see_also": [{
+                                "name": "dioxus-native",
+                                "notes": "A native backend for Dioxus built on top of <a href=\"https://github.com/DioxusLabs/blitz\">Blitz</a>"
+                            }, {
                                 "name": "floem",
-                                "notes": "Inspired by Xilem, Leptos and rui, floem is currently more complete than any of them for native UI. Used by the Lapce text editor."
+                                "notes": "Inspired by Xilem, Leptos and rui, Floem is currently more complete than any of them for native UI. Used by the Lapce text editor."
                             }, {
                                 "name": "vizia",
                                 "link": "https://github.com/vizia/vizia",
                                 "docs": "https://book.vizia.dev/",
                                 "notes": "Fairly complete with sophisticated layout and text layout, but has yet to make a stable release."
                             }, {
-                               "name": "xilem",
-                                "link": "https://github.com/linebender/xilem",
-                                "docs": "https://docs.rs/xilem",
-                                "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
-                            }, {
                                 "name": "freya",
                                 "link": "https://github.com/marc2332/freya",
                                 "docs": "https://book.freyaui.dev/",
                                 "notes": "Dioxus-based GUI framework using Skia for rendering."
                             }, {
-                                "name": "gpui",
-                                "link": "https://github.com/zed-industries/zed/tree/main/crates/gpui",
-                                "docs": "https://www.gpui.rs/#docs",
-                                "notes": "High performance framework used in the Zed text editor. Now available on macOS and linux."
+                               "name": "xilem",
+                                "link": "https://github.com/linebender/xilem",
+                                "docs": "https://docs.rs/xilem",
+                                "notes": "The replacement for Druid based on the more interoperable Vello and Glazier crates. However, it's currently not complete enough to be usable."
                             }, {
                                 "name": "makepad",
                                 "link": "https://github.com/makepad/makepad",
@@ -1225,7 +1237,8 @@
                             "recommendations": [{
                                 "name": "winit",
                                 "notes": "The defacto standard option. Uses an event loop based architecture. Widely used and should probably be the default choice."
-                            }, {
+                            }],
+                            "see_also": [{
                                 "name": "tao",
                                 "notes": "A fork of winit by the Tauri project which adds support for things like system menus that desktop apps need."
                             }, {
@@ -1236,20 +1249,24 @@
                         }, {
                             "name": "2D Renderers",
                             "recommendations": [{
-                                "name": "femtovg",
-                                "notes": "OpenGL based. Offers a simple API. Probably the easiest to get started with."
-                            }, {
                                 "name": "skia-safe",
                                 "notes": "Bindings to the Skia C++ library. The most complete option with excellent performance. However, it can be difficult to get it to compile."
                             }, {
                                 "name": "vello",
-                                "notes": "WGPU based and uses cutting edge techniques to render vector paths using the GPU. Still somewhat immature and hasn't yet put out a stable release."
+                                "notes": "WGPU based and uses cutting edge techniques to render vector paths using the GPU."
                             }, {
-                                "name": "vger",
-                                "notes": "A simpler WGPU based option which is less innovative but currently more stable than vello."
+                                "name": "vello_cpu",
+                                "notes": "Pure-CPU (no GPU) rendering with excellent performance (multithreaded and SIMD-accelerated."
+                            }],
+                            "see_also": [{
+                                "name": "femtovg",
+                                "notes": "OpenGL based. Offers a simple API. Probably the easiest to get started with."
                             }, {
                                 "name": "webrender",
                                 "notes": "OpenGL based. Mature with production usage in Firefox but documentation and OSS maintenance are lacking."
+                            }, {
+                                "name": "vger",
+                                "notes": "A simpler WGPU based option which is less innovative but currently more stable than vello."
                             }]
                         }, {
                             "name": "UI layout",
@@ -1258,18 +1275,17 @@
                                 "notes": "Supports Flexbox and CSS Grid algorithms."
                             }, {
                                 "name": "morphorm",
-                                "notes": "Implements it's own layout algorithm based on Subform layout"
+                                "notes": "Implements an algorithm based on Figma's AutoLayout"
                             }]
                         }, {
                             "name": "Text layout",
+                            "notes": "Parley and Cosmic-Text are more similar than they are different. Both build on top of Fontations and HarfRust, and handle rich text and BiDi.",
                             "recommendations": [{
-                                "name": "cosmic-text",
-                                "notes": "Full text layout including rich text and support for BiDi and non-latin scripts. The best option for now."
-                            }, {
                                 "name": "parley",
-                                "link": "https://github.com/dfrg/parley",
-                                "docs": "https://docs.rs/parley/latest/parley/",
-                                "notes": "Another very accomplished text layout library used by Druid/Xilem."
+                                "notes": "Supports advanced layout features like laying out boxes inline with text."
+                            }, {
+                                "name": "cosmic-text",
+                                "notes": "Has better support for large buffers of monospace text"
                             }]
                         }, {
                             "name": "Accessibility",
