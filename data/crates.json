@@ -223,6 +223,9 @@
                                 "name": "serde_json",
                                 "notes": "A fast and heavily optimized JSON encoder and decoder."
                             }, {
+                                "name": "toml",
+                                "notes": "Serde compatible encoder for Tom's obvious, minimal language. Very commonly used for human-friendly configuration data."
+                            }, {
                                 "name": "prost",
                                 "notes": "Protocol buffer library with strong ergonomics and wide industry adoption. Commonly used with gRPC / `tonic`. Use in conjunction with `protox` to avoid dependency on `protoc`."
                             }, {
