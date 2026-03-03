@@ -220,6 +220,9 @@
                         {
                             "name": "Non-self-describing, external schema file",
                             "recommendations": [{
+                                "name": "serde_json",
+                                "notes": "A fast and heavily optimized JSON encoder and decoder."
+                            }, {
                                 "name": "prost",
                                 "notes": "Protocol buffer library with strong ergonomics and wide industry adoption. Commonly used with gRPC / `tonic`. Use in conjunction with `protox` to avoid dependency on `protoc`."
                             }, {
