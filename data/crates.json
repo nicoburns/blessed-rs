@@ -476,7 +476,8 @@
                     "name": "Big Integers",
                     "recommendations": [
                         { "name": "num-bigint", "notes": "It's not the fastest, but it's part of the trusted num library." },
-                        { "name": "rug", "notes": "LGPL licensed. Wrapper for GMP. Much faster than num-bigint." }
+                        { "name": "malachite", "notes": "LGPL licensed. Much faster than num-bigint while still being pure-Rust." },
+                        { "name": "rug", "notes": "LGPL licensed. Wrapper for the GMP C library. Much faster than num-bigint." }
                     ]
                 },
                 {
