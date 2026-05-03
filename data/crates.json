@@ -397,6 +397,9 @@
                                 "name": "divan",
                                 "notes": "Simple yet powerful benchmarking library with allocation profiling"
                             }, {
+                                "name": "gungraun",
+                                "notes": "High-precision, one-shot and consistent benchmarking framework/harness for Rust. All Valgrind tools at your fingertips."
+                            }, {
                                 "name": "hyperfine",
                                 "link": "https://github.com/sharkdp/hyperfine#hyperfine",
                                 "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
