@@ -92,7 +92,7 @@
                                 "notes": "Full-fat HTTP client. Can be used in both synchronous and asynchronous code. Requires tokio runtime."
                             }, {
                                 "name": "ureq",
-                                "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
+                                "notes": "Minimal synchronous HTTP client focused on simplicity and minimising dependencies."
                             }]
                         }
                     ]
@@ -748,7 +748,7 @@
                                 "notes": "Full-fat HTTP client. Can be used in both synchronous and asynchronous code. Requires tokio runtime."
                             }, {
                                 "name": "ureq",
-                                "notes": "Minimal synchronous HTTP client focussed on simplicity and minimising dependencies."
+                                "notes": "Minimal synchronous HTTP client focused on simplicity and minimising dependencies."
                             }]
                         },
                         {
@@ -758,7 +758,7 @@
                                 "notes": "A minimal and ergonomic framework. An official part of the tokio project. Recommend for most new projects."
                             }, {
                                 "name": "actix-web",
-                                "notes": "A performance focussed framework. All Rust frameworks are fast, but choose actix-web if you need the absolutely maximum performance."
+                                "notes": "A performance focused framework. All Rust frameworks are fast, but choose actix-web if you need the absolutely maximum performance."
                             }],
                             "see_also": [{
                                 "name": "rocket",
