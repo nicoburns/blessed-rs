@@ -764,6 +764,9 @@
                                 "name": "warp",
                                 "notes": "Very similar to axum but with a quirkier API. This is a solid framework, but you should probably prefer Axum unless you particularly like the API"
                             }, {
+                                "name": "salvo",
+                                "notes": "Hyper/tokio-based with simplified handler signatures (no complex generic bounds), built-in OpenAPI and TLS/ACME."
+                            }, {
                                 "name": "rocket",
                                 "notes": "Has an excellent API and a solid implementation. However development has been intermittent."
                             }, {
