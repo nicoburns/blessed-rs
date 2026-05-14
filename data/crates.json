@@ -769,12 +769,6 @@
                             }, {
                                 "name": "rocket",
                                 "notes": "Has an excellent API and a solid implementation. However development has been intermittent."
-                            }, {
-                                "name": "poem",
-                                "notes": "Automatically generates OpenAPI definitions."
-                            }, {
-                                "name": "tide",
-                                "notes": "Similar to Axum, but based on async-std rather than tokio"
                             }]
                         },
                         {
