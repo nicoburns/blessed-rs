@@ -167,7 +167,7 @@
                         {
                             "name": "Lazy static variable initialization",
                             "notes": "This functionality is now <a href=\"https://doc.rust-lang.org/stable/std/sync/struct.LazyLock.html\">included in the standard library</a>",
-                            "recommendations": [{
+                            "see_also": [{
                                 "name": "once_cell",
                                 "notes": "Newer crate with more ergonomic API. Has since been adopted into the std library"
                             }, {
