@@ -191,7 +191,7 @@
                                 "name": "quote",
                                 "notes": "Quasi quoting rust (useful for interpolating generated code with literal code)"
                             }, {
-                                "name": "paste",
+                                "name": "pastey",
                                 "notes": "Concatenating and manipulating identifiers"
                             }, {
                                 "name": "darling",
