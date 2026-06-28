@@ -192,7 +192,10 @@
                                 "notes": "Quasi quoting rust (useful for interpolating generated code with literal code)"
                             }, {
                                 "name": "paste",
-                                "notes": "Concatenating and manipulating identifiers"
+                                "notes": "Concatenating and manipulating identifiers, currently unmaintained"
+                            }, {
+                                "name": "pastey",
+                                "notes": "Successor and drop in replacement of paste crate"
                             }, {
                                 "name": "darling",
                                 "notes": "Derive macro to easily parse derive macro inputs"
