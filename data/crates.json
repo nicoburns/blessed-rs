@@ -570,7 +570,8 @@
                 {
                     "name": "Java/JVM",
                     "recommendations": [
-                        { "name": "jni", "notes": "Implement Java methods for JVM and Android in Rust. Call Java code from Rust. Embed JVM in Rust applications." }
+                        { "name": "jni", "notes": "Implement Java methods for JVM and Android in Rust. Call Java code from Rust. Embed JVM in Rust applications." },
+                        { "name": "duchess", "notes": "Autogenerates safe wrappers so safe Rust code can invoke methods on Java objects. No unsafe code required. Limited support for calling Rust from Java." }
                     ]
                 },
                 {
