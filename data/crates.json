@@ -1240,9 +1240,9 @@
                                 "notes": "Fairly complete with sophisticated layout and text layout, but has yet to make a stable release."
                             }, {
                                 "name": "freya",
-                                "link": "https://github.com/marc2332/freya",
-                                "docs": "https://book.freyaui.dev/",
-                                "notes": "Dioxus-based GUI framework using Skia for rendering."
+                                "link": "https://freyaui.dev/",
+                                "docs": "https://docs.rs/freya/latest/freya/",
+                                "notes": "Cross-platform, native, declarative GUI library for Rust 🦀."
                             }, {
                                "name": "xilem",
                                 "link": "https://github.com/linebender/xilem",
