@@ -1242,7 +1242,7 @@
                                 "name": "freya",
                                 "link": "https://freyaui.dev/",
                                 "docs": "https://docs.rs/freya/latest/freya/",
-                                "notes": "Cross-platform, native, declarative GUI library for Rust 🦀."
+                                "notes": "Cross-platform, native, declarative GUI library powered by Skia, with a built-in headless testing runner, common components, and flexible state management and styling APIs"
                             }, {
                                "name": "xilem",
                                 "link": "https://github.com/linebender/xilem",
