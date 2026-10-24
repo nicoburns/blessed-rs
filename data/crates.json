@@ -413,6 +413,10 @@
                                 "name": "hyperfine",
                                 "link": "https://github.com/sharkdp/hyperfine#hyperfine",
                                 "notes": "Tool for benchmarking compiled binaries (similar to unix time command but better)"
+                            }, {
+                                "name": "hotpath-rs",
+                                "link": "https://hotpath.rs",
+                                "notes": "Profiler for CPU, memory, SQL, HTTP, and async performance, with Prometheus and Grafana support."
                             }]
                         },
                         {
