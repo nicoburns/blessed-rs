@@ -735,6 +735,28 @@
                     ]
                 },
                 {
+                    "slug": "ip-networks",
+                    "name": "IP Networks",
+                    "description": "IPv4 and IPv6 network types and address-set operations.",
+                    "purposes": [
+                        {
+                            "name": "Network address calculations",
+                            "recommendations": [
+                                {
+                                    "name": "ipnet",
+                                    "notes": "IPv4 and IPv6 CIDR network types, including subnet and address-range iterators."
+                                }
+                            ],
+                            "see_also": [
+                                {
+                                    "name": "netip",
+                                    "notes": "Fast network set operations with arbitrary masks. Zero dependencies; uses only core and requires no allocator."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "slug": "http-foundations",
                     "name": "HTTP",
                     "description": "HTTP client and server libraries, as well as lower-level building blocks.",
